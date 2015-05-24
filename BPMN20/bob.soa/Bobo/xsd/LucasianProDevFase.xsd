@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:ll="http://www.lucasian.com/faseproyecto"
+            targetNamespace="http://www.lucasian.com/faseproyecto"
+            elementFormDefault="qualified">
+  <xsd:element name="faseProyecto">
+    <xsd:annotation>
+      <xsd:documentation>
+        A sample element
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="detalle" maxOccurs="1" type="ll:detalleFase"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:simpleType name="estadoFase" id="estadoFase">
+    <xsd:restriction>
+      <xsd:simpleType>
+        <xsd:list itemType="xsd:string" id="listaEstado"/>
+      </xsd:simpleType>
+      <xsd:enumeration value="ENPROCESO"/>
+      <xsd:enumeration value="TERMINADO"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="detalleFase" id="detalleFase">
+    <xsd:sequence>
+      <xsd:element name="version" type="xsd:string"/>
+      <xsd:element name="comentarios" type="xsd:string"/>
+      <xsd:element name="estado" type="ll:estadoFase"/>
+      <xsd:element name="tipo" type="ll:tipoFase"/>
+      <xsd:element name="nombre" type="xsd:string"/>
+      <xsd:element name="requireOtraIteracion" type="xsd:boolean"/>
+      <xsd:element name="proyectoId" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="tipoFase" id="tipoFase">
+    <xsd:restriction>
+      <xsd:simpleType>
+        <xsd:list id="listaFase" itemType="xsd:string"/>
+      </xsd:simpleType>
+      <xsd:enumeration value="CONCEPCION"/>
+      <xsd:enumeration value="ELABORACION"/>
+      <xsd:enumeration value="CONSTRUCCION"/>
+      <xsd:enumeration value="TRANSICION"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

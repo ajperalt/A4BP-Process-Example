@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?oracleBPM version="12.1.3.0.0.00.00" fileRevision="20120601"?>
+<processDocumentation xmlns="http://xmlns.oracle.com/bpm/taskMetadataService/processDocumentation">
+   <component name="LucasianProDevGeneral">
+      <topicDocumentations>
+         <topicDocumentation name="LucasianProDevGeneral">
+            <descriptions>
+               <description locale="en">LucasianProDevGeneral</description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ABSTRACT_ACTIVITY6083732563860">
+            <labels>
+               <label locale="en">IterarDeNuevoEnFase</label>
+            </labels>
+            <descriptions>
+               <description locale="en">El usuario decide si es necesario otra iteracion</description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ABSTRACT_ACTIVITY6109355060626">
+            <labels>
+               <label locale="en">ConfiguraFase</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ABSTRACT_ACTIVITY614028745157">
+            <labels>
+               <label locale="en">INIConcepcion</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ABSTRACT_ACTIVITY6140291838965">
+            <labels>
+               <label locale="en">FINConcepcion</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ABSTRACT_ACTIVITY616813362095">
+            <labels>
+               <label locale="en">INIElaboracion</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ABSTRACT_ACTIVITY6168133621575">
+            <labels>
+               <label locale="en">FINElaboracion</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ABSTRACT_ACTIVITY6168246779947">
+            <labels>
+               <label locale="en">INIConstruccion</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ABSTRACT_ACTIVITY6168273280246">
+            <labels>
+               <label locale="en">FINConstruccion</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ABSTRACT_ACTIVITY6168365119351">
+            <labels>
+               <label locale="en">INITransicion</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ABSTRACT_ACTIVITY6168369393261">
+            <labels>
+               <label locale="en">FINTransicion</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="START_EVENT6081786462975">
+            <labels>
+               <label locale="en">Start</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="END_EVENT6081786463069">
+            <labels>
+               <label locale="en">End</label>
+            </labels>
+         </topicDocumentation>
+         <topicDocumentation name="EXCLUSIVE_GATEWAY6084170054453">
+            <labels>
+               <label locale="en">NuevaFase</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf79"/>
+         <topicDocumentation name="sf128"/>
+         <topicDocumentation name="sf94">
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf96">
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf99">
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf103">
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf154"/>
+         <topicDocumentation name="sf147"/>
+         <topicDocumentation name="sf148"/>
+         <topicDocumentation name="sf352"/>
+         <topicDocumentation name="sf356">
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf358"/>
+         <topicDocumentation name="sf374"/>
+         <topicDocumentation name="sf376"/>
+         <topicDocumentation name="sf378"/>
+         <topicDocumentation name="sf380"/>
+      </topicDocumentations>
+   </component>
+</processDocumentation>

@@ -1,0 +1,383 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Faults>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:import[@location='LucasianProDevConstruccion.wsdl']</loc>
+      <line>41</line>
+      <col>73</col>
+      <file>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</file>
+      <name>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</name>
+      <fix/>
+      <msg>Load of wsdl "LucasianProDevConstruccion.wsdl" failed</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:import[@location='LucasianProDevElaboracion.wsdl']</loc>
+      <line>43</line>
+      <col>72</col>
+      <file>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</file>
+      <name>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</name>
+      <fix/>
+      <msg>Load of wsdl "LucasianProDevElaboracion.wsdl" failed</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:import[@location='LucasianProDevTransicion.wsdl']</loc>
+      <line>45</line>
+      <col>71</col>
+      <file>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</file>
+      <name>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</name>
+      <fix/>
+      <msg>Load of wsdl "LucasianProDevTransicion.wsdl" failed</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:service[@name='LucasianProDevElaboracion.service']</loc>
+      <line>108</line>
+      <col>61</col>
+      <file>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</file>
+      <name>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{http://xmlns.oracle.com/bpmn/bpmnProcess/LucasianProDevElaboracion}LucasianProDevElaboracionPortType" for "LucasianProDevElaboracion.service" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:service[@name='LucasianProDevConstruccion.service']</loc>
+      <line>99</line>
+      <col>62</col>
+      <file>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</file>
+      <name>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{http://xmlns.oracle.com/bpmn/bpmnProcess/LucasianProDevConstruccion}LucasianProDevConstruccionPortType" for "LucasianProDevConstruccion.service" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:service[@name='LucasianProDevTransicion.service']</loc>
+      <line>117</line>
+      <col>60</col>
+      <file>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</file>
+      <name>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{http://xmlns.oracle.com/bpmn/bpmnProcess/LucasianProDevTransicion}LucasianProDevTransicionPortType" for "LucasianProDevTransicion.service" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>/composite.xml</file>
+      <name>/composite.xml</name>
+      <fix/>
+      <msg>BPM-71504: Unexpected error parsing '/LucasianProDevConstruccion.wsdl'.  Cause: D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\LucasianProDevConstruccion.wsdl (El sistema no puede encontrar el archivo especificado).  Action: Verify that file is valid and accessible</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>/composite.xml</file>
+      <name>/composite.xml</name>
+      <fix/>
+      <msg>BPM-71504: Unexpected error parsing '/LucasianProDevElaboracion.wsdl'.  Cause: D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\LucasianProDevElaboracion.wsdl (El sistema no puede encontrar el archivo especificado).  Action: Verify that file is valid and accessible</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>/composite.xml</file>
+      <name>/composite.xml</name>
+      <fix/>
+      <msg>BPM-71504: Unexpected error parsing '/LucasianProDevTransicion.wsdl'.  Cause: D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\LucasianProDevTransicion.wsdl (El sistema no puede encontrar el archivo especificado).  Action: Verify that file is valid and accessible</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file/>
+      <name/>
+      <fix/>
+      <msg>BPM-71526: Type 'LucasianProDevConstruccion.service', the composite.xml has an invalid service reference.  Cause: The specified service was not found in the composite.xml.  Action: Verify that all services references are correct</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file/>
+      <name/>
+      <fix/>
+      <msg>BPM-71526: Type 'LucasianProDevElaboracion.service', the composite.xml has an invalid service reference.  Cause: The specified service was not found in the composite.xml.  Action: Verify that all services references are correct</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file/>
+      <name/>
+      <fix/>
+      <msg>BPM-71526: Type 'LucasianProDevTransicion.service', the composite.xml has an invalid service reference.  Cause: The specified service was not found in the composite.xml.  Action: Verify that all services references are correct</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>HTLucasianProDevIterarDeNuevoEnFase.task</file>
+      <name>HTLucasianProDevIterarDeNuevoEnFase.task</name>
+      <fix/>
+      <msg>Error assignee not specified</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>LucasianProDevCrearPlanDeProyecto.task</file>
+      <name>LucasianProDevCrearPlanDeProyecto.task</name>
+      <fix/>
+      <msg>Error assignee not specified</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>HTLucasianProDevTarea.task</file>
+      <name>HTLucasianProDevTarea.task</name>
+      <fix/>
+      <msg>Error assignee not specified</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>BPELPR_GestionBOBTTR.bpel</file>
+      <name>BPELPR_GestionBOBTTR.bpel</name>
+      <fix>n/a</fix>
+      <msg>XML parsing failed because "Error in getting XML input stream: file:/D:/alvaro/lucasian/projects/BOB.SOA/branches/BOB.SOA.desarrollo/tecnico/desarrollo/bob.soa/Bobo/LucasianProDevConstruccion.wsdl: D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\LucasianProDevConstruccion.wsdl (El sistema no puede encontrar el archivo especificado)"</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>BPELGestionEstadoCU.bpel</file>
+      <name>BPELGestionEstadoCU.bpel</name>
+      <fix>n/a</fix>
+      <msg>XML parsing failed because "Error in getting XML input stream: file:/D:/alvaro/lucasian/projects/BOB.SOA/branches/BOB.SOA.desarrollo/tecnico/desarrollo/bob.soa/Bobo/LucasianProDevConstruccion.wsdl: D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\LucasianProDevConstruccion.wsdl (El sistema no puede encontrar el archivo especificado)"</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:wire/ns:target.uri[.='LucasianProDevElaboracion/LucasianProDevElaboracion.service']</loc>
+      <line>294</line>
+      <col>17</col>
+      <file>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</file>
+      <name>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</name>
+      <fix/>
+      <msg>Cannot find service name "LucasianProDevElaboracion.service" in component "LucasianProDevElaboracion" for wire definition </msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:wire/ns:target.uri[.='LucasianProDevElaboracion/LucasianProDevElaboracion.service']</loc>
+      <line>294</line>
+      <col>17</col>
+      <file>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</file>
+      <name>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{http://xmlns.oracle.com/bpmn/bpmnProcess/LucasianProDevElaboracion}LucasianProDevElaboracionPortType" for "LucasianProDevElaboracion.service" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc>/ns:composite/ns:wire/ns:target.uri[.='LucasianProDevElaboracion/LucasianProDevElaboracion.service']</loc>
+      <line>294</line>
+      <col>17</col>
+      <file>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</file>
+      <name>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{http://xmlns.oracle.com/bpmn/bpmnProcess/LucasianProDevElaboracion}LucasianProDevElaboracionPortTypeCallBack" for "LucasianProDevElaboracion.service" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:wire/ns:source.uri[.='LucasianProDevConstruccion/Services.BPEL.BPELPR_GestionBOBTTR.GestionBOBTTRInicioTarea.reference']</loc>
+      <line>273</line>
+      <col>17</col>
+      <file>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</file>
+      <name>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</name>
+      <fix/>
+      <msg>Cannot find reference name "Services.BPEL.BPELPR_GestionBOBTTR.GestionBOBTTRInicioTarea.reference" in component "LucasianProDevConstruccion" for wire definition</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:wire/ns:source.uri[.='LucasianProDevElaboracion/HumanTasks.HTLucasianProDevTarea.reference']</loc>
+      <line>289</line>
+      <col>17</col>
+      <file>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</file>
+      <name>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</name>
+      <fix/>
+      <msg>Cannot find reference name "HumanTasks.HTLucasianProDevTarea.reference" in component "LucasianProDevElaboracion" for wire definition</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:wire/ns:source.uri[.='LucasianProDevElaboracion/Services.BPEL.BPELPR_GestionBOBTTR.GestionBOBTTRInicioTarea.reference']</loc>
+      <line>285</line>
+      <col>17</col>
+      <file>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</file>
+      <name>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</name>
+      <fix/>
+      <msg>Cannot find reference name "Services.BPEL.BPELPR_GestionBOBTTR.GestionBOBTTRInicioTarea.reference" in component "LucasianProDevElaboracion" for wire definition</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:wire/ns:source.uri[.='LucasianProDevGeneral/LucasianProDevConstruccion.reference']</loc>
+      <line>313</line>
+      <col>17</col>
+      <file>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</file>
+      <name>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</name>
+      <fix/>
+      <msg>Cannot find reference name "LucasianProDevConstruccion.reference" in component "LucasianProDevGeneral" for wire definition</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:wire/ns:target.uri[.='LucasianProDevConstruccion/LucasianProDevConstruccion.service']</loc>
+      <line>282</line>
+      <col>17</col>
+      <file>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</file>
+      <name>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</name>
+      <fix/>
+      <msg>Cannot find service name "LucasianProDevConstruccion.service" in component "LucasianProDevConstruccion" for wire definition </msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:wire/ns:source.uri[.='LucasianProDevGeneral/LucasianProDevElaboracion.reference']</loc>
+      <line>309</line>
+      <col>17</col>
+      <file>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</file>
+      <name>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</name>
+      <fix/>
+      <msg>Cannot find reference name "LucasianProDevElaboracion.reference" in component "LucasianProDevGeneral" for wire definition</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:wire/ns:target.uri[.='LucasianProDevElaboracion/LucasianProDevElaboracion.service']</loc>
+      <line>294</line>
+      <col>17</col>
+      <file>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</file>
+      <name>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</name>
+      <fix/>
+      <msg>Cannot find service name "LucasianProDevElaboracion.service" in component "LucasianProDevElaboracion" for wire definition </msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:wire/ns:target.uri[.='LucasianProDevConstruccion/LucasianProDevConstruccion.service']</loc>
+      <line>282</line>
+      <col>17</col>
+      <file>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</file>
+      <name>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</name>
+      <fix/>
+      <msg>Cannot find service name "LucasianProDevConstruccion.service" in component "LucasianProDevConstruccion" for wire definition </msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:wire/ns:target.uri[.='LucasianProDevConstruccion/LucasianProDevConstruccion.service']</loc>
+      <line>282</line>
+      <col>17</col>
+      <file>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</file>
+      <name>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{http://xmlns.oracle.com/bpmn/bpmnProcess/LucasianProDevConstruccion}LucasianProDevConstruccionPortType" for "LucasianProDevConstruccion.service" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc>/ns:composite/ns:wire/ns:target.uri[.='LucasianProDevConstruccion/LucasianProDevConstruccion.service']</loc>
+      <line>282</line>
+      <col>17</col>
+      <file>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</file>
+      <name>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{http://xmlns.oracle.com/bpmn/bpmnProcess/LucasianProDevConstruccion}LucasianProDevConstruccionPortTypeCallBack" for "LucasianProDevConstruccion.service" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:wire/ns:source.uri[.='LucasianProDevConstruccion/HumanTasks.HTLucasianProDevTarea.reference']</loc>
+      <line>277</line>
+      <col>17</col>
+      <file>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</file>
+      <name>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</name>
+      <fix/>
+      <msg>Cannot find reference name "HumanTasks.HTLucasianProDevTarea.reference" in component "LucasianProDevConstruccion" for wire definition</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:wire/ns:source.uri[.='LucasianProDevGeneral/LucasianProDevTransicion.reference']</loc>
+      <line>317</line>
+      <col>17</col>
+      <file>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</file>
+      <name>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</name>
+      <fix/>
+      <msg>Cannot find reference name "LucasianProDevTransicion.reference" in component "LucasianProDevGeneral" for wire definition</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:wire/ns:target.uri[.='LucasianProDevTransicion/LucasianProDevTransicion.service']</loc>
+      <line>306</line>
+      <col>17</col>
+      <file>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</file>
+      <name>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</name>
+      <fix/>
+      <msg>Cannot find service name "LucasianProDevTransicion.service" in component "LucasianProDevTransicion" for wire definition </msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:wire/ns:source.uri[.='LucasianProDevTransicion/Services.BPEL.BPELPR_GestionBOBTTR.GestionBOBTTRInicioTarea.reference']</loc>
+      <line>297</line>
+      <col>17</col>
+      <file>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</file>
+      <name>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</name>
+      <fix/>
+      <msg>Cannot find reference name "Services.BPEL.BPELPR_GestionBOBTTR.GestionBOBTTRInicioTarea.reference" in component "LucasianProDevTransicion" for wire definition</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:wire/ns:target.uri[.='LucasianProDevTransicion/LucasianProDevTransicion.service']</loc>
+      <line>306</line>
+      <col>17</col>
+      <file>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</file>
+      <name>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</name>
+      <fix/>
+      <msg>Cannot find service name "LucasianProDevTransicion.service" in component "LucasianProDevTransicion" for wire definition </msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:wire/ns:target.uri[.='LucasianProDevTransicion/LucasianProDevTransicion.service']</loc>
+      <line>306</line>
+      <col>17</col>
+      <file>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</file>
+      <name>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{http://xmlns.oracle.com/bpmn/bpmnProcess/LucasianProDevTransicion}LucasianProDevTransicionPortType" for "LucasianProDevTransicion.service" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc>/ns:composite/ns:wire/ns:target.uri[.='LucasianProDevTransicion/LucasianProDevTransicion.service']</loc>
+      <line>306</line>
+      <col>17</col>
+      <file>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</file>
+      <name>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</name>
+      <fix/>
+      <msg>Cannot find Port Type "{http://xmlns.oracle.com/bpmn/bpmnProcess/LucasianProDevTransicion}LucasianProDevTransicionPortTypeCallBack" for "LucasianProDevTransicion.service" in WSDL Manager</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:wire/ns:source.uri[.='LucasianProDevTransicion/HumanTasks.HTLucasianProDevTarea.reference']</loc>
+      <line>301</line>
+      <col>17</col>
+      <file>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</file>
+      <name>D:\alvaro\lucasian\projects\BOB.SOA\branches\BOB.SOA.desarrollo\tecnico\desarrollo\bob.soa\Bobo\composite.xml</name>
+      <fix/>
+      <msg>Cannot find reference name "HumanTasks.HTLucasianProDevTarea.reference" in component "LucasianProDevTransicion" for wire definition</msg>
+   </Fault>
+</Faults>

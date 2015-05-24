@@ -1,0 +1,170 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<References xmlns="http://xmlns.oracle.com/adf/jndi">
+   <Reference name="LucasianBAM" className="oracle.tip.tools.ide.bam.rc.connection.BAMProviderImpl" credentialStoreKey="LucasianBAM" xmlns="">
+      <Factory className="oracle.tip.tools.ide.bam.rc.connection.BAMProviderFactory"/>
+      <RefAddresses>
+         <StringRefAddr addrType="USER_NAME">
+            <Contents>weblogic</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="WEBTIER_SERVER_PORT">
+            <Contents>9001</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="EnableAppFlag">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="BAM_SERVER_HOST">
+            <Contents>localhost</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="WEBTIER_SERVER">
+            <Contents>localhost</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="CONNECTION_NAME">
+            <Contents>LucasianBAM</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="BAM_SERVER_PORT">
+            <Contents>9001</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="BAM_WEBTIER_PROTOCOL">
+            <Contents>http</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="AppFlag">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <SecureRefAddr addrType="PASSWORD"/>
+         <StringRefAddr addrType="CONNECTION_MODE">
+            <Contents>BASIC</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="bob.reporta.estado.cu_ep" className="oracle.adf.model.connection.webservice.impl.WebServiceConnectionImpl" xmlns="">
+      <Factory className="oracle.adf.model.connection.webservice.api.WebServiceConnectionFactory"/>
+      <RefAddresses>
+         <XmlRefAddr addrType="WebServiceConnection">
+            <Contents>
+               <wsconnection description="http://lucasian.pruebaosb:8001/soa-infra/services/default/Bobo/bob.reporta.estado.cu_ep?WSDL" service="{http://xmlns.oracle.com/bob.soa/Bobo/bob.reporta.estado.cu}bob.reporta.estado.cu_ep">
+                  <model name="{http://xmlns.oracle.com/bob.soa/Bobo/bob.reporta.estado.cu}bob.reporta.estado.cu" xmlns="http://oracle.com/ws/model">
+                     <types xmlns="http://oracle.com/oracle/webservices/mdds">
+                        <complexType elementQualified="true" namespace="http://www.lucasian.com" localPart="detalleProducto" prefix="lucasian" xmlns="">
+                           <sequence minOccurs="1" maxOccurs="1">
+                              <part name="nombreProducto" required="true" namespace="http://www.lucasian.com" elementQualified="true">
+                                 <type namespace="http://www.w3.org/2001/XMLSchema" localPart="string"/>
+                              </part>
+                              <part name="estadoProducto" required="true" namespace="http://www.lucasian.com" elementQualified="true">
+                                 <type namespace="http://www.w3.org/2001/XMLSchema" localPart="string"/>
+                              </part>
+                              <part name="nombreModulo" required="true" namespace="http://www.lucasian.com" elementQualified="true">
+                                 <type namespace="http://www.w3.org/2001/XMLSchema" localPart="string"/>
+                              </part>
+                              <part name="nombreProyecto" required="true" namespace="http://www.lucasian.com" elementQualified="true">
+                                 <type namespace="http://www.w3.org/2001/XMLSchema" localPart="string"/>
+                              </part>
+                              <part name="fechaIni" required="false" namespace="http://www.lucasian.com" elementQualified="true">
+                                 <type namespace="http://www.w3.org/2001/XMLSchema" localPart="dateTime"/>
+                              </part>
+                              <part name="fechaFin" required="false" namespace="http://www.lucasian.com" elementQualified="true">
+                                 <type namespace="http://www.w3.org/2001/XMLSchema" localPart="dateTime"/>
+                              </part>
+                              <part name="deltaTEstado" required="false" namespace="http://www.lucasian.com" elementQualified="true">
+                                 <type namespace="http://www.w3.org/2001/XMLSchema" localPart="duration"/>
+                              </part>
+                              <part name="deltaTEstadoNumero" required="false" namespace="http://www.lucasian.com" elementQualified="true">
+                                 <type namespace="http://www.w3.org/2001/XMLSchema" localPart="double"/>
+                              </part>
+                           </sequence>
+                        </complexType>
+                        <complexType elementQualified="true" namespace="http://www.lucasian.com" localPart="idProducto" prefix="lucasian" xmlns="">
+                           <sequence minOccurs="1" maxOccurs="1">
+                              <part name="idProducto" required="true" namespace="http://www.lucasian.com" elementQualified="true">
+                                 <type namespace="http://www.w3.org/2001/XMLSchema" localPart="string"/>
+                              </part>
+                              <part name="idModulo" required="true" namespace="http://www.lucasian.com" elementQualified="true">
+                                 <type namespace="http://www.w3.org/2001/XMLSchema" localPart="string"/>
+                              </part>
+                              <part name="idProyecto" required="true" namespace="http://www.lucasian.com" elementQualified="true">
+                                 <type namespace="http://www.w3.org/2001/XMLSchema" localPart="string"/>
+                              </part>
+                           </sequence>
+                        </complexType>
+                        <types-in-elements/>
+                     </types>
+                     <service name="{http://xmlns.oracle.com/bob.soa/Bobo/bob.reporta.estado.cu}bob.reporta.estado.cu_ep">
+                        <port name="execute_pt" binding="{http://xmlns.oracle.com/bob.soa/Bobo/bob.reporta.estado.cu}execute_pttBinding" portType="{http://xmlns.oracle.com/bob.soa/Bobo/bob.reporta.estado.cu}execute_ptt">
+                           <soap addressUrl="http://lucasian.pruebaosb:8001/soa-infra/services/default/Bobo/bob.reporta.estado.cu_ep" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                           <operation name="execute">
+                              <soap soapAction="execute" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                              <output name="" message="{http://xmlns.oracle.com/bob.soa/Bobo/bob.reporta.estado.cu}replyMessage">
+                                 <message style="2" use="1" soapVersion="1" encodingStyle="" docLitWrapped="true" namespace="http://www.lucasian.com" localPart="arg" xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="reply" required="true" xmlns="">
+                                       <type>
+                                          <complexType elementQualified="true">
+                                             <sequence minOccurs="1" maxOccurs="1">
+                                                <part name="idProducto" required="true" namespace="http://www.lucasian.com" elementQualified="true">
+                                                   <type namespace="http://www.lucasian.com" localPart="idProducto" prefix="lucasian"/>
+                                                </part>
+                                                <part name="detalleProducto" required="true" namespace="http://www.lucasian.com" elementQualified="true">
+                                                   <type namespace="http://www.lucasian.com" localPart="detalleProducto" prefix="lucasian"/>
+                                                </part>
+                                             </sequence>
+                                          </complexType>
+                                       </type>
+                                    </part>
+                                 </message>
+                              </output>
+                              <input name="" message="{http://xmlns.oracle.com/bob.soa/Bobo/bob.reporta.estado.cu}requestMessage">
+                                 <message style="2" use="1" soapVersion="1" encodingStyle="" docLitWrapped="false" namespace="http://www.lucasian.com" localPart="arg" xmlns="http://oracle.com/oracle/webservices/mdds">
+                                    <part name="request" required="true" xmlns="">
+                                       <type>
+                                          <complexType elementQualified="true">
+                                             <sequence minOccurs="1" maxOccurs="1">
+                                                <part name="idProducto" required="true" namespace="http://www.lucasian.com" elementQualified="true">
+                                                   <type namespace="http://www.lucasian.com" localPart="idProducto" prefix="lucasian"/>
+                                                </part>
+                                                <part name="detalleProducto" required="true" namespace="http://www.lucasian.com" elementQualified="true">
+                                                   <type namespace="http://www.lucasian.com" localPart="detalleProducto" prefix="lucasian"/>
+                                                </part>
+                                             </sequence>
+                                          </complexType>
+                                       </type>
+                                    </part>
+                                 </message>
+                              </input>
+                           </operation>
+                        </port>
+                     </service>
+                  </model>
+               </wsconnection>
+            </Contents>
+         </XmlRefAddr>
+      </RefAddresses>
+   </Reference>
+   <Reference name="bobsoa" className="oracle.jdeveloper.db.adapter.DatabaseProvider" credentialStoreKey="bobsoa" xmlns="">
+      <Factory className="oracle.jdeveloper.db.adapter.DatabaseProviderFactory"/>
+      <RefAddresses>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="sid">
+            <Contents>XE</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>1521</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="DeployPassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>sys</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="role">
+            <Contents>SYSDBA</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>localhost</Contents>
+         </StringRefAddr>
+         <SecureRefAddr addrType="password"/>
+      </RefAddresses>
+   </Reference>
+</References>

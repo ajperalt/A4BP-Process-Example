@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?oracleBPM version="11.1.1.7.0.0.97" fileRevision="20120217"?>
+<processDocumentation xmlns="http://xmlns.oracle.com/bpm/taskMetadataService/processDocumentation">
+    <component name="LucasianProDevConstruccion">
+        <topicDocumentations>
+            <topicDocumentation name="LucasianProDevConstruccion">
+                <descriptions>
+                    <description locale="en">LucasianProDevConstruccion</description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6142584917925">
+                <labels>
+                    <label locale="en">Crear proyecto eclipse de acceso a datos unico para el sistema</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6142614321329">
+                <labels>
+                    <label locale="en">Generar capa de acceso a los datos Leaf</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6142636575831">
+                <labels>
+                    <label locale="en">Crear proyecto Eclipse modulo funcional</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6142649684278">
+                <labels>
+                    <label locale="en">Validar Especificación</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6142658235938">
+                <labels>
+                    <label locale="en">Generar Branch Producción</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6142712734586">
+                <labels>
+                    <label locale="en">Crear Ant de generación de librerías</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6142717595923">
+                <labels>
+                    <label locale="en">Actualizar Estado BOB a construido</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6142719486578">
+                <labels>
+                    <label locale="en">Controlar en Repositorio Agendar Nigthbuild</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6142780208483">
+                <labels>
+                    <label locale="en">Revisar especificación técnica y aprobación de Arquitecto para desarrollo</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6142801755778">
+                <labels>
+                    <label locale="en">Generar presentación con Leaf</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6142808473987">
+                <labels>
+                    <label locale="en">Codificar servicios de negocio</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6142820432818">
+                <labels>
+                    <label locale="en">Validar Codificiación vs Especificación</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6142823582518">
+                <labels>
+                    <label locale="en">Validar Planes de Ejecución Sentencias Críticas</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6142824515159">
+                <labels>
+                    <label locale="en">Pruebas de Carga Según Necesidad</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6142825392864">
+                <labels>
+                    <label locale="en">Pruebas Unitarias Desarrollo</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6142870528216">
+                <labels>
+                    <label locale="en">Actualizar ANT de Generación y Agendar en nigthbuild</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY614287163580">
+                <labels>
+                    <label locale="en">Generar JUnits y Validar Ejecución Pruebas</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6142872772757">
+                <labels>
+                    <label locale="en">Probar Planes Ejecución Sentencias Criticas</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6142873925744">
+                <labels>
+                    <label locale="en">Validar Compilación, Controlar En repositorio y commit</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6143163016666">
+                <labels>
+                    <label locale="en">Generar plan de pruebas</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6143177388677">
+                <labels>
+                    <label locale="en">Generar datos de pruebas</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6143187301942">
+                <labels>
+                    <label locale="en">Crear/actualizar Plan Global de Pruebas (guión negocio) del Módulo</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY614321530363">
+                <labels>
+                    <label locale="en">"QA Unidad" Ejecutar Planes de Prueba Automáticos de BOB</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6143216647654">
+                <labels>
+                    <label locale="en">Ejecutar Plan de Pruebas Funcional, Stress</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6143217789176">
+                <labels>
+                    <label locale="en">Determinar Impactos de Cambio</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6143218961917">
+                <labels>
+                    <label locale="en">Reportar NC en BOB</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6143267687394">
+                <labels>
+                    <label locale="en">Gestionar cierre NC BOB</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6143270822486">
+                <labels>
+                    <label locale="en">Certificar Caso de Uso</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6143272516439">
+                <labels>
+                    <label locale="en">Crear/Actualizar ficha despliegue siguiente Release</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6143309281133">
+                <labels>
+                    <label locale="en">Generar Branch Desarrollo</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6143313712344">
+                <labels>
+                    <label locale="en">Ejecutar Planes de Prueba de cambio</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6143322836453">
+                <labels>
+                    <label locale="en">Ejecutar planes prueba impacto (pruebas regresión)</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6143324680810">
+                <labels>
+                    <label locale="en">Validar planes ejecución sentencias criticas</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6143326763913">
+                <labels>
+                    <label locale="en">Realizar Codificación de Cambio</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="START_EVENT6083593581229">
+                <labels>
+                    <label locale="en">Start</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="END_EVENT6083593581385">
+                <labels>
+                    <label locale="en">End</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="PARALLEL_GATEWAY6142626962662">
+                <labels>
+                    <label locale="en">ParallelGateway</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="PARALLEL_GATEWAY6142627381126">
+                <labels>
+                    <label locale="en">ParallelGateway</label>
+                </labels>
+            </topicDocumentation>
+            <topicDocumentation name="EXCLUSIVE_GATEWAY6144738026240">
+                <labels>
+                    <label locale="en">Es mantenimiento</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf132"/>
+            <topicDocumentation name="sf133"/>
+            <topicDocumentation name="sf134"/>
+            <topicDocumentation name="sf135"/>
+            <topicDocumentation name="sf137"/>
+            <topicDocumentation name="sf139"/>
+            <topicDocumentation name="sf142"/>
+            <topicDocumentation name="sf144"/>
+            <topicDocumentation name="sf150"/>
+            <topicDocumentation name="sf188"/>
+            <topicDocumentation name="sf203"/>
+            <topicDocumentation name="sf219"/>
+            <topicDocumentation name="sf235"/>
+            <topicDocumentation name="sf236"/>
+            <topicDocumentation name="sf254"/>
+            <topicDocumentation name="sf255"/>
+            <topicDocumentation name="sf256"/>
+            <topicDocumentation name="sf257"/>
+            <topicDocumentation name="sf279"/>
+            <topicDocumentation name="sf280"/>
+            <topicDocumentation name="sf281"/>
+            <topicDocumentation name="sf282"/>
+            <topicDocumentation name="sf310"/>
+            <topicDocumentation name="sf311"/>
+            <topicDocumentation name="sf312"/>
+            <topicDocumentation name="sf341"/>
+            <topicDocumentation name="sf342"/>
+            <topicDocumentation name="sf343"/>
+            <topicDocumentation name="sf344"/>
+            <topicDocumentation name="sf377"/>
+            <topicDocumentation name="sf378"/>
+            <topicDocumentation name="sf379"/>
+            <topicDocumentation name="sf415"/>
+            <topicDocumentation name="sf416"/>
+            <topicDocumentation name="sf417"/>
+            <topicDocumentation name="sf418"/>
+            <topicDocumentation name="sf458"/>
+            <topicDocumentation name="sf497"/>
+            <topicDocumentation name="sf499"/>
+            <topicDocumentation name="sf501">
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf503"/>
+        </topicDocumentations>
+    </component>
+</processDocumentation>

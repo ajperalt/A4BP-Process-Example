@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.61.92"
+          id="HTLucasianProDevTareaPayloadType"
+          Package="HTLucasianProDevTarea_HTLucasianProDevTarea"
+          BeanClass="HTLucasianProDevTarea_HTLucasianProDevTarea.HTLucasianProDevTareaPayloadType"
+          isJavaBased="false">
+  <AccessorAttribute id="Tarea" IsCollection="true"
+                     BeanClass="HTLucasianProDevTarea_HTLucasianProDevTarea.detalleTarea"
+                     CollectionBeanClass="HTLucasianProDevTarea_HTLucasianProDevTarea.detalleTarea_Tarea_Operations">
+    <Properties>
+      <Property Name="minOccurs" Value="1"/>
+      <Property Name="maxOccurs" Value="1"/>
+      <Property Name="LABEL" Value="Tarea"/>
+      <Property Name="nillable" Value="false"/>
+      <Property Name="originalName" Value="Tarea"/>
+      <Property Name="targetNamespace" Value="http://www.lucasian.com/Tarea"/>
+    </Properties>
+  </AccessorAttribute>
+</JavaBean>

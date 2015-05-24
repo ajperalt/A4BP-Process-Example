@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:llt="http://www.lucasian.com/Tarea"
+            targetNamespace="http://www.lucasian.com/Tarea"
+            elementFormDefault="qualified">
+  <xsd:element name="Tarea" type="llt:detalleTarea" id="Tarea">
+    <xsd:annotation>
+      <xsd:documentation>
+        A sample element
+      </xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="detalleTarea" id="detalleTarea">
+    <xsd:sequence>
+      <xsd:element name="tareaId" type="xsd:string"/>
+      <xsd:element name="bobTareaId" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="nombre"  type="xsd:string" minOccurs="0"/>
+      <xsd:element name="userId" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="proyectoId" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="faseId" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="fechaIni" type="xsd:date" minOccurs="0"/>
+      <xsd:element name="fechaFin" type="xsd:date" minOccurs="0"/>
+      <xsd:element name="ordenDeServicio" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="actividad" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="tipoActividad" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="unidadOrganizacional" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="rol" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="proyectoBOBId" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

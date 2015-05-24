@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?oracleBPM version="11.1.1.6.0.15.53" fileRevision="20090820"?>
+<ns1:organization xmlns:ns2="http://xmlns.oracle.com/bpm/lpg/peopleQuery" xmlns:ns1="http://xmlns.oracle.com/bpm/organization" xmlns:ns4="http://xmlns.oracle.com/bpel/workflow/task" xmlns:ns3="http://xmlns.oracle.com/bpel/workflow/taskQuery" xmlns:ns5="http://xmlns.oracle.com/bpm/identity">
+    <ns1:updateExistingObjects>false</ns1:updateExistingObjects>
+    <ns1:organizationalUnits>
+        <ns1:organizationalUnit>
+            <ns1:organizationalUnitId>b110d08f-b198-41ff-9707-0509605f02b9</ns1:organizationalUnitId>
+            <ns1:organizationalUnitName>lucasian</ns1:organizationalUnitName>
+            <ns1:description></ns1:description>
+        </ns1:organizationalUnit>
+        <ns1:organizationalUnit>
+            <ns1:organizationalUnitId>7bc2a47e-811b-4f7f-bd1c-f0ab33508c3d</ns1:organizationalUnitId>
+            <ns1:parentOrganizationalUnitId>b110d08f-b198-41ff-9707-0509605f02b9</ns1:parentOrganizationalUnitId>
+            <ns1:parentOrganizationalUnitName>lucasian</ns1:parentOrganizationalUnitName>
+            <ns1:organizationalUnitName>pais</ns1:organizationalUnitName>
+            <ns1:description></ns1:description>
+        </ns1:organizationalUnit>
+        <ns1:organizationalUnit>
+            <ns1:organizationalUnitId>ec91b7d4-c699-4a43-b4ae-8e24bb663760</ns1:organizationalUnitId>
+            <ns1:parentOrganizationalUnitId>7bc2a47e-811b-4f7f-bd1c-f0ab33508c3d</ns1:parentOrganizationalUnitId>
+            <ns1:parentOrganizationalUnitName>pais</ns1:parentOrganizationalUnitName>
+            <ns1:organizationalUnitName>colombia</ns1:organizationalUnitName>
+            <ns1:description></ns1:description>
+        </ns1:organizationalUnit>
+        <ns1:organizationalUnit>
+            <ns1:organizationalUnitId>a8645baa-3988-4f13-8906-1c8f30be5cb4</ns1:organizationalUnitId>
+            <ns1:parentOrganizationalUnitId>ec91b7d4-c699-4a43-b4ae-8e24bb663760</ns1:parentOrganizationalUnitId>
+            <ns1:parentOrganizationalUnitName>colombia</ns1:parentOrganizationalUnitName>
+            <ns1:organizationalUnitName>cali</ns1:organizationalUnitName>
+            <ns1:description></ns1:description>
+            <ns1:member type="USER">
+                <ns1:name>aperalta</ns1:name>
+                <ns1:memberId>bd53db80-5bce-4f40-8b33-8bb67f3633ce</ns1:memberId>
+            </ns1:member>
+            <ns1:member type="USER">
+                <ns1:name>weblogic</ns1:name>
+                <ns1:memberId>55dc0a4e-7a3f-446e-9773-3e61f702badc</ns1:memberId>
+            </ns1:member>
+        </ns1:organizationalUnit>
+        <ns1:organizationalUnit>
+            <ns1:organizationalUnitId>8d72ce78-c69a-4e94-b332-610127191037</ns1:organizationalUnitId>
+            <ns1:parentOrganizationalUnitId>ec91b7d4-c699-4a43-b4ae-8e24bb663760</ns1:parentOrganizationalUnitId>
+            <ns1:parentOrganizationalUnitName>colombia</ns1:parentOrganizationalUnitName>
+            <ns1:organizationalUnitName>pereira</ns1:organizationalUnitName>
+            <ns1:description></ns1:description>
+        </ns1:organizationalUnit>
+        <ns1:organizationalUnit>
+            <ns1:organizationalUnitId>5c90b4e4-81a6-4cb5-8f69-41bb8cc65a86</ns1:organizationalUnitId>
+            <ns1:parentOrganizationalUnitId>ec91b7d4-c699-4a43-b4ae-8e24bb663760</ns1:parentOrganizationalUnitId>
+            <ns1:parentOrganizationalUnitName>colombia</ns1:parentOrganizationalUnitName>
+            <ns1:organizationalUnitName>bogota</ns1:organizationalUnitName>
+            <ns1:description></ns1:description>
+        </ns1:organizationalUnit>
+        <ns1:organizationalUnit>
+            <ns1:organizationalUnitId>1424fc87-f123-415b-9b03-901af9a08ed8</ns1:organizationalUnitId>
+            <ns1:parentOrganizationalUnitId>b110d08f-b198-41ff-9707-0509605f02b9</ns1:parentOrganizationalUnitId>
+            <ns1:parentOrganizationalUnitName>lucasian</ns1:parentOrganizationalUnitName>
+            <ns1:organizationalUnitName>proyectos</ns1:organizationalUnitName>
+            <ns1:description></ns1:description>
+        </ns1:organizationalUnit>
+        <ns1:organizationalUnit>
+            <ns1:organizationalUnitId>e4311ab4-1c1a-42f1-a8ce-a09a4a300674</ns1:organizationalUnitId>
+            <ns1:parentOrganizationalUnitId>1424fc87-f123-415b-9b03-901af9a08ed8</ns1:parentOrganizationalUnitId>
+            <ns1:parentOrganizationalUnitName>proyectos</ns1:parentOrganizationalUnitName>
+            <ns1:organizationalUnitName>bob_soa</ns1:organizationalUnitName>
+            <ns1:description></ns1:description>
+            <ns1:member type="USER">
+                <ns1:name>aperalta</ns1:name>
+                <ns1:memberId>0b2ad76e-1671-48d7-b4cd-d0d3142c5880</ns1:memberId>
+            </ns1:member>
+            <ns1:member type="USER">
+                <ns1:name>weblogic</ns1:name>
+                <ns1:memberId>18a814d0-ce56-4239-a966-ab13e6f6fb97</ns1:memberId>
+            </ns1:member>
+        </ns1:organizationalUnit>
+    </ns1:organizationalUnits>
+    <ns1:applicationRoles>
+        <ns1:applicationRole isProcessRole="true" id="Bobo.ProcessOwner">
+            <ns5:name>Bobo.ProcessOwner</ns5:name>
+            <ns1:member type="USER">
+                <ns1:name>weblogic</ns1:name>
+            </ns1:member>
+            <ns1:processRole name="Process Owner" id="ProcessOwner"/>
+        </ns1:applicationRole>
+        <ns1:applicationRole isProcessRole="true" id="GerenteDeProyecto">
+            <ns5:name>GerenteDeProyecto</ns5:name>
+            <ns1:member type="USER">
+                <ns1:name>weblogic</ns1:name>
+            </ns1:member>
+            <ns1:member type="USER">
+                <ns1:name>aperalta</ns1:name>
+            </ns1:member>
+            <ns1:processRole name="GerenteDeProyecto" id="GerenteDeProyecto"/>
+        </ns1:applicationRole>
+        <ns1:applicationRole isProcessRole="true" id="Analista">
+            <ns5:name>Analista</ns5:name>
+            <ns1:member type="USER">
+                <ns1:name>weblogic</ns1:name>
+            </ns1:member>
+            <ns1:member type="USER">
+                <ns1:name>aperalta</ns1:name>
+            </ns1:member>
+            <ns1:processRole name="Analista" id="Analista"/>
+        </ns1:applicationRole>
+        <ns1:applicationRole isProcessRole="false" id="Cliente">
+            <ns5:name>Cliente</ns5:name>
+            <ns1:member type="USER">
+                <ns1:name>weblogic</ns1:name>
+            </ns1:member>
+            <ns1:processRole name="Cliente" id="Cliente"/>
+        </ns1:applicationRole>
+        <ns1:applicationRole isProcessRole="true" id="Desarrollador">
+            <ns5:name>Desarrollador</ns5:name>
+            <ns1:member type="USER">
+                <ns1:name>weblogic</ns1:name>
+            </ns1:member>
+            <ns1:member type="USER">
+                <ns1:name>aperalta</ns1:name>
+            </ns1:member>
+            <ns1:processRole name="Desarrollador" id="Desarrollador"/>
+        </ns1:applicationRole>
+        <ns1:applicationRole isProcessRole="true" id="SQA">
+            <ns5:name>SQA</ns5:name>
+            <ns1:member type="USER">
+                <ns1:name>weblogic</ns1:name>
+            </ns1:member>
+            <ns1:processRole name="SQA" id="SQA"/>
+        </ns1:applicationRole>
+        <ns1:applicationRole isProcessRole="true" id="Arquitecto">
+            <ns5:name>Arquitecto</ns5:name>
+            <ns1:member type="USER">
+                <ns1:name>weblogic</ns1:name>
+            </ns1:member>
+            <ns1:processRole name="Arquitecto" id="Arquitecto"/>
+        </ns1:applicationRole>
+        <ns1:applicationRole isProcessRole="true" id="Funcionario">
+            <ns5:name>Funcionario</ns5:name>
+            <ns1:member type="USER">
+                <ns1:name>weblogic</ns1:name>
+            </ns1:member>
+            <ns1:member type="USER">
+                <ns1:name>aperalta</ns1:name>
+            </ns1:member>
+            <ns1:processRole name="Funcionario" id="Funcionario"/>
+        </ns1:applicationRole>
+        <ns1:applicationRole isProcessRole="true" id="Arquitecto_DBA">
+            <ns5:name>Arquitecto_DBA</ns5:name>
+            <ns1:member type="USER">
+                <ns1:name>weblogic</ns1:name>
+            </ns1:member>
+            <ns1:processRole name="Arquitecto_DBA" id="Arquitecto_DBA"/>
+        </ns1:applicationRole>
+    </ns1:applicationRoles>
+    <ns1:applicationRoleOrgUnitCalendarAssociations/>
+    <ns1:participantPropertiesList/>
+    <ns1:holidayRules/>
+    <ns1:calendarRules/>
+</ns1:organization>

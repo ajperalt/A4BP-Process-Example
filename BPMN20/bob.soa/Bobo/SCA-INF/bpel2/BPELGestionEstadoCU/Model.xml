@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process name="BPELGestionEstadoCU" targetNamespace="http://xmlns.oracle.com/bob_soa/Bobo/BPELGestionEstadoCU" xmlns="http://schemas.xmlsoap.org/ws/2003/03/business-process/" xmlns:client="http://xmlns.oracle.com/bob_soa/Bobo/BPELGestionEstadoCU" xmlns:ora="http://schemas.oracle.com/xpath/extension" xmlns:bpelx="http://schemas.oracle.com/bpel/extension" xmlns:bpws="http://schemas.xmlsoap.org/ws/2003/03/business-process/" xmlns:bpel2="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:ns1="http://www.lucasian.com" xmlns:ns2="http://xmlns.oracle.com/bob_soa/Bobo/BPELGestionEstadoCU/correlationset" xmlns:ns3="http://xmlns.oracle.com/GestionCambioEstadoCU/GestionCambioEstadoCU_DecisionService_1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns4="http://xmlns.oracle.com/BRGestionaEstado/BRGestionaEstado_DecisionService_1" xmlns:ns5="http://xmlns.oracle.com/bpel" xmlns:ns6="http://xmlns.oracle.com/BRGestionEstadosProducto/BRGestionEstadosProducto_DecisionService_1" xmlns:ns7="http://xmlns.oracle.com/BRGestionaEstadoProducto/BRGestionaEstadoProducto_DecisionService_1" xmlns:xp20="http://www.oracle.com/XSL/Transform/java/oracle.tip.pc.services.functions.Xpath20" xmlns:oraext="http://www.oracle.com/XSL/Transform/java/oracle.tip.pc.services.functions.ExtFunc" xmlns:dvm="http://www.oracle.com/XSL/Transform/java/oracle.tip.dvm.LookupValue" xmlns:hwf="http://xmlns.oracle.com/bpel/workflow/xpath" xmlns:ids="http://xmlns.oracle.com/bpel/services/IdentityService/xpath" xmlns:bpm="http://xmlns.oracle.com/bpmn20/extensions" xmlns:xdk="http://schemas.oracle.com/bpel/extension/xpath/function/xdk" xmlns:xref="http://www.oracle.com/XSL/Transform/java/oracle.tip.xref.xpath.XRefXPathFunctions" xmlns:ldap="http://schemas.oracle.com/xpath/extension/ldap" xmlns:ns8="http://action.cu.ws.soa.lucasian.com/" xmlns:ns9="http://ifaces.cu.ws.soa.lucasian.com/" id="BpPrc0">
+
+    <!-- 
+      ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        PARTNERLINKS                                                      
+        List of services participating in this BPEL process               
+      ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    --> 
+    <partnerLinks>
+        <!-- 
+      The 'client' role represents the requester of this service. It is 
+      used for callback. The location and correlation information associated
+      with the client role are automatically set using WS-Addressing.
+    -->
+        <partnerLink name="bpelgestionestadocu_client" partnerLinkType="client:BPELGestionEstadoCU" myRole="BPELGestionEstadoCUProvider" partnerRole="BPELGestionEstadoCURequester"/>
+        <partnerLink name="BRGestionaEstadoProducto.BRGestionaEstadoProducto_DecisionService_1" partnerRole="IDecisionService_Role" partnerLinkType="ns7:IDecisionService_PL"/>
+        <partnerLink name="PLBOBServiciosUtil" partnerLinkType="ns8:IBOBServiciosUtil_PL" partnerRole="IBOBServiciosUtil_Role"/>
+    </partnerLinks>
+
+    <!-- 
+      ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        VARIABLES                                                        
+        List of messages and XML documents used within this BPEL process 
+      ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    -->
+    <variables>
+        <!-- Reference to the message passed as input during initiation -->
+        <variable name="inputVariable" messageType="client:BPELGestionEstadoCURequestMessage"/>
+
+        <!-- Reference to the message that will be sent back to the requester during callback -->
+        <variable name="outputVariable" messageType="client:BPELGestionEstadoCUResponseMessage"/>
+        <variable name="nuevoEstadoInputVariable" messageType="client:BPELGestionEstadoCURequestMessage"/>
+        <variable name="nuevoEstadoOutputVariable" messageType="client:BPELGestionEstadoCURequestMessage"/>
+        <variable name="idnombreProducto" type="xsd:string"/>
+        <variable name="IncalcularDifFecha" messageType="ns9:calcularDifFecha"/>
+        <variable name="outcalcularDifFecha" messageType="ns9:calcularDifFechaResponse"/>
+    </variables>
+    <correlationSets>
+        <correlationSet name="csInicio" properties="ns2:cspropiedad"/>
+        <correlationSet name="csReporte" properties="ns2:cspropiedad"/>
+    </correlationSets>
+    <!-- 
+      ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+       ORCHESTRATION LOGIC                                               
+       Set of activities coordinating the flow of messages across the    
+       services integrated within this business process                  
+      ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    -->
+    <sequence name="main" id="BpSeq0">
+        <!-- Receive input from requestor. (Note: This maps to operation defined in BPELGestionEstadoCU.wsdl) -->
+        <receive name="receiveInput" partnerLink="bpelgestionestadocu_client" portType="client:BPELGestionEstadoCU" operation="process" variable="inputVariable" createInstance="yes" id="BpRcv0">
+            <correlations>
+                <correlation set="csInicio" initiate="yes"/>
+            </correlations>
+        </receive>
+        <receive name="ReceiveNuevoEstado" createInstance="no" variable="nuevoEstadoInputVariable" partnerLink="bpelgestionestadocu_client" portType="client:BPELGestionEstadoCU" operation="reportaEstado" id="BpRcv1">
+            <correlations>
+                <correlation set="csInicio" initiate="no"/>
+                <correlation set="csReporte" initiate="yes"/>
+            </correlations>
+        </receive>
+        <assign name="setInfoDataBPMToRespNuevoEstado" id="BpAss0">
+            <copy>
+                <from variable="inputVariable" part="payload" query="/ns1:arg"/>
+                <to variable="nuevoEstadoOutputVariable" part="payload" query="/ns1:arg"/>
+            </copy>
+        </assign>
+        <scope name="GestionaEstadoProducto" variableAccessSerializable="no" id="BpScp0">
+            <bpelx:annotation>
+                <bpelx:pattern patternName="bpelx:decide"/>
+            </bpelx:annotation>
+            <variables>
+                <variable name="dsIn" messageType="ns7:callFunctionStatelessMessage"/>
+                <variable name="dsOut" messageType="ns7:callFunctionStatelessDecisionMessage"/>
+            </variables>
+            <sequence name="Sequence1" id="BpSeq1">
+                <assign name="Facts_To_Rule_Service" id="BpAss1">
+                    <copy>
+                        <from variable="inputVariable" part="payload" query="/ns1:arg/ns1:detalleProducto/ns1:estadoProducto"/>
+                        <to variable="dsIn" part="payload" query="/ns7:callFunctionStateless/ns7:parameterList/ns1:estados/ns1:estadoActual"/>
+                    </copy>
+                    <copy>
+                        <from variable="nuevoEstadoInputVariable" part="payload" query="/ns1:arg/ns1:detalleProducto/ns1:estadoProducto"/>
+                        <to variable="dsIn" part="payload" query="/ns7:callFunctionStateless/ns7:parameterList/ns1:estados/ns1:estadoNuevo"/>
+                    </copy>
+                    <copy>
+                        <from variable="nuevoEstadoInputVariable" part="payload" query="/ns1:arg/ns1:detalleProducto/ns1:estadoProducto"/>
+                        <to variable="dsIn" part="payload" query="/ns7:callFunctionStateless/ns7:parameterList/ns1:estados/ns1:estadoPropuesto"/>
+                    </copy>
+                </assign>
+                <assign name="BPEL_Header" id="BpAss2">
+                    <copy>
+                        <from expression="&quot;BRGestionaEstadoProducto_DecisionService_1&quot;"/>
+                        <to variable="dsIn" part="payload" query="@name"/>
+                    </copy>
+                </assign>
+                <invoke name="Invoke" partnerLink="BRGestionaEstadoProducto.BRGestionaEstadoProducto_DecisionService_1" portType="ns7:IDecisionService" operation="callFunctionStateless" inputVariable="dsIn" outputVariable="dsOut" id="BpInv0"/>
+                <assign name="Rule_Service_To_Facts" id="BpAss3">
+                    <copy>
+                        <from variable="dsOut" part="payload" query="/ns7:callFunctionStatelessDecision/ns7:resultList/ns1:estados/ns1:estadoPropuesto"/>
+                        <to variable="nuevoEstadoOutputVariable" part="payload" query="/ns1:arg/ns1:detalleProducto/ns1:estadoProducto"/>
+                    </copy>
+                </assign>
+            </sequence>
+        </scope>
+        <flow name="verificaEstadoParaMonitorBAM" id="BpFlw0">
+            <sequence name="Sequence" bpelx:skipCondition="bpws:getVariableData('inputVariable','payload','/ns1:arg/ns1:detalleProducto/ns1:estadoProducto') = bpws:getVariableData('nuevoEstadoOutputVariable','payload','/ns1:arg/ns1:detalleProducto/ns1:estadoProducto')" id="BpSeq2">
+                <switch name="Switch1" id="BpSwt0">
+                    <case condition="bpws:getVariableData('nuevoEstadoInputVariable','payload','/ns1:arg/ns1:detalleProducto/ns1:estadoDatosSOA') = &quot;COMPLETO&quot;">
+                        <assign name="sefFechasParaCalculoConfiaEnMensaje" id="BpAss4">
+                            <copy>
+                                <from variable="nuevoEstadoInputVariable" part="payload" query="/ns1:arg/ns1:detalleProducto/ns1:fechaIni"/>
+                                <to variable="IncalcularDifFecha" part="parameters" query="/ns9:calcularDifFecha/arg0/fechaIni"/>
+                            </copy>
+                            <copy>
+                                <from variable="nuevoEstadoInputVariable" part="payload" query="/ns1:arg/ns1:detalleProducto/ns1:fechaFin"/>
+                                <to variable="IncalcularDifFecha" part="parameters" query="/ns9:calcularDifFecha/arg0/fechaFin"/>
+                            </copy>
+                            <copy>
+                                <from variable="nuevoEstadoInputVariable" part="payload" query="/ns1:arg/ns1:detalleProducto/ns1:fechaFin"/>
+                                <to variable="nuevoEstadoOutputVariable" part="payload" query="/ns1:arg/ns1:detalleProducto/ns1:fechaIni"/>
+                            </copy>
+                        </assign>
+                    </case>
+                    <otherwise>
+                        <assign name="sefFechasParaCalculoPorBPEL" id="BpAss5">
+                            <copy>
+                                <from variable="inputVariable" part="payload" query="/ns1:arg/ns1:detalleProducto/ns1:fechaIni"/>
+                                <to variable="IncalcularDifFecha" part="parameters" query="/ns9:calcularDifFecha/arg0/fechaIni"/>
+                            </copy>
+                            <copy>
+                                <from expression="xp20:current-dateTime()"/>
+                                <to variable="IncalcularDifFecha" part="parameters" query="/ns9:calcularDifFecha/arg0/fechaFin"/>
+                            </copy>
+                            <copy>
+                                <from expression="xp20:current-dateTime()"/>
+                                <to variable="nuevoEstadoOutputVariable" part="payload" query="/ns1:arg/ns1:detalleProducto/ns1:fechaIni"/>
+                            </copy>
+                        </assign>
+                    </otherwise>
+                </switch>
+                <invoke name="InvokeSerBobUtil" partnerLink="PLBOBServiciosUtil" portType="ns9:IBOBServiciosUtil" operation="calcularDifFecha" inputVariable="IncalcularDifFecha" outputVariable="outcalcularDifFecha" bpelx:invokeAsDetail="no" id="BpInv1"/>
+                <assign name="setDifHoras" id="BpAss6">
+                    <copy>
+                        <from variable="outcalcularDifFecha" part="parameters" query="/ns9:calcularDifFechaResponse/return/horas"/>
+                        <to variable="nuevoEstadoOutputVariable" part="payload" query="/ns1:arg/ns1:detalleProducto/ns1:deltaTEstadoNumero"/>
+                    </copy>
+                </assign>
+                <empty name="MarcarRegistroSensor" id="BpEmp0"/>
+            </sequence>
+        </flow>
+        <reply name="RespondeEstado" variable="nuevoEstadoOutputVariable" partnerLink="bpelgestionestadocu_client" portType="client:BPELGestionEstadoCU" operation="reportaEstado" id="BpRpl0"/>
+        <assign name="AssignNuevoEstado" id="BpAss7">
+            <copy>
+                <from variable="nuevoEstadoOutputVariable" part="payload" query="/ns1:arg"/>
+                <to variable="outputVariable" part="payload" query="/ns1:arg"/>
+            </copy>
+        </assign>
+        <!-- 
+          Asynchronous callback to the requester. (Note: the callback location and correlation id is transparently handled using WS-addressing.)
+        -->
+        <invoke name="callbackClient" partnerLink="bpelgestionestadocu_client" portType="client:BPELGestionEstadoCUCallback" operation="processResponse" inputVariable="outputVariable" id="BpInv2"/>
+    </sequence>
+</process><!--
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  Oracle JDeveloper BPEL Designer 
+  
+  Created: Fri Jul 13 11:42:09 COT 2012
+  Author:  root
+  Type: BPEL 1.1 Process
+  Purpose: Asynchronous BPEL Process
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+-->

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?oracleBPM version="11.1.1.6.0.15.53" fileRevision="20110706"?>
+<processDocumentation xmlns="http://xmlns.oracle.com/bpm/taskMetadataService/processDocumentation">
+    <component name="Especificación">
+        <topicDocumentations>
+            <topicDocumentation name="Especificación">
+                <descriptions>
+                    <description locale="en">Especificación</description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="START_EVENT4001211590854">
+                <labels>
+                    <label locale="en">Start</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="END_EVENT4001211590893">
+                <labels>
+                    <label locale="en">End</label>
+                </labels>
+            </topicDocumentation>
+            <topicDocumentation name="sf35"/>
+        </topicDocumentations>
+    </component>
+</processDocumentation>

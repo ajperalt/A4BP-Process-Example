@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:lucasian="http://www.lucasian.com"
+            targetNamespace="http://www.lucasian.com"
+            elementFormDefault="qualified">
+  <xsd:element name="arg">
+    <xsd:annotation>
+      <xsd:documentation>
+        A sample element
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="idProducto" type="lucasian:idProducto"/>
+        <xsd:element name="detalleProducto" type="lucasian:detalleProducto"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="idProducto">
+    <xsd:sequence>
+      <xsd:element name="idProducto" type="xsd:string" minOccurs="1"/>
+      <xsd:element name="idModulo" type="xsd:string" minOccurs="1"/>
+      <xsd:element name="idProyecto" type="xsd:string" minOccurs="1"/>
+      <xsd:element name="idModulo" type="xsd:string"/>
+      <xsd:element name="idProyecto" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="detalleProducto">
+    <xsd:sequence>
+      <xsd:element name="nombreProducto" type="xsd:string" minOccurs="1"/>
+      <xsd:element name="estadoProducto" type="xsd:string" minOccurs="1"/>
+      <xsd:element name="nombreModulo" type="xsd:string" minOccurs="1"/>
+      <xsd:element name="nombreProyecto" type="xsd:string" minOccurs="1"/>
+      <xsd:element name="fechaIni" minOccurs="1" type="xsd:dateTime"/>
+      <xsd:element name="fechaFin" minOccurs="1" type="xsd:dateTime"/>
+      <xsd:element name="deltaTEstado" type="xsd:duration" minOccurs="1"/>
+      <xsd:element name="deltaTEstadoNumero" type="xsd:double" minOccurs="1"/>
+      <xsd:element name="estadoDatosSOA" type="lucasian:estadoDatoSOA"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="estadoDatoSOA">
+    <xsd:restriction base="xsd:string">
+        <xsd:enumeration value="PENDIENTE"/>
+        <xsd:enumeration value="COMPLETO" />
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

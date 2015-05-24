@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?oracleBPM version="12.1.3.0.0.00.00" fileRevision="20120601"?>
+<processDocumentation xmlns="http://xmlns.oracle.com/bpm/taskMetadataService/processDocumentation">
+   <component name="Process">
+      <topicDocumentations>
+         <topicDocumentation name="Process">
+            <labels>
+               <label locale="en">Especificacion</label>
+            </labels>
+            <descriptions>
+               <description locale="en">Especificacion</description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ABSTRACT_ACTIVITY3812237930523">
+            <labels>
+               <label locale="en">ClienteNotificaFalloAAnalista</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ABSTRACT_ACTIVITY4157414055230">
+            <labels>
+               <label locale="en">DefinirNombreInstancia</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="START_EVENT3812088329020">
+            <labels>
+               <label locale="en">Start</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="END_EVENT3812088329166">
+            <labels>
+               <label locale="en">End</label>
+            </labels>
+         </topicDocumentation>
+         <topicDocumentation name="THROW_INTERMEDIATE_EVENT4061389252722">
+            <labels>
+               <label locale="en">IEspecificandoCU</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="CATCH_INTERMEDIATE_EVENT4061400808583">
+            <labels>
+               <label locale="en">FEspecificandoCU</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="THROW_INTERMEDIATE_EVENT4061406438539">
+            <labels>
+               <label locale="en">IValidandoCU</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="CATCH_INTERMEDIATE_EVENT406141078243">
+            <labels>
+               <label locale="en">FValidandoCU</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="THROW_INTERMEDIATE_EVENT4087667370555">
+            <labels>
+               <label locale="en">INuevo</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="CATCH_INTERMEDIATE_EVENT4087675523686">
+            <labels>
+               <label locale="en">FNuevo</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="THROW_INTERMEDIATE_EVENT410538904831">
+            <labels>
+               <label locale="en">IEnEspecificacion</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="CATCH_INTERMEDIATE_EVENT4105394614284">
+            <labels>
+               <label locale="en">FEnEspecificacion</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="THROW_INTERMEDIATE_EVENT410544067902">
+            <labels>
+               <label locale="en">IConfirmado</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="CATCH_INTERMEDIATE_EVENT4105446649078">
+            <labels>
+               <label locale="en">FConfirmado</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="THROW_INTERMEDIATE_EVENT4105473309984">
+            <labels>
+               <label locale="en">IEnContruccion</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="CATCH_INTERMEDIATE_EVENT4105478644672">
+            <labels>
+               <label locale="en">FEnConstruccion</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="THROW_INTERMEDIATE_EVENT4105684361898">
+            <labels>
+               <label locale="en">IConstruido</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="CATCH_INTERMEDIATE_EVENT4105689302278">
+            <labels>
+               <label locale="en">FConstruido</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="THROW_INTERMEDIATE_EVENT4105739790993">
+            <labels>
+               <label locale="en">IPruebasInterfaz</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="CATCH_INTERMEDIATE_EVENT4105752503931">
+            <labels>
+               <label locale="en">FIPruebasInterfaz</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="THROW_INTERMEDIATE_EVENT410589925693">
+            <labels>
+               <label locale="en">IPruebasNegocio</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="CATCH_INTERMEDIATE_EVENT4105903039639">
+            <labels>
+               <label locale="en">FPruebasNegocio</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="EXCLUSIVE_GATEWAY3812152232188">
+            <labels>
+               <label locale="en">CUValidado</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="EXCLUSIVE_GATEWAY4096986280955">
+            <labels>
+               <label locale="en">cuValidadoOConfirmado</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="EXCLUSIVE_GATEWAY410540143651">
+            <labels>
+               <label locale="en">cuEspecificado</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="EXCLUSIVE_GATEWAY4106012189390">
+            <labels>
+               <label locale="en">CUConstruido</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="EXCLUSIVE_GATEWAY4106478939168">
+            <labels>
+               <label locale="en">CuEnConstrucccion</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="EXCLUSIVE_GATEWAY4106501798991">
+            <labels>
+               <label locale="en">CUPruebas</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="EXCLUSIVE_GATEWAY4164174676066">
+            <labels>
+               <label locale="en">CUPruebasNegocio</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="EXCLUSIVE_GATEWAY4164185665481">
+            <labels>
+               <label locale="en">CUTerminado</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf26"/>
+         <topicDocumentation name="sf38">
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf41">
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf64"/>
+         <topicDocumentation name="sf37"/>
+         <topicDocumentation name="sf39"/>
+         <topicDocumentation name="sf40"/>
+         <topicDocumentation name="sf42"/>
+         <topicDocumentation name="sf33"/>
+         <topicDocumentation name="sf34"/>
+         <topicDocumentation name="sf51">
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf53">
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf75"/>
+         <topicDocumentation name="sf76"/>
+         <topicDocumentation name="sf77">
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf79">
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf81">
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf86"/>
+         <topicDocumentation name="sf58"/>
+         <topicDocumentation name="sf60"/>
+         <topicDocumentation name="sf62"/>
+         <topicDocumentation name="sf67"/>
+         <topicDocumentation name="sf68">
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf78"/>
+         <topicDocumentation name="sf82">
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf85">
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf88">
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf90"/>
+         <topicDocumentation name="sf92">
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf94">
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf102"/>
+         <topicDocumentation name="sf246"/>
+         <topicDocumentation name="sf285">
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf287"/>
+         <topicDocumentation name="sf289">
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf291">
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf292">
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf294">
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf61"/>
+         <topicDocumentation name="sf70">
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+      </topicDocumentations>
+   </component>
+</processDocumentation>

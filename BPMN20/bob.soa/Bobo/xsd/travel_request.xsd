@@ -1,0 +1,47 @@
+<?xml version= '1.0' encoding= 'UTF-8' ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:trq="http://www.oracle.com/bpm-training/ps4fp/travel-request"
+     targetNamespace="http://www.oracle.com/bpm-training/ps4fp/travel-request" elementFormDefault="qualified">
+    <xsd:element name="NewTravelRequest" type="trq:TravelRequestType">
+        <xsd:annotation>
+            <xsd:documentation>A sample element</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="CancelTravelRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="RequestId" type="xsd:string"/>
+                <xsd:element name="CancelDate" type="xsd:dateTime"/>
+                <xsd:element name="Reason" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="ModifiedTravelRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="RequestId" type="xsd:string"/>
+                <xsd:element name="DateModified" type="xsd:dateTime"/>
+                <xsd:element name="ModifiedTravelDetails" type="trq:TravelDetailsType"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:complexType name="TravelRequestType">
+        <xsd:sequence>
+            <xsd:element name="RequestId" type="xsd:string"/>
+            <xsd:element name="EmployeeId" type="xsd:string"/>
+            <xsd:element name="EmployeeName" type="xsd:string"/>
+            <xsd:element name="RequestDate" type="xsd:dateTime"/>
+            <xsd:element name="TravelDetails" type="trq:TravelDetailsType"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="TravelDetailsType">
+        <xsd:sequence>
+            <xsd:element name="DepartureDate" type="xsd:date"/>
+            <xsd:element name="DepartureCity" type="xsd:string"/>
+            <xsd:element name="DestinationCity" type="xsd:string"/>
+            <xsd:element name="Airline" type="xsd:string"/>
+            <xsd:element name="Hotel" type="xsd:string"/>
+            <xsd:element name="EstimatedTicketCost" type="xsd:decimal"/>
+            <xsd:element name="EstimatedHotelCost" type="xsd:decimal"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

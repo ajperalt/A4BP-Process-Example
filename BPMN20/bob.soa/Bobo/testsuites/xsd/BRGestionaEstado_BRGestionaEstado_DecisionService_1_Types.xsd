@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://xmlns.oracle.com/rules/BRGestionaEstado/BRGestionaEstado_DecisionService_1" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:tns="http://xmlns.oracle.com/rules/BRGestionaEstado/BRGestionaEstado_DecisionService_1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:rules="http://xmlns.oracle.com/bpel/rules" xmlns:ns1="http://www.lucasian.com">
+   <import namespace="http://www.lucasian.com" schemaLocation="../../xsd/GestionaEstadoProducto.xsd"/>
+   <import namespace="http://xmlns.oracle.com/bpel/rules" schemaLocation="DecisionFunctionPrimitiveTypes.xsd"/>
+   <complexType name="parameterList">
+      <sequence>
+         <element ref="ns1:estados"/>
+      </sequence>
+   </complexType>
+   <complexType name="resultList">
+      <sequence/>
+   </complexType>
+</schema>

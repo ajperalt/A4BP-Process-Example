@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.61.92"
+          id="detalleFase"
+          Package="LucasianProDevCrearPlanDeProyecto_LucasianProDevCrearPlanDeProyecto"
+          BeanClass="LucasianProDevCrearPlanDeProyecto_LucasianProDevCrearPlanDeProyecto.detalleFase"
+          isJavaBased="false">
+  <Attribute Name="version" IsUpdateable="0" Type="java.lang.String">
+    <Properties>
+      <CustomProperties>
+        <Property Name="nextSiblingNamespace"
+                  Value="http://www.lucasian.com/faseproyecto"/>
+        <Property Name="nextSibling" Value="comentarios"/>
+        <Property Name="minOccurs" Value="1"/>
+        <Property Name="maxOccurs" Value="1"/>
+        <Property Name="LABEL" Value="Version"/>
+        <Property Name="LeafElement_hint" Value="LeafElement_no_attribute"/>
+        <Property Name="nillable" Value="false"/>
+        <Property Name="originalName" Value="version"/>
+        <Property Name="targetNamespace"
+                  Value="http://www.lucasian.com/faseproyecto"/>
+        <Property Name="type" Value="java.lang.String"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <Attribute Name="comentarios" IsUpdateable="0" Type="java.lang.String">
+    <Properties>
+      <CustomProperties>
+        <Property Name="nextSiblingNamespace"
+                  Value="http://www.lucasian.com/faseproyecto"/>
+        <Property Name="nextSibling" Value="estado"/>
+        <Property Name="minOccurs" Value="1"/>
+        <Property Name="maxOccurs" Value="1"/>
+        <Property Name="LABEL" Value="Comentarios"/>
+        <Property Name="LeafElement_hint" Value="LeafElement_no_attribute"/>
+        <Property Name="nillable" Value="false"/>
+        <Property Name="originalName" Value="comentarios"/>
+        <Property Name="targetNamespace"
+                  Value="http://www.lucasian.com/faseproyecto"/>
+        <Property Name="type" Value="java.lang.String"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <Attribute Name="estado" IsUpdateable="0" Type="java.lang.String">
+    <Properties>
+      <CustomProperties>
+        <Property Name="nextSiblingNamespace"
+                  Value="http://www.lucasian.com/faseproyecto"/>
+        <Property Name="nextSibling" Value="tipo"/>
+        <Property Name="minOccurs" Value="1"/>
+        <Property Name="maxOccurs" Value="1"/>
+        <Property Name="LABEL" Value="Estado"/>
+        <Property Name="LeafElement_hint" Value="LeafElement_no_attribute"/>
+        <Property Name="nillable" Value="false"/>
+        <Property Name="originalName" Value="estado"/>
+        <Property Name="targetNamespace"
+                  Value="http://www.lucasian.com/faseproyecto"/>
+        <Property Name="type" Value="java.lang.String"/>
+        <Property Name="enumeration" Value="[ENPROCESO, TERMINADO]"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <Attribute Name="tipo" IsUpdateable="0" Type="java.lang.String">
+    <Properties>
+      <CustomProperties>
+        <Property Name="nextSiblingNamespace"
+                  Value="http://www.lucasian.com/faseproyecto"/>
+        <Property Name="nextSibling" Value="nombre"/>
+        <Property Name="minOccurs" Value="1"/>
+        <Property Name="maxOccurs" Value="1"/>
+        <Property Name="LABEL" Value="Tipo"/>
+        <Property Name="LeafElement_hint" Value="LeafElement_no_attribute"/>
+        <Property Name="nillable" Value="false"/>
+        <Property Name="originalName" Value="tipo"/>
+        <Property Name="targetNamespace"
+                  Value="http://www.lucasian.com/faseproyecto"/>
+        <Property Name="type" Value="java.lang.String"/>
+        <Property Name="enumeration"
+                  Value="[CONCEPCION, ELABORACION, CONSTRUCCION, TRANSICION]"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <Attribute Name="nombre" IsUpdateable="0" Type="java.lang.String">
+    <Properties>
+      <CustomProperties>
+        <Property Name="nextSiblingNamespace"
+                  Value="http://www.lucasian.com/faseproyecto"/>
+        <Property Name="nextSibling" Value="requireOtraIteracion"/>
+        <Property Name="minOccurs" Value="1"/>
+        <Property Name="maxOccurs" Value="1"/>
+        <Property Name="LABEL" Value="Nombre"/>
+        <Property Name="LeafElement_hint" Value="LeafElement_no_attribute"/>
+        <Property Name="nillable" Value="false"/>
+        <Property Name="originalName" Value="nombre"/>
+        <Property Name="targetNamespace"
+                  Value="http://www.lucasian.com/faseproyecto"/>
+        <Property Name="type" Value="java.lang.String"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <Attribute Name="requireOtraIteracion" IsUpdateable="0"
+             Type="java.lang.Boolean">
+    <Properties>
+      <CustomProperties>
+        <Property Name="nextSiblingNamespace"
+                  Value="http://www.lucasian.com/faseproyecto"/>
+        <Property Name="nextSibling" Value="proyectoId"/>
+        <Property Name="minOccurs" Value="1"/>
+        <Property Name="maxOccurs" Value="1"/>
+        <Property Name="LABEL" Value="Require Otra Iteracion"/>
+        <Property Name="LeafElement_hint" Value="LeafElement_no_attribute"/>
+        <Property Name="nillable" Value="false"/>
+        <Property Name="originalName" Value="requireOtraIteracion"/>
+        <Property Name="targetNamespace"
+                  Value="http://www.lucasian.com/faseproyecto"/>
+        <Property Name="type" Value="java.lang.Boolean"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <Attribute Name="proyectoId" IsUpdateable="0" Type="java.lang.String">
+    <Properties>
+      <CustomProperties>
+        <Property Name="minOccurs" Value="1"/>
+        <Property Name="maxOccurs" Value="1"/>
+        <Property Name="LABEL" Value="Proyecto Id"/>
+        <Property Name="LeafElement_hint" Value="LeafElement_no_attribute"/>
+        <Property Name="nillable" Value="false"/>
+        <Property Name="originalName" Value="proyectoId"/>
+        <Property Name="targetNamespace"
+                  Value="http://www.lucasian.com/faseproyecto"/>
+        <Property Name="type" Value="java.lang.String"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+</JavaBean>

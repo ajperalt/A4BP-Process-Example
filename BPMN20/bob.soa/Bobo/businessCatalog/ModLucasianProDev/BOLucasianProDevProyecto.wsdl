@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?bpmo version="11.1.1.6.0.15.53" build="15.53" fullName="ModLucasianProDev.BOLucasianProDevProyecto" modifiers="268435456"?>
+<!--########################################################################################-->
+<!--####                                                                                ####-->
+<!--####          THIS IS AN AUTO GENERATED FILE. PLEASE DO NOT MANUALLY MODIFY         ####-->
+<!--#### CHANGES TO THIS FILE MAY PRODUCE UNEXPECTED BEHAVIOR AND WOULD BE OVERWRITTEN  ####-->
+<!--####                                                                                ####-->
+<!--########################################################################################-->
+<definitions targetNamespace="http://xmlns.oracle.com/bpm/bpmobject/ModLucasianProDev/BOLucasianProDevProyecto.Interface" name="BOLucasianProDevProyecto" xmlns:oj="http://www.lucasian.com/proyecto"  xmlns:tns="http://xmlns.oracle.com/bpm/bpmobject/ModLucasianProDev/BOLucasianProDevProyecto.Interface"  xmlns:xsd="http://www.w3.org/2001/XMLSchema"  xmlns="http://schemas.xmlsoap.org/wsdl/"  xmlns:bpmo="http://xmlns.oracle.com/bpm/bpmobject/" >
+    <types>
+        <xsd:schema>
+            <xsd:import namespace="http://www.lucasian.com/proyecto" schemaLocation="../../xsd/LucasianProDevProyecto.xsd"/>
+        </xsd:schema>
+    </types>
+    <portType name="BOLucasianProDevProyectoPortType"/>
+    <binding name="BOLucasianProDevProyectoPortTypeBinding" type="tns:BOLucasianProDevProyectoPortType">
+        <bpmo:binding element="oj:ProyectoDesarrollo"/>
+    </binding>
+</definitions>

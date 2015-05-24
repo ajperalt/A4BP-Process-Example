@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.61.92"
+          id="faseProyectoxyfmbwt0"
+          Package="LucasianProDevCrearPlanDeProyecto_LucasianProDevCrearPlanDeProyecto"
+          BeanClass="LucasianProDevCrearPlanDeProyecto_LucasianProDevCrearPlanDeProyecto.faseProyectoxyfmbwt0"
+          isJavaBased="false">
+  <AccessorAttribute id="detalle" IsCollection="true"
+                     BeanClass="LucasianProDevCrearPlanDeProyecto_LucasianProDevCrearPlanDeProyecto.detalleFase"
+                     CollectionBeanClass="LucasianProDevCrearPlanDeProyecto_LucasianProDevCrearPlanDeProyecto.detalleFase_detalle_Operations">
+    <Properties>
+      <Property Name="minOccurs" Value="1"/>
+      <Property Name="maxOccurs" Value="1"/>
+      <Property Name="LABEL" Value="Detalle"/>
+      <Property Name="nillable" Value="false"/>
+      <Property Name="originalName" Value="detalle"/>
+      <Property Name="targetNamespace"
+                Value="http://www.lucasian.com/faseproyecto"/>
+    </Properties>
+  </AccessorAttribute>
+</JavaBean>

@@ -1,0 +1,58 @@
+<?xml version= '1.0' encoding= 'UTF-8' ?>
+<wsdl:definitions
+     name="BPELGestionEstadoCU"
+     targetNamespace="http://xmlns.oracle.com/bob_soa/Bobo/BPELGestionEstadoCU"
+     xmlns:ns1="http://www.lucasian.com"
+     xmlns:plnk="http://schemas.xmlsoap.org/ws/2003/05/partner-link/"
+     xmlns:cor="http://xmlns.oracle.com/bob_soa/Bobo/BPELGestionEstadoCU/correlationset"
+     xmlns:client="http://xmlns.oracle.com/bob_soa/Bobo/BPELGestionEstadoCU"
+     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+     xmlns:bpws="http://schemas.xmlsoap.org/ws/2003/03/business-process/"
+    >
+    <plnk:partnerLinkType name="BPELGestionEstadoCU">
+        <plnk:role name="BPELGestionEstadoCUProvider">
+            <plnk:portType name="client:BPELGestionEstadoCU"/>
+        </plnk:role>
+        <plnk:role name="BPELGestionEstadoCURequester">
+            <plnk:portType name="client:BPELGestionEstadoCUCallback"/>
+        </plnk:role>
+    </plnk:partnerLinkType>
+    <bpws:propertyAlias propertyName="cor:cspropiedad" messageType="client:BPELGestionEstadoCURequestMessage"
+         part="payload" query="/ns1:arg/ns1:idProducto/ns1:idProducto"/>
+    <wsdl:import namespace="http://xmlns.oracle.com/bob_soa/Bobo/BPELGestionEstadoCU/correlationset"
+         location="WSDLs/BPELGestionEstadoCU_properties.wsdl"/>
+    <wsdl:types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://www.lucasian.com" xmlns:plnk="http://schemas.xmlsoap.org/ws/2003/05/partner-link/"
+             xmlns:cor="http://xmlns.oracle.com/bob_soa/Bobo/BPELGestionEstadoCU/correlationset"
+             xmlns:client="http://xmlns.oracle.com/bob_soa/Bobo/BPELGestionEstadoCU" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+             xmlns:bpws="http://schemas.xmlsoap.org/ws/2003/03/business-process/">
+            <import namespace="http://www.lucasian.com" schemaLocation="xsd/GestionProducto.xsd"/>
+        </schema>
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://www.lucasian.com"
+             xmlns:plnk="http://schemas.xmlsoap.org/ws/2003/05/partner-link/" xmlns:client="http://xmlns.oracle.com/bob_soa/Bobo/BPELGestionEstadoCU"
+             xmlns:cor="http://xmlns.oracle.com/bob_soa/Bobo/BPELGestionEstadoCU/correlationset"
+             xmlns:bpws="http://schemas.xmlsoap.org/ws/2003/03/business-process/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+            <xsd:import namespace="http://www.lucasian.com" schemaLocation="xsd/GestionaEstadoProducto.xsd"/>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="BPELGestionEstadoCUResponseMessage">
+        <wsdl:part name="payload" element="ns1:arg"/>
+    </wsdl:message>
+    <wsdl:message name="BPELGestionEstadoCURequestMessage">
+        <wsdl:part name="payload" element="ns1:arg"/>
+    </wsdl:message>
+    <wsdl:portType name="BPELGestionEstadoCUCallback">
+        <wsdl:operation name="processResponse">
+            <wsdl:input message="client:BPELGestionEstadoCUResponseMessage"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:portType name="BPELGestionEstadoCU">
+        <wsdl:operation name="process">
+            <wsdl:input message="client:BPELGestionEstadoCURequestMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="reportaEstado">
+            <wsdl:input message="client:BPELGestionEstadoCURequestMessage"/>
+            <wsdl:output message="client:BPELGestionEstadoCURequestMessage"/>
+        </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

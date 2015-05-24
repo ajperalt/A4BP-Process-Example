@@ -1,0 +1,49 @@
+<?xml version= '1.0' encoding= 'UTF-8' ?>
+<wsdl:definitions
+     name="BPELPR_GestionBOBTTR"
+     targetNamespace="http://xmlns.oracle.com/bob_soa/Bobo/BPELPR_GestionBOBTTR"
+     xmlns:ns1="http://www.lucasian.com/Tarea"
+     xmlns:plnk="http://schemas.xmlsoap.org/ws/2003/05/partner-link/"
+     xmlns:client="http://xmlns.oracle.com/bob_soa/Bobo/BPELPR_GestionBOBTTR"
+     xmlns:cor="http://xmlns.oracle.com/bob_soa/Bobo/BPELPR_GestionBOBTTR/correlationset"
+     xmlns:bpws="http://schemas.xmlsoap.org/ws/2003/03/business-process/"
+     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    >
+    <plnk:partnerLinkType name="BPELPR_GestionBOBTTR">
+        <plnk:role name="BPELPR_GestionBOBTTRProvider">
+            <plnk:portType name="client:BPELPR_GestionBOBTTR"/>
+        </plnk:role>
+        <plnk:role name="BPELPR_GestionBOBTTRRequester">
+            <plnk:portType name="client:BPELPR_GestionBOBTTRCallback"/>
+        </plnk:role>
+    </plnk:partnerLinkType>
+    <bpws:propertyAlias propertyName="cor:propTarea" messageType="client:BPELPR_GestionBOBTTRRequestMessage"
+         part="payload" query="/ns1:Tarea/ns1:tareaId"/>
+    <wsdl:import namespace="http://xmlns.oracle.com/bob_soa/Bobo/BPELPR_GestionBOBTTR/correlationset"
+         location="WSDLs/BPELPR_GestionBOBTTR_properties.wsdl"/>
+    <wsdl:types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema">
+            <import namespace="http://www.lucasian.com/Tarea" schemaLocation="xsd/LucasianProDevTarea.xsd"/>
+        </schema>
+    </wsdl:types>
+    <wsdl:message name="BPELPR_GestionBOBTTRResponseMessage">
+        <wsdl:part name="payload" element="ns1:Tarea"/>
+    </wsdl:message>
+    <wsdl:message name="BPELPR_GestionBOBTTRRequestMessage">
+        <wsdl:part name="payload" element="ns1:Tarea"/>
+    </wsdl:message>
+    <wsdl:portType name="BPELPR_GestionBOBTTRCallback">
+        <wsdl:operation name="processResponse">
+            <wsdl:input message="client:BPELPR_GestionBOBTTRResponseMessage"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:portType name="BPELPR_GestionBOBTTR">
+        <wsdl:operation name="process">
+            <wsdl:input message="client:BPELPR_GestionBOBTTRRequestMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="bobInfoTarea">
+            <wsdl:input message="client:BPELPR_GestionBOBTTRRequestMessage"/>
+            <wsdl:output message="client:BPELPR_GestionBOBTTRRequestMessage"/>
+        </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

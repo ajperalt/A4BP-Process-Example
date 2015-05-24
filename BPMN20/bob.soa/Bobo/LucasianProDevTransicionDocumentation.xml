@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?oracleBPM version="11.1.1.6.0.15.53" fileRevision="20110706"?>
+<processDocumentation xmlns="http://xmlns.oracle.com/bpm/taskMetadataService/processDocumentation">
+    <component name="LucasianProDevTransicion">
+        <topicDocumentations>
+            <topicDocumentation name="LucasianProDevTransicion">
+                <descriptions>
+                    <description locale="en">LucasianProDevTransicion</description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6144476562689">
+                <labels>
+                    <label locale="en">Realizar Manual de instalación</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6144526136468">
+                <labels>
+                    <label locale="en">Manual de Usuario</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6144527395715">
+                <labels>
+                    <label locale="en">Preparar ambiente de pruebas</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6144807847257">
+                <labels>
+                    <label locale="en">Realizar script de migración</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6144819268221">
+                <labels>
+                    <label locale="en">Planeación y correcciones</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6144820497617">
+                <labels>
+                    <label locale="en">Preparar ambiente de producción</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6144825612323">
+                <labels>
+                    <label locale="en">Pruebas de migración</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6144825612713">
+                <labels>
+                    <label locale="en">Migración de datos</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6144828301736">
+                <labels>
+                    <label locale="en">Aceptación de usuarios</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6144828302116">
+                <labels>
+                    <label locale="en">Ejecución casos de prueba</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6144828302421">
+                <labels>
+                    <label locale="en">Preparar datos de prueba</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY614482830262">
+                <labels>
+                    <label locale="en">Ayuda en línea</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6144872939539">
+                <labels>
+                    <label locale="en">Entrenamiento</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6144872940133">
+                <labels>
+                    <label locale="en">Verificación de migración</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6144872940461">
+                <labels>
+                    <label locale="en">Publicación Producción</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6144891474235">
+                <labels>
+                    <label locale="en">REgistros de errores</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6144891474563">
+                <labels>
+                    <label locale="en">Generación de Versión</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="START_EVENT6083598181127">
+                <labels>
+                    <label locale="en">Start</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="END_EVENT608359818116">
+                <labels>
+                    <label locale="en">End</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="PARALLEL_GATEWAY6144516150233">
+                <labels>
+                    <label locale="en">PG</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="PARALLEL_GATEWAY6144517209094">
+                <labels>
+                    <label locale="en">ParallelGateway</label>
+                </labels>
+            </topicDocumentation>
+            <topicDocumentation name="EXCLUSIVE_GATEWAY6144937098930">
+                <labels>
+                    <label locale="en">Existen errores </label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf82"/>
+            <topicDocumentation name="sf169"/>
+            <topicDocumentation name="sf170"/>
+            <topicDocumentation name="sf174"/>
+            <topicDocumentation name="sf175"/>
+            <topicDocumentation name="sf185"/>
+            <topicDocumentation name="sf192"/>
+            <topicDocumentation name="sf193"/>
+            <topicDocumentation name="sf196"/>
+            <topicDocumentation name="sf200"/>
+            <topicDocumentation name="sf202"/>
+            <topicDocumentation name="sf204"/>
+            <topicDocumentation name="sf206"/>
+            <topicDocumentation name="sf208"/>
+            <topicDocumentation name="sf214">
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf234"/>
+            <topicDocumentation name="sf236"/>
+            <topicDocumentation name="sf237"/>
+            <topicDocumentation name="sf239"/>
+            <topicDocumentation name="sf241"/>
+            <topicDocumentation name="sf246"/>
+            <topicDocumentation name="sf251"/>
+            <topicDocumentation name="sf256"/>
+            <topicDocumentation name="sf264"/>
+        </topicDocumentations>
+    </component>
+</processDocumentation>

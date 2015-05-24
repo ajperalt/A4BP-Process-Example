@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?oracleBPM version="12.1.3.0.0.00.00" fileRevision="20120601"?>
+<processDocumentation xmlns="http://xmlns.oracle.com/bpm/taskMetadataService/processDocumentation">
+   <component name="LucasianProDevConcepcion">
+      <topicDocumentations>
+         <topicDocumentation name="LucasianProDevConcepcion">
+            <descriptions>
+               <description locale="en">LucasianProDevConcepcion</description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ABSTRACT_ACTIVITY6118003750074">
+            <labels>
+               <label locale="en">Levantar Proceso de negocio</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ABSTRACT_ACTIVITY6118023157830">
+            <labels>
+               <label locale="en">Socializar plan de proyecto</label>
+            </labels>
+            <descriptions>
+               <description locale="en">Esta actividad implica plan de pruebas y de proyecto</description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ABSTRACT_ACTIVITY6118030208085">
+            <labels>
+               <label locale="en">Definir modelo de casos de uso</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ABSTRACT_ACTIVITY6118037483123">
+            <labels>
+               <label locale="en">Revizar alcance VS contrato</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ABSTRACT_ACTIVITY6118040197132">
+            <labels>
+               <label locale="en">Cierre alcance funcional primario</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ABSTRACT_ACTIVITY6118043147698">
+            <labels>
+               <label locale="en">Definir plan de iteraciones</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ABSTRACT_ACTIVITY6118056358353">
+            <labels>
+               <label locale="en">Crear plan de pruebas</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ABSTRACT_ACTIVITY6117820458965">
+            <labels>
+               <label locale="en">Crear un plan de proyecto</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="START_EVENT6083302605175">
+            <labels>
+               <label locale="en">Start</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="END_EVENT6083302605264">
+            <labels>
+               <label locale="en">End</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="PARALLEL_GATEWAY6118011290794">
+            <labels>
+               <label locale="en">ParallelGateway</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="PARALLEL_GATEWAY6118011510773">
+            <labels>
+               <label locale="en">ParallelGateway</label>
+            </labels>
+         </topicDocumentation>
+         <topicDocumentation name="sf117"/>
+         <topicDocumentation name="sf188"/>
+         <topicDocumentation name="sf192"/>
+         <topicDocumentation name="sf195"/>
+         <topicDocumentation name="sf198"/>
+         <topicDocumentation name="sf200"/>
+         <topicDocumentation name="sf202"/>
+         <topicDocumentation name="sf204"/>
+         <topicDocumentation name="sf206"/>
+         <topicDocumentation name="sf210"/>
+         <topicDocumentation name="sf212"/>
+         <topicDocumentation name="sf131"/>
+      </topicDocumentations>
+   </component>
+</processDocumentation>

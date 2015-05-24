@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--########################################################################################-->
+<!--####                                                                                ####-->
+<!--####          THIS IS AN AUTO GENERATED FILE. PLEASE DO NOT MANUALLY MODIFY         ####-->
+<!--#### CHANGES TO THIS FILE MAY PRODUCE UNEXPECTED BEHAVIOR AND WOULD BE OVERWRITTEN  ####-->
+<!--####                                                                                ####-->
+<!--########################################################################################-->
+<wsdl:definitions targetNamespace="http://xmlns.oracle.com/bpmn/bpmnProcess/Bobo" xmlns:tns2="http://xmlns.oracle.com/bpmn/bpmnProcess/CUCambiaDeEstado"  xmlns:xsd="http://www.w3.org/2001/XMLSchema"  xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"  xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/"  xmlns:tns4="http://xmlns.oracle.com/bob_soa/Bobo/BPELGestionEstadoCU"  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"  xmlns:tns="http://xmlns.oracle.com/bpmn/bpmnProcess/Bobo"  xmlns:tns3="http://xmlns.oracle.com/bob_soa/Bobo/BPELGestionEstadoCU/correlationset"  xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" >
+    <vprop:property name="idCU" type="xsd:string"/>
+    <vprop:propertyAlias propertyName="tns:idCU" part="parameters" messageType="tns2:SolicitarEscuchaCambioCU">
+        <vprop:query xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns3="http://xmlns.oracle.com/bob_soa/Bobo/BPELGestionEstadoCU" xmlns:ns="http://xmlns.oracle.com/bpmn/bpmnProcess/CUCambiaDeEstado" xmlns:tns4="http://xmlns.oracle.com/bpmn/bpmnProcess/CUCambiaDeEstado" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://xmlns.oracle.com/bpmn/bpmnProcess/Bobo" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns2="http://xmlns.oracle.com/bpmn/bpmnProcess/CUCambiaDeEstado" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://xmlns.oracle.com/bpm/bpmobject/ObjBOB/ObjCU">
+            /ns:SolicitarEscuchaCambioCU/ns1:ObjCU/ns1:idCU
+        </vprop:query>
+    </vprop:propertyAlias>
+    <vprop:propertyAlias propertyName="tns3:cspropiedad" part="payload" messageType="tns4:BPELGestionEstadoCURequestMessage">
+        <vprop:query xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:plnk="http://schemas.xmlsoap.org/ws/2003/05/partner-link/" xmlns:cor="http://xmlns.oracle.com/bob_soa/Bobo/BPELGestionEstadoCU/correlationset" xmlns:tns3="http://xmlns.oracle.com/bob_soa/Bobo/BPELGestionEstadoCU" xmlns:tns4="http://xmlns.oracle.com/bpmn/bpmnProcess/CUCambiaDeEstado" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:bpws="http://schemas.xmlsoap.org/ws/2003/03/business-process/" xmlns:tns="http://xmlns.oracle.com/bpmn/bpmnProcess/Bobo" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:client="http://xmlns.oracle.com/bob_soa/Bobo/BPELGestionEstadoCU" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns2="http://xmlns.oracle.com/bob_soa/Bobo/BPELGestionEstadoCU/correlationset" xmlns:ns1="http://www.lucasian.com" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/">
+            /ns1:arg/ns1:idProducto/ns1:idProducto
+        </vprop:query>
+    </vprop:propertyAlias>
+</wsdl:definitions>

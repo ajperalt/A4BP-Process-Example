@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<sensors targetNamespace="http://xmlns.oracle.com/bob_soa/Bobo/BPELGestionEstadoCU" xmlns="http://xmlns.oracle.com/bpel/sensor" xmlns:tns="http://xmlns.oracle.com/bob_soa/Bobo/BPELGestionEstadoCU" xmlns:pc="http://xmlns.oracle.com/bpel/sensor" xmlns:ns1="http://www.lucasian.com">
+   <sensor sensorName="ASCambioEstadoCU" classname="oracle.tip.pc.services.reports.dca.agents.BpelActivitySensorAgent" kind="activity" target="MarcarRegistroSensor">
+      <activityConfig evalTime="completion">
+         <variable outputDataType="arg" outputNamespace="http://www.lucasian.com" target="$nuevoEstadoOutputVariable/payload/ns1:arg"/>
+      </activityConfig>
+   </sensor>
+</sensors>

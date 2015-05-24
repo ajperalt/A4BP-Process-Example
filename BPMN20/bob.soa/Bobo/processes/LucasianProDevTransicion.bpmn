@@ -1,0 +1,2484 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<definitions fileRevision="20110706" version="11.1.1.6.0.15.53" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:ns2="http://xmlns.oracle.com/bpm/OracleExtensions" xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:ns4="http://www.omg.org/spec/DD/20100524/DC" xmlns:ns3="http://www.omg.org/spec/DD/20100524/DI" xmlns:ns5="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <process processType="Public" isExecutable="true" name="LucasianProDevTransicion" id="LucasianProDevTransicion">
+        <extensionElements>
+            <ns2:OracleExtensions>
+                <ns2:FeatureSet>
+                    <ns2:BooleanFeature value="false" name="atomic"/>
+                    <ns2:BooleanFeature value="false" name="instanceScreenflow"/>
+                    <ns2:BooleanFeature value="true" name="relative-coordinates"/>
+                    <ns2:BooleanFeature value="true" name="sharePredefineVariables"/>
+                    <ns2:BooleanFeature value="true" name="suspendInstanceOnDataAssociationError"/>
+                    <ns2:StringFeature value="" name="ANALYTICS_VIEW_IDENTIFIER"/>
+                    <ns2:StringFeature value="" name="AUTHOR"/>
+                    <ns2:StringFeature value="default" name="GreedyExecutionMode"/>
+                    <ns2:StringFeature value="http://xmlns.oracle.com/bpmn/bpmnProcess/LucasianProDevTransicion" name="NAMESPACE"/>
+                    <ns2:StringFeature value="PROJECT_DEFAULT" name="generatesEvents"/>
+                    <ns2:StringFeature value="HORIZONTAL_LAYOUT" name="process-layout"/>
+                    <ns2:StringFeature value="1.0" name="scale"/>
+                    <ns2:StringFeature value="REGULAR" name="sealType"/>
+                </ns2:FeatureSet>
+                <ns2:Conversations>
+                    <ns2:Conversation id="CONVERSATION61681123868" type="define_interface">
+                        <ns2:DefineInterfaceConversationDefinition exposeSOAPService="true"/>
+                    </ns2:Conversation>
+                </ns2:Conversations>
+            </ns2:OracleExtensions>
+        </extensionElements>
+        <laneSet>
+            <lane name="Funcionario" id="lane0">
+                <extensionElements>
+                    <ns2:OracleExtensions>
+                        <ns2:GraphicsAttributes backgroundColor="-1761607681">
+                            <ns2:Position x="0" y="0"/>
+                            <ns2:Size width="650" height="0"/>
+                        </ns2:GraphicsAttributes>
+                        <ns2:LaneAttributes roleId="Funcionario"/>
+                        <ns2:FeatureSet/>
+                    </ns2:OracleExtensions>
+                </extensionElements>
+            </lane>
+        </laneSet>
+        <callActivity calledElement="PRGestionBOBTTR" isForCompensation="false" name="Realizar Manual de instalación" id="ABSTRACT_ACTIVITY6144476562689">
+            <extensionElements>
+                <ns2:OracleExtensions>
+                    <ns2:GraphicsAttributes>
+                        <ns2:Position x="360" y="99"/>
+                    </ns2:GraphicsAttributes>
+                    <ns2:FeatureSet>
+                        <ns2:BooleanFeature value="false" name="inputValidation"/>
+                        <ns2:BooleanFeature value="false" name="isDraft"/>
+                        <ns2:BooleanFeature value="false" name="outputValidation"/>
+                        <ns2:StringFeature value="PROCESS_DEFAULT" name="generatesEvents"/>
+                        <ns2:StringFeature value="PARALLEL_GATEWAY6144516150233" name="level"/>
+                        <ns2:StringFeature value="PRGestionBOBTTR" name="relatedProcessName"/>
+                        <ns2:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
+                    </ns2:FeatureSet>
+                    <ns2:LogHandlers/>
+                </ns2:OracleExtensions>
+            </extensionElements>
+            <ioSpecification>
+                <dataInput name="inBOLucasianProDevTarea" id="inBOLucasianProDevTarea">
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:TypeRef namespace="http://www.lucasian.com/Tarea" element="Tarea" isArray="false"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                </dataInput>
+                <dataOutput name="outLucasianProDevTarea" id="outLucasianProDevTarea">
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:TypeRef namespace="http://www.lucasian.com/Tarea" element="Tarea" isArray="false"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                </dataOutput>
+                <inputSet id="ABSTRACT_ACTIVITY6144476562689_uniqueInputSet">
+                    <dataInputRefs>inBOLucasianProDevTarea</dataInputRefs>
+                </inputSet>
+                <outputSet id="ABSTRACT_ACTIVITY6144476562689_uniqueOutputSet">
+                    <dataOutputRefs>outLucasianProDevTarea</dataOutputRefs>
+                </outputSet>
+            </ioSpecification>
+            <dataInputAssociation>
+                <extensionElements>
+                    <ns2:OracleExtensions/>
+                </extensionElements>
+                <sourceRef>boLucasianProDevFase</sourceRef>
+                <targetRef>inBOLucasianProDevTarea</targetRef>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getProcessInstanceAttribute('activityName')
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:nombre
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/faseproyecto" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:proyectoId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:proyectoId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/faseproyecto" xmlns:bpmn="http://www.omg.org/bpmn20">concat(bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:proyectoId, ':', bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:nombre, ':', bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:version, ':', bpmn:getProcessInstanceAttribute('activityName'))
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:tareaId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+            </dataInputAssociation>
+        </callActivity>
+        <callActivity calledElement="PRGestionBOBTTR" isForCompensation="false" name="Manual de Usuario" id="ABSTRACT_ACTIVITY6144526136468">
+            <extensionElements>
+                <ns2:OracleExtensions>
+                    <ns2:GraphicsAttributes>
+                        <ns2:Position x="481" y="98"/>
+                    </ns2:GraphicsAttributes>
+                    <ns2:FeatureSet>
+                        <ns2:BooleanFeature value="false" name="inputValidation"/>
+                        <ns2:BooleanFeature value="false" name="isDraft"/>
+                        <ns2:BooleanFeature value="false" name="outputValidation"/>
+                        <ns2:StringFeature value="PROCESS_DEFAULT" name="generatesEvents"/>
+                        <ns2:StringFeature value="PARALLEL_GATEWAY6144516150233" name="level"/>
+                        <ns2:StringFeature value="PRGestionBOBTTR" name="relatedProcessName"/>
+                        <ns2:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
+                    </ns2:FeatureSet>
+                    <ns2:LogHandlers/>
+                </ns2:OracleExtensions>
+            </extensionElements>
+            <ioSpecification>
+                <dataInput name="inBOLucasianProDevTarea" id="inBOLucasianProDevTarea">
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:TypeRef namespace="http://www.lucasian.com/Tarea" element="Tarea" isArray="false"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                </dataInput>
+                <dataOutput name="outLucasianProDevTarea" id="outLucasianProDevTarea">
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:TypeRef namespace="http://www.lucasian.com/Tarea" element="Tarea" isArray="false"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                </dataOutput>
+                <inputSet id="ABSTRACT_ACTIVITY6144526136468_uniqueInputSet">
+                    <dataInputRefs>inBOLucasianProDevTarea</dataInputRefs>
+                </inputSet>
+                <outputSet id="ABSTRACT_ACTIVITY6144526136468_uniqueOutputSet">
+                    <dataOutputRefs>outLucasianProDevTarea</dataOutputRefs>
+                </outputSet>
+            </ioSpecification>
+            <dataInputAssociation>
+                <extensionElements>
+                    <ns2:OracleExtensions/>
+                </extensionElements>
+                <sourceRef>boLucasianProDevFase</sourceRef>
+                <targetRef>inBOLucasianProDevTarea</targetRef>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getProcessInstanceAttribute('activityName')
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:nombre
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/faseproyecto" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:proyectoId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:proyectoId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/faseproyecto" xmlns:bpmn="http://www.omg.org/bpmn20">concat(bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:proyectoId, ':', bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:nombre, ':', bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:version, ':', bpmn:getProcessInstanceAttribute('activityName'))
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:tareaId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+            </dataInputAssociation>
+        </callActivity>
+        <callActivity calledElement="PRGestionBOBTTR" isForCompensation="false" name="Preparar ambiente de pruebas" id="ABSTRACT_ACTIVITY6144527395715">
+            <extensionElements>
+                <ns2:OracleExtensions>
+                    <ns2:GraphicsAttributes>
+                        <ns2:Position x="359" y="325"/>
+                    </ns2:GraphicsAttributes>
+                    <ns2:FeatureSet>
+                        <ns2:BooleanFeature value="false" name="inputValidation"/>
+                        <ns2:BooleanFeature value="false" name="isDraft"/>
+                        <ns2:BooleanFeature value="false" name="outputValidation"/>
+                        <ns2:StringFeature value="PROCESS_DEFAULT" name="generatesEvents"/>
+                        <ns2:StringFeature value="PARALLEL_GATEWAY6144516150233" name="level"/>
+                        <ns2:StringFeature value="PRGestionBOBTTR" name="relatedProcessName"/>
+                        <ns2:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
+                    </ns2:FeatureSet>
+                    <ns2:LogHandlers/>
+                </ns2:OracleExtensions>
+            </extensionElements>
+            <ioSpecification>
+                <dataInput name="inBOLucasianProDevTarea" id="inBOLucasianProDevTarea">
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:TypeRef namespace="http://www.lucasian.com/Tarea" element="Tarea" isArray="false"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                </dataInput>
+                <dataOutput name="outLucasianProDevTarea" id="outLucasianProDevTarea">
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:TypeRef namespace="http://www.lucasian.com/Tarea" element="Tarea" isArray="false"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                </dataOutput>
+                <inputSet id="ABSTRACT_ACTIVITY6144527395715_uniqueInputSet">
+                    <dataInputRefs>inBOLucasianProDevTarea</dataInputRefs>
+                </inputSet>
+                <outputSet id="ABSTRACT_ACTIVITY6144527395715_uniqueOutputSet">
+                    <dataOutputRefs>outLucasianProDevTarea</dataOutputRefs>
+                </outputSet>
+            </ioSpecification>
+            <dataInputAssociation>
+                <extensionElements>
+                    <ns2:OracleExtensions/>
+                </extensionElements>
+                <sourceRef>boLucasianProDevFase</sourceRef>
+                <targetRef>inBOLucasianProDevTarea</targetRef>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getProcessInstanceAttribute('activityName')
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:nombre
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/faseproyecto" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:proyectoId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:proyectoId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/faseproyecto" xmlns:bpmn="http://www.omg.org/bpmn20">concat(bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:proyectoId, ':', bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:nombre, ':', bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:version, ':', bpmn:getProcessInstanceAttribute('activityName'))
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:tareaId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+            </dataInputAssociation>
+        </callActivity>
+        <callActivity calledElement="PRGestionBOBTTR" isForCompensation="false" name="Realizar script de migración" id="ABSTRACT_ACTIVITY6144807847257">
+            <extensionElements>
+                <ns2:OracleExtensions>
+                    <ns2:GraphicsAttributes>
+                        <ns2:Position x="358" y="217"/>
+                    </ns2:GraphicsAttributes>
+                    <ns2:FeatureSet>
+                        <ns2:BooleanFeature value="false" name="inputValidation"/>
+                        <ns2:BooleanFeature value="false" name="isDraft"/>
+                        <ns2:BooleanFeature value="false" name="outputValidation"/>
+                        <ns2:StringFeature value="PROCESS_DEFAULT" name="generatesEvents"/>
+                        <ns2:StringFeature value="PARALLEL_GATEWAY6144516150233" name="level"/>
+                        <ns2:StringFeature value="PRGestionBOBTTR" name="relatedProcessName"/>
+                        <ns2:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
+                    </ns2:FeatureSet>
+                    <ns2:LogHandlers/>
+                </ns2:OracleExtensions>
+            </extensionElements>
+            <ioSpecification>
+                <dataInput name="inBOLucasianProDevTarea" id="inBOLucasianProDevTarea">
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:TypeRef namespace="http://www.lucasian.com/Tarea" element="Tarea" isArray="false"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                </dataInput>
+                <dataOutput name="outLucasianProDevTarea" id="outLucasianProDevTarea">
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:TypeRef namespace="http://www.lucasian.com/Tarea" element="Tarea" isArray="false"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                </dataOutput>
+                <inputSet id="ABSTRACT_ACTIVITY6144807847257_uniqueInputSet">
+                    <dataInputRefs>inBOLucasianProDevTarea</dataInputRefs>
+                </inputSet>
+                <outputSet id="ABSTRACT_ACTIVITY6144807847257_uniqueOutputSet">
+                    <dataOutputRefs>outLucasianProDevTarea</dataOutputRefs>
+                </outputSet>
+            </ioSpecification>
+            <dataInputAssociation>
+                <extensionElements>
+                    <ns2:OracleExtensions/>
+                </extensionElements>
+                <sourceRef>boLucasianProDevFase</sourceRef>
+                <targetRef>inBOLucasianProDevTarea</targetRef>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getProcessInstanceAttribute('activityName')
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:nombre
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/faseproyecto" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:proyectoId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:proyectoId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/faseproyecto" xmlns:bpmn="http://www.omg.org/bpmn20">concat(bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:proyectoId, ':', bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:nombre, ':', bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:version, ':', bpmn:getProcessInstanceAttribute('activityName'))
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:tareaId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+            </dataInputAssociation>
+        </callActivity>
+        <callActivity calledElement="PRGestionBOBTTR" isForCompensation="false" name="Planeación y correcciones" id="ABSTRACT_ACTIVITY6144819268221">
+            <extensionElements>
+                <ns2:OracleExtensions>
+                    <ns2:GraphicsAttributes>
+                        <ns2:Position x="915" y="517"/>
+                    </ns2:GraphicsAttributes>
+                    <ns2:FeatureSet>
+                        <ns2:BooleanFeature value="false" name="inputValidation"/>
+                        <ns2:BooleanFeature value="false" name="isDraft"/>
+                        <ns2:BooleanFeature value="false" name="outputValidation"/>
+                        <ns2:StringFeature value="PROCESS_DEFAULT" name="generatesEvents"/>
+                        <ns2:StringFeature value="PARALLEL_GATEWAY6144516150233" name="level"/>
+                        <ns2:StringFeature value="PRGestionBOBTTR" name="relatedProcessName"/>
+                        <ns2:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
+                    </ns2:FeatureSet>
+                    <ns2:LogHandlers/>
+                </ns2:OracleExtensions>
+            </extensionElements>
+            <ioSpecification>
+                <dataInput name="inBOLucasianProDevTarea" id="inBOLucasianProDevTarea">
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:TypeRef namespace="http://www.lucasian.com/Tarea" element="Tarea" isArray="false"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                </dataInput>
+                <dataOutput name="outLucasianProDevTarea" id="outLucasianProDevTarea">
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:TypeRef namespace="http://www.lucasian.com/Tarea" element="Tarea" isArray="false"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                </dataOutput>
+                <inputSet id="ABSTRACT_ACTIVITY6144819268221_uniqueInputSet">
+                    <dataInputRefs>inBOLucasianProDevTarea</dataInputRefs>
+                </inputSet>
+                <outputSet id="ABSTRACT_ACTIVITY6144819268221_uniqueOutputSet">
+                    <dataOutputRefs>outLucasianProDevTarea</dataOutputRefs>
+                </outputSet>
+            </ioSpecification>
+            <dataInputAssociation>
+                <extensionElements>
+                    <ns2:OracleExtensions/>
+                </extensionElements>
+                <sourceRef>boLucasianProDevFase</sourceRef>
+                <targetRef>inBOLucasianProDevTarea</targetRef>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getProcessInstanceAttribute('activityName')
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:nombre
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/faseproyecto" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:proyectoId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:proyectoId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/faseproyecto" xmlns:bpmn="http://www.omg.org/bpmn20">concat(bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:proyectoId, ':', bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:nombre, ':', bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:version, ':', bpmn:getProcessInstanceAttribute('activityName'))
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:tareaId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+            </dataInputAssociation>
+        </callActivity>
+        <callActivity calledElement="PRGestionBOBTTR" isForCompensation="false" name="Preparar ambiente de producción" id="ABSTRACT_ACTIVITY6144820497617">
+            <extensionElements>
+                <ns2:OracleExtensions>
+                    <ns2:GraphicsAttributes>
+                        <ns2:Position x="1036" y="333"/>
+                    </ns2:GraphicsAttributes>
+                    <ns2:FeatureSet>
+                        <ns2:BooleanFeature value="false" name="inputValidation"/>
+                        <ns2:BooleanFeature value="false" name="isDraft"/>
+                        <ns2:BooleanFeature value="false" name="outputValidation"/>
+                        <ns2:StringFeature value="PROCESS_DEFAULT" name="generatesEvents"/>
+                        <ns2:StringFeature value="PARALLEL_GATEWAY6144516150233" name="level"/>
+                        <ns2:StringFeature value="PRGestionBOBTTR" name="relatedProcessName"/>
+                        <ns2:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
+                    </ns2:FeatureSet>
+                    <ns2:LogHandlers/>
+                </ns2:OracleExtensions>
+            </extensionElements>
+            <ioSpecification>
+                <dataInput name="inBOLucasianProDevTarea" id="inBOLucasianProDevTarea">
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:TypeRef namespace="http://www.lucasian.com/Tarea" element="Tarea" isArray="false"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                </dataInput>
+                <dataOutput name="outLucasianProDevTarea" id="outLucasianProDevTarea">
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:TypeRef namespace="http://www.lucasian.com/Tarea" element="Tarea" isArray="false"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                </dataOutput>
+                <inputSet id="ABSTRACT_ACTIVITY6144820497617_uniqueInputSet">
+                    <dataInputRefs>inBOLucasianProDevTarea</dataInputRefs>
+                </inputSet>
+                <outputSet id="ABSTRACT_ACTIVITY6144820497617_uniqueOutputSet">
+                    <dataOutputRefs>outLucasianProDevTarea</dataOutputRefs>
+                </outputSet>
+            </ioSpecification>
+            <dataInputAssociation>
+                <extensionElements>
+                    <ns2:OracleExtensions/>
+                </extensionElements>
+                <sourceRef>boLucasianProDevFase</sourceRef>
+                <targetRef>inBOLucasianProDevTarea</targetRef>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getProcessInstanceAttribute('activityName')
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:nombre
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/faseproyecto" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:proyectoId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:proyectoId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/faseproyecto" xmlns:bpmn="http://www.omg.org/bpmn20">concat(bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:proyectoId, ':', bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:nombre, ':', bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:version, ':', bpmn:getProcessInstanceAttribute('activityName'))
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:tareaId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+            </dataInputAssociation>
+        </callActivity>
+        <callActivity calledElement="PRGestionBOBTTR" isForCompensation="false" name="Pruebas de migración" id="ABSTRACT_ACTIVITY6144825612323">
+            <extensionElements>
+                <ns2:OracleExtensions>
+                    <ns2:GraphicsAttributes>
+                        <ns2:Position x="484" y="218"/>
+                    </ns2:GraphicsAttributes>
+                    <ns2:FeatureSet>
+                        <ns2:BooleanFeature value="false" name="inputValidation"/>
+                        <ns2:BooleanFeature value="false" name="isDraft"/>
+                        <ns2:BooleanFeature value="false" name="outputValidation"/>
+                        <ns2:StringFeature value="PROCESS_DEFAULT" name="generatesEvents"/>
+                        <ns2:StringFeature value="PARALLEL_GATEWAY6144516150233" name="level"/>
+                        <ns2:StringFeature value="PRGestionBOBTTR" name="relatedProcessName"/>
+                        <ns2:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
+                    </ns2:FeatureSet>
+                    <ns2:LogHandlers/>
+                </ns2:OracleExtensions>
+            </extensionElements>
+            <ioSpecification>
+                <dataInput name="inBOLucasianProDevTarea" id="inBOLucasianProDevTarea">
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:TypeRef namespace="http://www.lucasian.com/Tarea" element="Tarea" isArray="false"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                </dataInput>
+                <dataOutput name="outLucasianProDevTarea" id="outLucasianProDevTarea">
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:TypeRef namespace="http://www.lucasian.com/Tarea" element="Tarea" isArray="false"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                </dataOutput>
+                <inputSet id="ABSTRACT_ACTIVITY6144825612323_uniqueInputSet">
+                    <dataInputRefs>inBOLucasianProDevTarea</dataInputRefs>
+                </inputSet>
+                <outputSet id="ABSTRACT_ACTIVITY6144825612323_uniqueOutputSet">
+                    <dataOutputRefs>outLucasianProDevTarea</dataOutputRefs>
+                </outputSet>
+            </ioSpecification>
+            <dataInputAssociation>
+                <extensionElements>
+                    <ns2:OracleExtensions/>
+                </extensionElements>
+                <sourceRef>boLucasianProDevFase</sourceRef>
+                <targetRef>inBOLucasianProDevTarea</targetRef>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getProcessInstanceAttribute('activityName')
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:nombre
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/faseproyecto" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:proyectoId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:proyectoId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/faseproyecto" xmlns:bpmn="http://www.omg.org/bpmn20">concat(bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:proyectoId, ':', bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:nombre, ':', bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:version, ':', bpmn:getProcessInstanceAttribute('activityName'))
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:tareaId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+            </dataInputAssociation>
+        </callActivity>
+        <callActivity calledElement="PRGestionBOBTTR" isForCompensation="false" name="Migración de datos" id="ABSTRACT_ACTIVITY6144825612713">
+            <extensionElements>
+                <ns2:OracleExtensions>
+                    <ns2:GraphicsAttributes>
+                        <ns2:Position x="720" y="220"/>
+                    </ns2:GraphicsAttributes>
+                    <ns2:FeatureSet>
+                        <ns2:BooleanFeature value="false" name="inputValidation"/>
+                        <ns2:BooleanFeature value="false" name="isDraft"/>
+                        <ns2:BooleanFeature value="false" name="outputValidation"/>
+                        <ns2:StringFeature value="PROCESS_DEFAULT" name="generatesEvents"/>
+                        <ns2:StringFeature value="PARALLEL_GATEWAY6144516150233" name="level"/>
+                        <ns2:StringFeature value="PRGestionBOBTTR" name="relatedProcessName"/>
+                        <ns2:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
+                    </ns2:FeatureSet>
+                    <ns2:LogHandlers/>
+                </ns2:OracleExtensions>
+            </extensionElements>
+            <ioSpecification>
+                <dataInput name="inBOLucasianProDevTarea" id="inBOLucasianProDevTarea">
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:TypeRef namespace="http://www.lucasian.com/Tarea" element="Tarea" isArray="false"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                </dataInput>
+                <dataOutput name="outLucasianProDevTarea" id="outLucasianProDevTarea">
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:TypeRef namespace="http://www.lucasian.com/Tarea" element="Tarea" isArray="false"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                </dataOutput>
+                <inputSet id="ABSTRACT_ACTIVITY6144825612713_uniqueInputSet">
+                    <dataInputRefs>inBOLucasianProDevTarea</dataInputRefs>
+                </inputSet>
+                <outputSet id="ABSTRACT_ACTIVITY6144825612713_uniqueOutputSet">
+                    <dataOutputRefs>outLucasianProDevTarea</dataOutputRefs>
+                </outputSet>
+            </ioSpecification>
+            <dataInputAssociation>
+                <extensionElements>
+                    <ns2:OracleExtensions/>
+                </extensionElements>
+                <sourceRef>boLucasianProDevFase</sourceRef>
+                <targetRef>inBOLucasianProDevTarea</targetRef>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getProcessInstanceAttribute('activityName')
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:nombre
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/faseproyecto" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:proyectoId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:proyectoId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/faseproyecto" xmlns:bpmn="http://www.omg.org/bpmn20">concat(bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:proyectoId, ':', bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:nombre, ':', bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:version, ':', bpmn:getProcessInstanceAttribute('activityName'))
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:tareaId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+            </dataInputAssociation>
+        </callActivity>
+        <callActivity calledElement="PRGestionBOBTTR" isForCompensation="false" name="Aceptación de usuarios" id="ABSTRACT_ACTIVITY6144828301736">
+            <extensionElements>
+                <ns2:OracleExtensions>
+                    <ns2:GraphicsAttributes>
+                        <ns2:Position x="915" y="334"/>
+                    </ns2:GraphicsAttributes>
+                    <ns2:FeatureSet>
+                        <ns2:BooleanFeature value="false" name="inputValidation"/>
+                        <ns2:BooleanFeature value="false" name="isDraft"/>
+                        <ns2:BooleanFeature value="false" name="outputValidation"/>
+                        <ns2:StringFeature value="PROCESS_DEFAULT" name="generatesEvents"/>
+                        <ns2:StringFeature value="PARALLEL_GATEWAY6144516150233" name="level"/>
+                        <ns2:StringFeature value="PRGestionBOBTTR" name="relatedProcessName"/>
+                        <ns2:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
+                    </ns2:FeatureSet>
+                    <ns2:LogHandlers/>
+                </ns2:OracleExtensions>
+            </extensionElements>
+            <ioSpecification>
+                <dataInput name="inBOLucasianProDevTarea" id="inBOLucasianProDevTarea">
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:TypeRef namespace="http://www.lucasian.com/Tarea" element="Tarea" isArray="false"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                </dataInput>
+                <dataOutput name="outLucasianProDevTarea" id="outLucasianProDevTarea">
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:TypeRef namespace="http://www.lucasian.com/Tarea" element="Tarea" isArray="false"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                </dataOutput>
+                <inputSet id="ABSTRACT_ACTIVITY6144828301736_uniqueInputSet">
+                    <dataInputRefs>inBOLucasianProDevTarea</dataInputRefs>
+                </inputSet>
+                <outputSet id="ABSTRACT_ACTIVITY6144828301736_uniqueOutputSet">
+                    <dataOutputRefs>outLucasianProDevTarea</dataOutputRefs>
+                </outputSet>
+            </ioSpecification>
+            <dataInputAssociation>
+                <extensionElements>
+                    <ns2:OracleExtensions/>
+                </extensionElements>
+                <sourceRef>boLucasianProDevFase</sourceRef>
+                <targetRef>inBOLucasianProDevTarea</targetRef>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getProcessInstanceAttribute('activityName')
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:nombre
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/faseproyecto" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:proyectoId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:proyectoId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/faseproyecto" xmlns:bpmn="http://www.omg.org/bpmn20">concat(bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:proyectoId, ':', bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:nombre, ':', bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:version, ':', bpmn:getProcessInstanceAttribute('activityName'))
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:tareaId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+            </dataInputAssociation>
+        </callActivity>
+        <callActivity calledElement="PRGestionBOBTTR" isForCompensation="false" name="Ejecución casos de prueba" id="ABSTRACT_ACTIVITY6144828302116">
+            <extensionElements>
+                <ns2:OracleExtensions>
+                    <ns2:GraphicsAttributes>
+                        <ns2:Position x="602" y="330"/>
+                    </ns2:GraphicsAttributes>
+                    <ns2:FeatureSet>
+                        <ns2:BooleanFeature value="false" name="inputValidation"/>
+                        <ns2:BooleanFeature value="false" name="isDraft"/>
+                        <ns2:BooleanFeature value="false" name="outputValidation"/>
+                        <ns2:StringFeature value="PROCESS_DEFAULT" name="generatesEvents"/>
+                        <ns2:StringFeature value="PARALLEL_GATEWAY6144516150233" name="level"/>
+                        <ns2:StringFeature value="PRGestionBOBTTR" name="relatedProcessName"/>
+                        <ns2:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
+                    </ns2:FeatureSet>
+                    <ns2:LogHandlers/>
+                </ns2:OracleExtensions>
+            </extensionElements>
+            <ioSpecification>
+                <dataInput name="inBOLucasianProDevTarea" id="inBOLucasianProDevTarea">
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:TypeRef namespace="http://www.lucasian.com/Tarea" element="Tarea" isArray="false"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                </dataInput>
+                <dataOutput name="outLucasianProDevTarea" id="outLucasianProDevTarea">
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:TypeRef namespace="http://www.lucasian.com/Tarea" element="Tarea" isArray="false"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                </dataOutput>
+                <inputSet id="ABSTRACT_ACTIVITY6144828302116_uniqueInputSet">
+                    <dataInputRefs>inBOLucasianProDevTarea</dataInputRefs>
+                </inputSet>
+                <outputSet id="ABSTRACT_ACTIVITY6144828302116_uniqueOutputSet">
+                    <dataOutputRefs>outLucasianProDevTarea</dataOutputRefs>
+                </outputSet>
+            </ioSpecification>
+            <dataInputAssociation>
+                <extensionElements>
+                    <ns2:OracleExtensions/>
+                </extensionElements>
+                <sourceRef>boLucasianProDevFase</sourceRef>
+                <targetRef>inBOLucasianProDevTarea</targetRef>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getProcessInstanceAttribute('activityName')
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:nombre
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/faseproyecto" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:proyectoId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:proyectoId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/faseproyecto" xmlns:bpmn="http://www.omg.org/bpmn20">concat(bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:proyectoId, ':', bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:nombre, ':', bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:version, ':', bpmn:getProcessInstanceAttribute('activityName'))
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:tareaId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+            </dataInputAssociation>
+        </callActivity>
+        <callActivity calledElement="PRGestionBOBTTR" isForCompensation="false" name="Preparar datos de prueba" id="ABSTRACT_ACTIVITY6144828302421">
+            <extensionElements>
+                <ns2:OracleExtensions>
+                    <ns2:GraphicsAttributes>
+                        <ns2:Position x="486" y="330"/>
+                    </ns2:GraphicsAttributes>
+                    <ns2:FeatureSet>
+                        <ns2:BooleanFeature value="false" name="inputValidation"/>
+                        <ns2:BooleanFeature value="false" name="isDraft"/>
+                        <ns2:BooleanFeature value="false" name="outputValidation"/>
+                        <ns2:StringFeature value="PROCESS_DEFAULT" name="generatesEvents"/>
+                        <ns2:StringFeature value="PARALLEL_GATEWAY6144516150233" name="level"/>
+                        <ns2:StringFeature value="PRGestionBOBTTR" name="relatedProcessName"/>
+                        <ns2:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
+                    </ns2:FeatureSet>
+                    <ns2:LogHandlers/>
+                </ns2:OracleExtensions>
+            </extensionElements>
+            <ioSpecification>
+                <dataInput name="inBOLucasianProDevTarea" id="inBOLucasianProDevTarea">
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:TypeRef namespace="http://www.lucasian.com/Tarea" element="Tarea" isArray="false"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                </dataInput>
+                <dataOutput name="outLucasianProDevTarea" id="outLucasianProDevTarea">
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:TypeRef namespace="http://www.lucasian.com/Tarea" element="Tarea" isArray="false"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                </dataOutput>
+                <inputSet id="ABSTRACT_ACTIVITY6144828302421_uniqueInputSet">
+                    <dataInputRefs>inBOLucasianProDevTarea</dataInputRefs>
+                </inputSet>
+                <outputSet id="ABSTRACT_ACTIVITY6144828302421_uniqueOutputSet">
+                    <dataOutputRefs>outLucasianProDevTarea</dataOutputRefs>
+                </outputSet>
+            </ioSpecification>
+            <dataInputAssociation>
+                <extensionElements>
+                    <ns2:OracleExtensions/>
+                </extensionElements>
+                <sourceRef>boLucasianProDevFase</sourceRef>
+                <targetRef>inBOLucasianProDevTarea</targetRef>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getProcessInstanceAttribute('activityName')
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:nombre
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/faseproyecto" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:proyectoId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:proyectoId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/faseproyecto" xmlns:bpmn="http://www.omg.org/bpmn20">concat(bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:proyectoId, ':', bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:nombre, ':', bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:version, ':', bpmn:getProcessInstanceAttribute('activityName'))
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:tareaId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+            </dataInputAssociation>
+        </callActivity>
+        <callActivity calledElement="PRGestionBOBTTR" isForCompensation="false" name="Ayuda en línea" id="ABSTRACT_ACTIVITY614482830262">
+            <extensionElements>
+                <ns2:OracleExtensions>
+                    <ns2:GraphicsAttributes>
+                        <ns2:Position x="604" y="99"/>
+                    </ns2:GraphicsAttributes>
+                    <ns2:FeatureSet>
+                        <ns2:BooleanFeature value="false" name="inputValidation"/>
+                        <ns2:BooleanFeature value="false" name="isDraft"/>
+                        <ns2:BooleanFeature value="false" name="outputValidation"/>
+                        <ns2:StringFeature value="PROCESS_DEFAULT" name="generatesEvents"/>
+                        <ns2:StringFeature value="PARALLEL_GATEWAY6144516150233" name="level"/>
+                        <ns2:StringFeature value="PRGestionBOBTTR" name="relatedProcessName"/>
+                        <ns2:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
+                    </ns2:FeatureSet>
+                    <ns2:LogHandlers/>
+                </ns2:OracleExtensions>
+            </extensionElements>
+            <ioSpecification>
+                <dataInput name="inBOLucasianProDevTarea" id="inBOLucasianProDevTarea">
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:TypeRef namespace="http://www.lucasian.com/Tarea" element="Tarea" isArray="false"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                </dataInput>
+                <dataOutput name="outLucasianProDevTarea" id="outLucasianProDevTarea">
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:TypeRef namespace="http://www.lucasian.com/Tarea" element="Tarea" isArray="false"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                </dataOutput>
+                <inputSet id="ABSTRACT_ACTIVITY614482830262_uniqueInputSet">
+                    <dataInputRefs>inBOLucasianProDevTarea</dataInputRefs>
+                </inputSet>
+                <outputSet id="ABSTRACT_ACTIVITY614482830262_uniqueOutputSet">
+                    <dataOutputRefs>outLucasianProDevTarea</dataOutputRefs>
+                </outputSet>
+            </ioSpecification>
+            <dataInputAssociation>
+                <extensionElements>
+                    <ns2:OracleExtensions/>
+                </extensionElements>
+                <sourceRef>boLucasianProDevFase</sourceRef>
+                <targetRef>inBOLucasianProDevTarea</targetRef>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getProcessInstanceAttribute('activityName')
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:nombre
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/faseproyecto" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:proyectoId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:proyectoId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/faseproyecto" xmlns:bpmn="http://www.omg.org/bpmn20">concat(bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:proyectoId, ':', bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:nombre, ':', bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:version, ':', bpmn:getProcessInstanceAttribute('activityName'))
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:tareaId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+            </dataInputAssociation>
+        </callActivity>
+        <callActivity calledElement="PRGestionBOBTTR" isForCompensation="false" name="Entrenamiento" id="ABSTRACT_ACTIVITY6144872939539">
+            <extensionElements>
+                <ns2:OracleExtensions>
+                    <ns2:GraphicsAttributes>
+                        <ns2:Position x="1619" y="241"/>
+                    </ns2:GraphicsAttributes>
+                    <ns2:FeatureSet>
+                        <ns2:BooleanFeature value="false" name="inputValidation"/>
+                        <ns2:BooleanFeature value="false" name="isDraft"/>
+                        <ns2:BooleanFeature value="false" name="outputValidation"/>
+                        <ns2:StringFeature value="PROCESS_DEFAULT" name="generatesEvents"/>
+                        <ns2:StringFeature value="Begin Level" name="level"/>
+                        <ns2:StringFeature value="PRGestionBOBTTR" name="relatedProcessName"/>
+                        <ns2:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
+                    </ns2:FeatureSet>
+                    <ns2:LogHandlers/>
+                </ns2:OracleExtensions>
+            </extensionElements>
+            <ioSpecification>
+                <dataInput name="inBOLucasianProDevTarea" id="inBOLucasianProDevTarea">
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:TypeRef namespace="http://www.lucasian.com/Tarea" element="Tarea" isArray="false"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                </dataInput>
+                <dataOutput name="outLucasianProDevTarea" id="outLucasianProDevTarea">
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:TypeRef namespace="http://www.lucasian.com/Tarea" element="Tarea" isArray="false"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                </dataOutput>
+                <inputSet id="ABSTRACT_ACTIVITY6144872939539_uniqueInputSet">
+                    <dataInputRefs>inBOLucasianProDevTarea</dataInputRefs>
+                </inputSet>
+                <outputSet id="ABSTRACT_ACTIVITY6144872939539_uniqueOutputSet">
+                    <dataOutputRefs>outLucasianProDevTarea</dataOutputRefs>
+                </outputSet>
+            </ioSpecification>
+            <dataInputAssociation>
+                <extensionElements>
+                    <ns2:OracleExtensions/>
+                </extensionElements>
+                <sourceRef>boLucasianProDevFase</sourceRef>
+                <targetRef>inBOLucasianProDevTarea</targetRef>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getProcessInstanceAttribute('activityName')
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:nombre
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/faseproyecto" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:proyectoId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:proyectoId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/faseproyecto" xmlns:bpmn="http://www.omg.org/bpmn20">concat(bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:proyectoId, ':', bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:nombre, ':', bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:version, ':', bpmn:getProcessInstanceAttribute('activityName'))
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:tareaId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+            </dataInputAssociation>
+        </callActivity>
+        <callActivity calledElement="PRGestionBOBTTR" isForCompensation="false" name="Verificación de migración" id="ABSTRACT_ACTIVITY6144872940133">
+            <extensionElements>
+                <ns2:OracleExtensions>
+                    <ns2:GraphicsAttributes>
+                        <ns2:Position x="604" y="217"/>
+                    </ns2:GraphicsAttributes>
+                    <ns2:FeatureSet>
+                        <ns2:BooleanFeature value="false" name="inputValidation"/>
+                        <ns2:BooleanFeature value="false" name="isDraft"/>
+                        <ns2:BooleanFeature value="false" name="outputValidation"/>
+                        <ns2:StringFeature value="PROCESS_DEFAULT" name="generatesEvents"/>
+                        <ns2:StringFeature value="PARALLEL_GATEWAY6144516150233" name="level"/>
+                        <ns2:StringFeature value="PRGestionBOBTTR" name="relatedProcessName"/>
+                        <ns2:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
+                    </ns2:FeatureSet>
+                    <ns2:LogHandlers/>
+                </ns2:OracleExtensions>
+            </extensionElements>
+            <ioSpecification>
+                <dataInput name="inBOLucasianProDevTarea" id="inBOLucasianProDevTarea">
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:TypeRef namespace="http://www.lucasian.com/Tarea" element="Tarea" isArray="false"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                </dataInput>
+                <dataOutput name="outLucasianProDevTarea" id="outLucasianProDevTarea">
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:TypeRef namespace="http://www.lucasian.com/Tarea" element="Tarea" isArray="false"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                </dataOutput>
+                <inputSet id="ABSTRACT_ACTIVITY6144872940133_uniqueInputSet">
+                    <dataInputRefs>inBOLucasianProDevTarea</dataInputRefs>
+                </inputSet>
+                <outputSet id="ABSTRACT_ACTIVITY6144872940133_uniqueOutputSet">
+                    <dataOutputRefs>outLucasianProDevTarea</dataOutputRefs>
+                </outputSet>
+            </ioSpecification>
+            <dataInputAssociation>
+                <extensionElements>
+                    <ns2:OracleExtensions/>
+                </extensionElements>
+                <sourceRef>boLucasianProDevFase</sourceRef>
+                <targetRef>inBOLucasianProDevTarea</targetRef>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getProcessInstanceAttribute('activityName')
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:nombre
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/faseproyecto" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:proyectoId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:proyectoId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/faseproyecto" xmlns:bpmn="http://www.omg.org/bpmn20">concat(bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:proyectoId, ':', bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:nombre, ':', bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:version, ':', bpmn:getProcessInstanceAttribute('activityName'))
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:tareaId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+            </dataInputAssociation>
+        </callActivity>
+        <callActivity calledElement="PRGestionBOBTTR" isForCompensation="false" name="Publicación Producción" id="ABSTRACT_ACTIVITY6144872940461">
+            <extensionElements>
+                <ns2:OracleExtensions>
+                    <ns2:GraphicsAttributes>
+                        <ns2:Position x="1506" y="241"/>
+                    </ns2:GraphicsAttributes>
+                    <ns2:FeatureSet>
+                        <ns2:BooleanFeature value="false" name="inputValidation"/>
+                        <ns2:BooleanFeature value="false" name="isDraft"/>
+                        <ns2:BooleanFeature value="false" name="outputValidation"/>
+                        <ns2:StringFeature value="PROCESS_DEFAULT" name="generatesEvents"/>
+                        <ns2:StringFeature value="Begin Level" name="level"/>
+                        <ns2:StringFeature value="PRGestionBOBTTR" name="relatedProcessName"/>
+                        <ns2:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
+                    </ns2:FeatureSet>
+                    <ns2:LogHandlers/>
+                </ns2:OracleExtensions>
+            </extensionElements>
+            <ioSpecification>
+                <dataInput name="inBOLucasianProDevTarea" id="inBOLucasianProDevTarea">
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:TypeRef namespace="http://www.lucasian.com/Tarea" element="Tarea" isArray="false"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                </dataInput>
+                <dataOutput name="outLucasianProDevTarea" id="outLucasianProDevTarea">
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:TypeRef namespace="http://www.lucasian.com/Tarea" element="Tarea" isArray="false"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                </dataOutput>
+                <inputSet id="ABSTRACT_ACTIVITY6144872940461_uniqueInputSet">
+                    <dataInputRefs>inBOLucasianProDevTarea</dataInputRefs>
+                </inputSet>
+                <outputSet id="ABSTRACT_ACTIVITY6144872940461_uniqueOutputSet">
+                    <dataOutputRefs>outLucasianProDevTarea</dataOutputRefs>
+                </outputSet>
+            </ioSpecification>
+            <dataInputAssociation>
+                <extensionElements>
+                    <ns2:OracleExtensions/>
+                </extensionElements>
+                <sourceRef>boLucasianProDevFase</sourceRef>
+                <targetRef>inBOLucasianProDevTarea</targetRef>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getProcessInstanceAttribute('activityName')
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:nombre
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/faseproyecto" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:proyectoId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:proyectoId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/faseproyecto" xmlns:bpmn="http://www.omg.org/bpmn20">concat(bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:proyectoId, ':', bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:nombre, ':', bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:version, ':', bpmn:getProcessInstanceAttribute('activityName'))
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:tareaId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+            </dataInputAssociation>
+        </callActivity>
+        <callActivity calledElement="PRGestionBOBTTR" isForCompensation="false" name="REgistros de errores" id="ABSTRACT_ACTIVITY6144891474235">
+            <extensionElements>
+                <ns2:OracleExtensions>
+                    <ns2:GraphicsAttributes>
+                        <ns2:Position x="703" y="516"/>
+                    </ns2:GraphicsAttributes>
+                    <ns2:FeatureSet>
+                        <ns2:BooleanFeature value="false" name="inputValidation"/>
+                        <ns2:BooleanFeature value="false" name="isDraft"/>
+                        <ns2:BooleanFeature value="false" name="outputValidation"/>
+                        <ns2:StringFeature value="PROCESS_DEFAULT" name="generatesEvents"/>
+                        <ns2:StringFeature value="PARALLEL_GATEWAY6144516150233" name="level"/>
+                        <ns2:StringFeature value="PRGestionBOBTTR" name="relatedProcessName"/>
+                        <ns2:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
+                    </ns2:FeatureSet>
+                    <ns2:LogHandlers/>
+                </ns2:OracleExtensions>
+            </extensionElements>
+            <ioSpecification>
+                <dataInput name="inBOLucasianProDevTarea" id="inBOLucasianProDevTarea">
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:TypeRef namespace="http://www.lucasian.com/Tarea" element="Tarea" isArray="false"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                </dataInput>
+                <dataOutput name="outLucasianProDevTarea" id="outLucasianProDevTarea">
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:TypeRef namespace="http://www.lucasian.com/Tarea" element="Tarea" isArray="false"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                </dataOutput>
+                <inputSet id="ABSTRACT_ACTIVITY6144891474235_uniqueInputSet">
+                    <dataInputRefs>inBOLucasianProDevTarea</dataInputRefs>
+                </inputSet>
+                <outputSet id="ABSTRACT_ACTIVITY6144891474235_uniqueOutputSet">
+                    <dataOutputRefs>outLucasianProDevTarea</dataOutputRefs>
+                </outputSet>
+            </ioSpecification>
+            <dataInputAssociation>
+                <extensionElements>
+                    <ns2:OracleExtensions/>
+                </extensionElements>
+                <sourceRef>boLucasianProDevFase</sourceRef>
+                <targetRef>inBOLucasianProDevTarea</targetRef>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getProcessInstanceAttribute('activityName')
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:nombre
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/faseproyecto" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:proyectoId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:proyectoId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/faseproyecto" xmlns:bpmn="http://www.omg.org/bpmn20">concat(bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:proyectoId, ':', bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:nombre, ':', bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:version, ':', bpmn:getProcessInstanceAttribute('activityName'))
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:tareaId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+            </dataInputAssociation>
+        </callActivity>
+        <callActivity calledElement="PRGestionBOBTTR" isForCompensation="false" name="Generación de Versión" id="ABSTRACT_ACTIVITY6144891474563">
+            <extensionElements>
+                <ns2:OracleExtensions>
+                    <ns2:GraphicsAttributes>
+                        <ns2:Position x="1397" y="241"/>
+                    </ns2:GraphicsAttributes>
+                    <ns2:FeatureSet>
+                        <ns2:BooleanFeature value="false" name="inputValidation"/>
+                        <ns2:BooleanFeature value="false" name="isDraft"/>
+                        <ns2:BooleanFeature value="false" name="outputValidation"/>
+                        <ns2:StringFeature value="PROCESS_DEFAULT" name="generatesEvents"/>
+                        <ns2:StringFeature value="Begin Level" name="level"/>
+                        <ns2:StringFeature value="PRGestionBOBTTR" name="relatedProcessName"/>
+                        <ns2:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
+                    </ns2:FeatureSet>
+                    <ns2:LogHandlers/>
+                </ns2:OracleExtensions>
+            </extensionElements>
+            <ioSpecification>
+                <dataInput name="inBOLucasianProDevTarea" id="inBOLucasianProDevTarea">
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:TypeRef namespace="http://www.lucasian.com/Tarea" element="Tarea" isArray="false"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                </dataInput>
+                <dataOutput name="outLucasianProDevTarea" id="outLucasianProDevTarea">
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:TypeRef namespace="http://www.lucasian.com/Tarea" element="Tarea" isArray="false"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                </dataOutput>
+                <inputSet id="ABSTRACT_ACTIVITY6144891474563_uniqueInputSet">
+                    <dataInputRefs>inBOLucasianProDevTarea</dataInputRefs>
+                </inputSet>
+                <outputSet id="ABSTRACT_ACTIVITY6144891474563_uniqueOutputSet">
+                    <dataOutputRefs>outLucasianProDevTarea</dataOutputRefs>
+                </outputSet>
+            </ioSpecification>
+            <dataInputAssociation>
+                <extensionElements>
+                    <ns2:OracleExtensions/>
+                </extensionElements>
+                <sourceRef>boLucasianProDevFase</sourceRef>
+                <targetRef>inBOLucasianProDevTarea</targetRef>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getProcessInstanceAttribute('activityName')
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:nombre
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/faseproyecto" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:proyectoId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:proyectoId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/faseproyecto" xmlns:bpmn="http://www.omg.org/bpmn20">concat(bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:proyectoId, ':', bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:nombre, ':', bpmn:getDataObject('boLucasianProDevFase')/ns:detalle/ns:version, ':', bpmn:getProcessInstanceAttribute('activityName'))
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:ns="http://www.lucasian.com/Tarea" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('inBOLucasianProDevTarea')/ns:tareaId
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+            </dataInputAssociation>
+        </callActivity>
+        <startEvent isInterrupting="false" name="Start" id="START_EVENT6083598181127">
+            <extensionElements>
+                <ns2:OracleExtensions>
+                    <ns2:GraphicsAttributes>
+                        <ns2:Position x="51" y="208"/>
+                    </ns2:GraphicsAttributes>
+                    <ns2:FeatureSet>
+                        <ns2:BooleanFeature value="false" name="catchAllErrors"/>
+                        <ns2:BooleanFeature value="false" name="catchAllSystemExceptions"/>
+                        <ns2:BooleanFeature value="false" name="isDraft"/>
+                        <ns2:BooleanFeature value="false" name="outputValidation"/>
+                        <ns2:StringFeature value="PROCESS_DEFAULT" name="generatesEvents"/>
+                        <ns2:StringFeature value="Begin Level" name="level"/>
+                        <ns2:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
+                    </ns2:FeatureSet>
+                    <ns2:Conversational conversation="CONVERSATION61681123868">
+                        <ns2:DefineInterfaceConversationalDefinition definedOperationName="inicio"/>
+                    </ns2:Conversational>
+                    <ns2:LogHandlers/>
+                </ns2:OracleExtensions>
+            </extensionElements>
+            <dataOutput name="inLucasianProDevFase" id="inLucasianProDevFase">
+                <extensionElements>
+                    <ns2:OracleExtensions>
+                        <ns2:TypeRef namespace="http://www.lucasian.com/faseproyecto" element="faseProyecto" isArray="false"/>
+                    </ns2:OracleExtensions>
+                </extensionElements>
+            </dataOutput>
+            <dataOutputAssociation>
+                <extensionElements>
+                    <ns2:OracleExtensions/>
+                </extensionElements>
+                <sourceRef>inLucasianProDevFase</sourceRef>
+                <targetRef>boLucasianProDevFase</targetRef>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataOutput('inLucasianProDevFase')
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataObject('boLucasianProDevFase')
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+            </dataOutputAssociation>
+            <dataOutputAssociation>
+                <extensionElements>
+                    <ns2:OracleExtensions/>
+                </extensionElements>
+                <targetRef>Rol_Funcionario</targetRef>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath">'Funcionario'
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataObject('Rol_Funcionario')
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+            </dataOutputAssociation>
+            <outputSet id="START_EVENT6083598181127_uniqueOutputSet">
+                <dataOutputRefs>inLucasianProDevFase</dataOutputRefs>
+            </outputSet>
+            <messageEventDefinition/>
+        </startEvent>
+        <endEvent name="End" id="END_EVENT608359818116">
+            <extensionElements>
+                <ns2:OracleExtensions>
+                    <ns2:GraphicsAttributes>
+                        <ns2:Position x="1723" y="241"/>
+                    </ns2:GraphicsAttributes>
+                    <ns2:FeatureSet>
+                        <ns2:BooleanFeature value="false" name="catchAllErrors"/>
+                        <ns2:BooleanFeature value="false" name="catchAllSystemExceptions"/>
+                        <ns2:BooleanFeature value="false" name="inputValidation"/>
+                        <ns2:BooleanFeature value="false" name="isDraft"/>
+                        <ns2:StringFeature value="PROCESS_DEFAULT" name="generatesEvents"/>
+                        <ns2:StringFeature value="Begin Level" name="level"/>
+                        <ns2:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
+                    </ns2:FeatureSet>
+                    <ns2:Conversational conversation="CONVERSATION61681123868">
+                        <ns2:DefineInterfaceConversationalDefinition definedOperationName="fin"/>
+                    </ns2:Conversational>
+                    <ns2:LogHandlers/>
+                </ns2:OracleExtensions>
+            </extensionElements>
+            <dataInput name="outLucasianProDevFase" id="outLucasianProDevFase">
+                <extensionElements>
+                    <ns2:OracleExtensions>
+                        <ns2:TypeRef namespace="http://www.lucasian.com/faseproyecto" element="faseProyecto" isArray="false"/>
+                    </ns2:OracleExtensions>
+                </extensionElements>
+            </dataInput>
+            <dataInputAssociation>
+                <extensionElements>
+                    <ns2:OracleExtensions/>
+                </extensionElements>
+                <sourceRef>boLucasianProDevFase</sourceRef>
+                <targetRef>outLucasianProDevFase</targetRef>
+                <assignment>
+                    <extensionElements>
+                        <ns2:OracleExtensions>
+                            <ns2:DataAssignment operation="copy"/>
+                        </ns2:OracleExtensions>
+                    </extensionElements>
+                    <from xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataObject('boLucasianProDevFase')
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </from>
+                    <to xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath" xmlns:bpmn="http://www.omg.org/bpmn20">bpmn:getDataInput('outLucasianProDevFase')
+                        <extensionElements>
+                            <ns2:OracleExtensions>
+                                <ns2:Expression mode="simple"/>
+                            </ns2:OracleExtensions>
+                        </extensionElements>
+                    </to>
+                </assignment>
+            </dataInputAssociation>
+            <inputSet id="END_EVENT608359818116_uniqueInputSet">
+                <dataInputRefs>outLucasianProDevFase</dataInputRefs>
+            </inputSet>
+            <messageEventDefinition/>
+        </endEvent>
+        <parallelGateway gatewayDirection="Diverging" name="PG" id="PARALLEL_GATEWAY6144516150233">
+            <extensionElements>
+                <ns2:OracleExtensions>
+                    <ns2:GraphicsAttributes>
+                        <ns2:Position x="183" y="212"/>
+                    </ns2:GraphicsAttributes>
+                    <ns2:FeatureSet>
+                        <ns2:StringFeature value="PROCESS_DEFAULT" name="generatesEvents"/>
+                        <ns2:StringFeature value="Begin Level" name="level"/>
+                        <ns2:StringFeature value="PARALLEL_GATEWAY6144517209094" name="pairedGateway"/>
+                        <ns2:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
+                    </ns2:FeatureSet>
+                </ns2:OracleExtensions>
+            </extensionElements>
+        </parallelGateway>
+        <parallelGateway gatewayDirection="Converging" name="ParallelGateway" id="PARALLEL_GATEWAY6144517209094">
+            <extensionElements>
+                <ns2:OracleExtensions>
+                    <ns2:GraphicsAttributes>
+                        <ns2:Position x="1293" y="238"/>
+                    </ns2:GraphicsAttributes>
+                    <ns2:FeatureSet>
+                        <ns2:StringFeature value="PROCESS_DEFAULT" name="generatesEvents"/>
+                        <ns2:StringFeature value="Begin Level" name="level"/>
+                        <ns2:StringFeature value="PARALLEL_GATEWAY6144516150233" name="pairedGateway"/>
+                        <ns2:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
+                    </ns2:FeatureSet>
+                </ns2:OracleExtensions>
+            </extensionElements>
+        </parallelGateway>
+        <exclusiveGateway gatewayDirection="Unspecified" name="Existen errores " id="EXCLUSIVE_GATEWAY6144937098930">
+            <extensionElements>
+                <ns2:OracleExtensions>
+                    <ns2:GraphicsAttributes>
+                        <ns2:Position x="712" y="333"/>
+                    </ns2:GraphicsAttributes>
+                    <ns2:FeatureSet>
+                        <ns2:StringFeature value="PROCESS_DEFAULT" name="generatesEvents"/>
+                        <ns2:StringFeature value="PARALLEL_GATEWAY6144516150233" name="level"/>
+                        <ns2:StringFeature value="USE_PROCESS_PERMISSION" name="sealType"/>
+                    </ns2:FeatureSet>
+                </ns2:OracleExtensions>
+            </extensionElements>
+        </exclusiveGateway>
+        <sequenceFlow sourceRef="START_EVENT6083598181127" targetRef="PARALLEL_GATEWAY6144516150233" name="sf82" id="sf82">
+            <extensionElements>
+                <ns2:OracleExtensions>
+                    <ns2:SequenceFlowAttributes>
+                        <ns2:Positions x="137" y="213"/>
+                    </ns2:SequenceFlowAttributes>
+                    <ns2:FeatureSet>
+                        <ns2:BooleanFeature value="false" name="collapseMessage"/>
+                        <ns2:StringFeature value="137,213" name="curve"/>
+                        <ns2:StringFeature value="ORTHOGONAL" name="routing"/>
+                    </ns2:FeatureSet>
+                </ns2:OracleExtensions>
+            </extensionElements>
+        </sequenceFlow>
+        <sequenceFlow sourceRef="PARALLEL_GATEWAY6144516150233" targetRef="ABSTRACT_ACTIVITY6144476562689" name="sf169" id="sf169">
+            <extensionElements>
+                <ns2:OracleExtensions>
+                    <ns2:SequenceFlowAttributes>
+                        <ns2:Positions x="254" y="102"/>
+                    </ns2:SequenceFlowAttributes>
+                    <ns2:FeatureSet>
+                        <ns2:BooleanFeature value="false" name="collapseMessage"/>
+                        <ns2:StringFeature value="254,102" name="curve"/>
+                        <ns2:StringFeature value="ORTHOGONAL" name="routing"/>
+                    </ns2:FeatureSet>
+                </ns2:OracleExtensions>
+            </extensionElements>
+        </sequenceFlow>
+        <sequenceFlow sourceRef="PARALLEL_GATEWAY6144517209094" targetRef="ABSTRACT_ACTIVITY6144891474563" name="sf170" id="sf170">
+            <extensionElements>
+                <ns2:OracleExtensions>
+                    <ns2:SequenceFlowAttributes>
+                        <ns2:Positions x="1337" y="243"/>
+                    </ns2:SequenceFlowAttributes>
+                    <ns2:FeatureSet>
+                        <ns2:BooleanFeature value="false" name="collapseMessage"/>
+                        <ns2:StringFeature value="1337,243" name="curve"/>
+                        <ns2:StringFeature value="ORTHOGONAL" name="routing"/>
+                    </ns2:FeatureSet>
+                </ns2:OracleExtensions>
+            </extensionElements>
+        </sequenceFlow>
+        <sequenceFlow sourceRef="PARALLEL_GATEWAY6144516150233" targetRef="ABSTRACT_ACTIVITY6144527395715" name="sf174" id="sf174">
+            <extensionElements>
+                <ns2:OracleExtensions>
+                    <ns2:SequenceFlowAttributes>
+                        <ns2:Positions x="185" y="283"/>
+                    </ns2:SequenceFlowAttributes>
+                    <ns2:FeatureSet>
+                        <ns2:BooleanFeature value="false" name="collapseMessage"/>
+                        <ns2:StringFeature value="185,283" name="curve"/>
+                        <ns2:StringFeature value="ORTHOGONAL" name="routing"/>
+                    </ns2:FeatureSet>
+                </ns2:OracleExtensions>
+            </extensionElements>
+        </sequenceFlow>
+        <sequenceFlow sourceRef="ABSTRACT_ACTIVITY6144476562689" targetRef="ABSTRACT_ACTIVITY6144526136468" name="sf175" id="sf175">
+            <extensionElements>
+                <ns2:OracleExtensions>
+                    <ns2:SequenceFlowAttributes>
+                        <ns2:Positions x="432" y="101"/>
+                    </ns2:SequenceFlowAttributes>
+                    <ns2:FeatureSet>
+                        <ns2:BooleanFeature value="false" name="collapseMessage"/>
+                        <ns2:StringFeature value="432,101" name="curve"/>
+                        <ns2:StringFeature value="ORTHOGONAL" name="routing"/>
+                    </ns2:FeatureSet>
+                </ns2:OracleExtensions>
+            </extensionElements>
+        </sequenceFlow>
+        <sequenceFlow sourceRef="ABSTRACT_ACTIVITY6144526136468" targetRef="ABSTRACT_ACTIVITY614482830262" name="sf185" id="sf185">
+            <extensionElements>
+                <ns2:OracleExtensions>
+                    <ns2:SequenceFlowAttributes>
+                        <ns2:Positions x="554" y="104"/>
+                    </ns2:SequenceFlowAttributes>
+                    <ns2:FeatureSet>
+                        <ns2:BooleanFeature value="false" name="collapseMessage"/>
+                        <ns2:StringFeature value="554,104" name="curve"/>
+                        <ns2:StringFeature value="ORTHOGONAL" name="routing"/>
+                    </ns2:FeatureSet>
+                </ns2:OracleExtensions>
+            </extensionElements>
+        </sequenceFlow>
+        <sequenceFlow sourceRef="PARALLEL_GATEWAY6144516150233" targetRef="ABSTRACT_ACTIVITY6144807847257" name="sf192" id="sf192">
+            <extensionElements>
+                <ns2:OracleExtensions>
+                    <ns2:SequenceFlowAttributes>
+                        <ns2:Positions x="251" y="211"/>
+                    </ns2:SequenceFlowAttributes>
+                    <ns2:FeatureSet>
+                        <ns2:BooleanFeature value="false" name="collapseMessage"/>
+                        <ns2:StringFeature value="251,211" name="curve"/>
+                        <ns2:StringFeature value="ORTHOGONAL" name="routing"/>
+                    </ns2:FeatureSet>
+                </ns2:OracleExtensions>
+            </extensionElements>
+        </sequenceFlow>
+        <sequenceFlow sourceRef="ABSTRACT_ACTIVITY614482830262" targetRef="PARALLEL_GATEWAY6144517209094" name="sf193" id="sf193">
+            <extensionElements>
+                <ns2:OracleExtensions>
+                    <ns2:SequenceFlowAttributes>
+                        <ns2:Positions x="1293" y="203"/>
+                    </ns2:SequenceFlowAttributes>
+                    <ns2:FeatureSet>
+                        <ns2:BooleanFeature value="false" name="collapseMessage"/>
+                        <ns2:StringFeature value="1293,203" name="curve"/>
+                        <ns2:StringFeature value="ORTHOGONAL" name="routing"/>
+                    </ns2:FeatureSet>
+                </ns2:OracleExtensions>
+            </extensionElements>
+        </sequenceFlow>
+        <sequenceFlow sourceRef="ABSTRACT_ACTIVITY6144807847257" targetRef="ABSTRACT_ACTIVITY6144825612323" name="sf196" id="sf196">
+            <extensionElements>
+                <ns2:OracleExtensions>
+                    <ns2:SequenceFlowAttributes>
+                        <ns2:Positions x="420" y="217"/>
+                    </ns2:SequenceFlowAttributes>
+                    <ns2:FeatureSet>
+                        <ns2:BooleanFeature value="false" name="collapseMessage"/>
+                        <ns2:StringFeature value="420,217" name="curve"/>
+                        <ns2:StringFeature value="ORTHOGONAL" name="routing"/>
+                    </ns2:FeatureSet>
+                </ns2:OracleExtensions>
+            </extensionElements>
+        </sequenceFlow>
+        <sequenceFlow sourceRef="ABSTRACT_ACTIVITY6144825612323" targetRef="ABSTRACT_ACTIVITY6144872940133" name="sf200" id="sf200">
+            <extensionElements>
+                <ns2:OracleExtensions>
+                    <ns2:SequenceFlowAttributes>
+                        <ns2:Positions x="544" y="218"/>
+                    </ns2:SequenceFlowAttributes>
+                    <ns2:FeatureSet>
+                        <ns2:BooleanFeature value="false" name="collapseMessage"/>
+                        <ns2:StringFeature value="544,218" name="curve"/>
+                        <ns2:StringFeature value="ORTHOGONAL" name="routing"/>
+                    </ns2:FeatureSet>
+                </ns2:OracleExtensions>
+            </extensionElements>
+        </sequenceFlow>
+        <sequenceFlow sourceRef="ABSTRACT_ACTIVITY6144872940133" targetRef="ABSTRACT_ACTIVITY6144825612713" name="sf202" id="sf202">
+            <extensionElements>
+                <ns2:OracleExtensions>
+                    <ns2:SequenceFlowAttributes>
+                        <ns2:Positions x="673" y="221"/>
+                    </ns2:SequenceFlowAttributes>
+                    <ns2:FeatureSet>
+                        <ns2:BooleanFeature value="false" name="collapseMessage"/>
+                        <ns2:StringFeature value="673,221" name="curve"/>
+                        <ns2:StringFeature value="ORTHOGONAL" name="routing"/>
+                    </ns2:FeatureSet>
+                </ns2:OracleExtensions>
+            </extensionElements>
+        </sequenceFlow>
+        <sequenceFlow sourceRef="ABSTRACT_ACTIVITY6144527395715" targetRef="ABSTRACT_ACTIVITY6144828302421" name="sf204" id="sf204">
+            <extensionElements>
+                <ns2:OracleExtensions>
+                    <ns2:SequenceFlowAttributes>
+                        <ns2:Positions x="479" y="328"/>
+                    </ns2:SequenceFlowAttributes>
+                    <ns2:FeatureSet>
+                        <ns2:BooleanFeature value="false" name="collapseMessage"/>
+                        <ns2:StringFeature value="479,328" name="curve"/>
+                        <ns2:StringFeature value="ORTHOGONAL" name="routing"/>
+                    </ns2:FeatureSet>
+                </ns2:OracleExtensions>
+            </extensionElements>
+        </sequenceFlow>
+        <sequenceFlow sourceRef="ABSTRACT_ACTIVITY6144828302421" targetRef="ABSTRACT_ACTIVITY6144828302116" name="sf206" id="sf206">
+            <extensionElements>
+                <ns2:OracleExtensions>
+                    <ns2:SequenceFlowAttributes>
+                        <ns2:Positions x="544" y="330"/>
+                    </ns2:SequenceFlowAttributes>
+                    <ns2:FeatureSet>
+                        <ns2:BooleanFeature value="false" name="collapseMessage"/>
+                        <ns2:StringFeature value="544,330" name="curve"/>
+                        <ns2:StringFeature value="ORTHOGONAL" name="routing"/>
+                    </ns2:FeatureSet>
+                </ns2:OracleExtensions>
+            </extensionElements>
+        </sequenceFlow>
+        <sequenceFlow sourceRef="ABSTRACT_ACTIVITY6144828302116" targetRef="EXCLUSIVE_GATEWAY6144937098930" name="sf208" id="sf208">
+            <extensionElements>
+                <ns2:OracleExtensions>
+                    <ns2:SequenceFlowAttributes>
+                        <ns2:Positions x="669" y="334"/>
+                    </ns2:SequenceFlowAttributes>
+                    <ns2:FeatureSet>
+                        <ns2:BooleanFeature value="false" name="collapseMessage"/>
+                        <ns2:StringFeature value="669,334" name="curve"/>
+                        <ns2:StringFeature value="ORTHOGONAL" name="routing"/>
+                    </ns2:FeatureSet>
+                </ns2:OracleExtensions>
+            </extensionElements>
+        </sequenceFlow>
+        <sequenceFlow sourceRef="EXCLUSIVE_GATEWAY6144937098930" targetRef="ABSTRACT_ACTIVITY6144828301736" name="sf214" id="sf214">
+            <extensionElements>
+                <ns2:OracleExtensions>
+                    <ns2:SequenceFlowAttributes/>
+                    <ns2:FeatureSet>
+                        <ns2:BooleanFeature value="false" name="collapseMessage"/>
+                        <ns2:StringFeature value="-2147483648,-2147483648" name="curve"/>
+                        <ns2:StringFeature value="STRAIGHT" name="routing"/>
+                        <ns2:StringFeature value="No" name="userName"/>
+                        <ns2:IntegerFeature value="0" name="order"/>
+                    </ns2:FeatureSet>
+                </ns2:OracleExtensions>
+            </extensionElements>
+            <conditionExpression xsi:type="tFormalExpression" language="http://www.w3.org/1999/XPath">false()
+                <extensionElements>
+                    <ns2:OracleExtensions>
+                        <ns2:Expression mode="simple"/>
+                    </ns2:OracleExtensions>
+                </extensionElements>
+            </conditionExpression>
+        </sequenceFlow>
+        <sequenceFlow sourceRef="ABSTRACT_ACTIVITY6144891474235" targetRef="ABSTRACT_ACTIVITY6144819268221" name="sf234" id="sf234">
+            <extensionElements>
+                <ns2:OracleExtensions>
+                    <ns2:SequenceFlowAttributes>
+                        <ns2:Positions x="768" y="520"/>
+                    </ns2:SequenceFlowAttributes>
+                    <ns2:FeatureSet>
+                        <ns2:BooleanFeature value="false" name="collapseMessage"/>
+                        <ns2:StringFeature value="768,520" name="curve"/>
+                        <ns2:StringFeature value="ORTHOGONAL" name="routing"/>
+                    </ns2:FeatureSet>
+                </ns2:OracleExtensions>
+            </extensionElements>
+        </sequenceFlow>
+        <sequenceFlow sourceRef="EXCLUSIVE_GATEWAY6144937098930" targetRef="ABSTRACT_ACTIVITY6144891474235" name="sf236" id="sf236">
+            <extensionElements>
+                <ns2:OracleExtensions>
+                    <ns2:SequenceFlowAttributes>
+                        <ns2:Positions x="711" y="378"/>
+                    </ns2:SequenceFlowAttributes>
+                    <ns2:FeatureSet>
+                        <ns2:BooleanFeature value="false" name="collapseMessage"/>
+                        <ns2:StringFeature value="711,378" name="curve"/>
+                        <ns2:StringFeature value="ORTHOGONAL" name="routing"/>
+                    </ns2:FeatureSet>
+                </ns2:OracleExtensions>
+            </extensionElements>
+        </sequenceFlow>
+        <sequenceFlow sourceRef="ABSTRACT_ACTIVITY6144819268221" targetRef="ABSTRACT_ACTIVITY6144828301736" name="sf237" id="sf237">
+            <extensionElements>
+                <ns2:OracleExtensions>
+                    <ns2:SequenceFlowAttributes>
+                        <ns2:Positions x="926" y="424"/>
+                    </ns2:SequenceFlowAttributes>
+                    <ns2:FeatureSet>
+                        <ns2:BooleanFeature value="false" name="collapseMessage"/>
+                        <ns2:StringFeature value="926,424" name="curve"/>
+                        <ns2:StringFeature value="ORTHOGONAL" name="routing"/>
+                    </ns2:FeatureSet>
+                </ns2:OracleExtensions>
+            </extensionElements>
+        </sequenceFlow>
+        <sequenceFlow sourceRef="ABSTRACT_ACTIVITY6144828301736" targetRef="ABSTRACT_ACTIVITY6144820497617" name="sf239" id="sf239">
+            <extensionElements>
+                <ns2:OracleExtensions>
+                    <ns2:SequenceFlowAttributes>
+                        <ns2:Positions x="976" y="334"/>
+                    </ns2:SequenceFlowAttributes>
+                    <ns2:FeatureSet>
+                        <ns2:BooleanFeature value="false" name="collapseMessage"/>
+                        <ns2:StringFeature value="976,334" name="curve"/>
+                        <ns2:StringFeature value="ORTHOGONAL" name="routing"/>
+                    </ns2:FeatureSet>
+                </ns2:OracleExtensions>
+            </extensionElements>
+        </sequenceFlow>
+        <sequenceFlow sourceRef="ABSTRACT_ACTIVITY6144825612713" targetRef="PARALLEL_GATEWAY6144517209094" name="sf241" id="sf241">
+            <extensionElements>
+                <ns2:OracleExtensions>
+                    <ns2:SequenceFlowAttributes>
+                        <ns2:Positions x="1174" y="242"/>
+                    </ns2:SequenceFlowAttributes>
+                    <ns2:FeatureSet>
+                        <ns2:BooleanFeature value="false" name="collapseMessage"/>
+                        <ns2:StringFeature value="1174,242" name="curve"/>
+                        <ns2:StringFeature value="ORTHOGONAL" name="routing"/>
+                    </ns2:FeatureSet>
+                </ns2:OracleExtensions>
+            </extensionElements>
+        </sequenceFlow>
+        <sequenceFlow sourceRef="ABSTRACT_ACTIVITY6144820497617" targetRef="PARALLEL_GATEWAY6144517209094" name="sf246" id="sf246">
+            <extensionElements>
+                <ns2:OracleExtensions>
+                    <ns2:SequenceFlowAttributes>
+                        <ns2:Positions x="1187" y="337"/>
+                    </ns2:SequenceFlowAttributes>
+                    <ns2:FeatureSet>
+                        <ns2:BooleanFeature value="false" name="collapseMessage"/>
+                        <ns2:StringFeature value="1187,337" name="curve"/>
+                        <ns2:StringFeature value="ORTHOGONAL" name="routing"/>
+                    </ns2:FeatureSet>
+                </ns2:OracleExtensions>
+            </extensionElements>
+        </sequenceFlow>
+        <sequenceFlow sourceRef="ABSTRACT_ACTIVITY6144891474563" targetRef="ABSTRACT_ACTIVITY6144872940461" name="sf251" id="sf251">
+            <extensionElements>
+                <ns2:OracleExtensions>
+                    <ns2:SequenceFlowAttributes>
+                        <ns2:Positions x="1452" y="243"/>
+                    </ns2:SequenceFlowAttributes>
+                    <ns2:FeatureSet>
+                        <ns2:BooleanFeature value="false" name="collapseMessage"/>
+                        <ns2:StringFeature value="1452,243" name="curve"/>
+                        <ns2:StringFeature value="ORTHOGONAL" name="routing"/>
+                    </ns2:FeatureSet>
+                </ns2:OracleExtensions>
+            </extensionElements>
+        </sequenceFlow>
+        <sequenceFlow sourceRef="ABSTRACT_ACTIVITY6144872939539" targetRef="END_EVENT608359818116" name="sf256" id="sf256">
+            <extensionElements>
+                <ns2:OracleExtensions>
+                    <ns2:SequenceFlowAttributes>
+                        <ns2:Positions x="1671" y="241"/>
+                    </ns2:SequenceFlowAttributes>
+                    <ns2:FeatureSet>
+                        <ns2:BooleanFeature value="false" name="collapseMessage"/>
+                        <ns2:StringFeature value="1671,241" name="curve"/>
+                        <ns2:StringFeature value="ORTHOGONAL" name="routing"/>
+                    </ns2:FeatureSet>
+                </ns2:OracleExtensions>
+            </extensionElements>
+        </sequenceFlow>
+        <sequenceFlow sourceRef="ABSTRACT_ACTIVITY6144872940461" targetRef="ABSTRACT_ACTIVITY6144872939539" name="sf264" id="sf264">
+            <extensionElements>
+                <ns2:OracleExtensions>
+                    <ns2:SequenceFlowAttributes>
+                        <ns2:Positions x="1563" y="241"/>
+                    </ns2:SequenceFlowAttributes>
+                    <ns2:FeatureSet>
+                        <ns2:BooleanFeature value="false" name="collapseMessage"/>
+                        <ns2:StringFeature value="1563,241" name="curve"/>
+                        <ns2:StringFeature value="ORTHOGONAL" name="routing"/>
+                    </ns2:FeatureSet>
+                </ns2:OracleExtensions>
+            </extensionElements>
+        </sequenceFlow>
+        <dataObject name="boLucasianProDevFase" id="boLucasianProDevFase">
+            <extensionElements>
+                <ns2:OracleExtensions>
+                    <ns2:DataObjectType initialize="true">
+                        <ns2:TypeRef namespace="http://www.lucasian.com/faseproyecto" element="faseProyecto" isArray="false"/>
+                    </ns2:DataObjectType>
+                </ns2:OracleExtensions>
+            </extensionElements>
+        </dataObject>
+        <dataObject name="Rol_Funcionario" id="Rol_Funcionario">
+            <extensionElements>
+                <ns2:OracleExtensions>
+                    <ns2:DataObjectType initialize="true">
+                        <ns2:TypeRef namespace="http://www.w3.org/2001/XMLSchema" type="string" isArray="false"/>
+                    </ns2:DataObjectType>
+                </ns2:OracleExtensions>
+            </extensionElements>
+        </dataObject>
+    </process>
+</definitions>

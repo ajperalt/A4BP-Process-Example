@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<actions targetNamespace="http://xmlns.oracle.com/bob_soa/Bobo/BPELGestionEstadoCU" xmlns="http://xmlns.oracle.com/bpel/sensor" xmlns:tns="http://xmlns.oracle.com/bob_soa/Bobo/BPELGestionEstadoCU" xmlns:pc="http://xmlns.oracle.com/bpel/sensor">
+   <action name="BAMSensorAction" publishName="OracleBam" publishType="BAM" enabled="true">
+      <property name="bamTransform">bam/MapCambioEstadoCU.xsl</property>
+      <property name="jcaFileName">bam/BAMSensorAction.jcabam</property>
+      <sensorName>ASCambioEstadoCU</sensorName>
+   </action>
+   <action name="BAMSensorActionCUEstadoHis3" publishName="OracleBam" publishType="BAM" enabled="true">
+      <property name="jcaFileName">bam/BAMSensorActionCUEstadoHis3.jcabam</property>
+      <property name="bamTransform">bam/MapBobCuEstadoHistorico3.xsl</property>
+      <sensorName>ASCambioEstadoCU</sensorName>
+   </action>
+</actions>

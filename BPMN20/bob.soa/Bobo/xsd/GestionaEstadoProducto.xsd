@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:lucasian="http://www.lucasian.com"
+            targetNamespace="http://www.lucasian.com"
+            elementFormDefault="qualified">
+  <xsd:element name="estados">
+    <xsd:annotation>
+      <xsd:documentation>
+        A sample element
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="estadoActual" type="xsd:string"/>
+        <xsd:element name="estadoNuevo" type="xsd:string"/>
+        <xsd:element name="estadoPropuesto" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

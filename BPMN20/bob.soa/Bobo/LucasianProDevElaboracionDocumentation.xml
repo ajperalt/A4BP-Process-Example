@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?oracleBPM version="11.1.1.7.0.0.97" fileRevision="20120217"?>
+<processDocumentation xmlns="http://xmlns.oracle.com/bpm/taskMetadataService/processDocumentation">
+    <component name="LucasianProDevElaboracion">
+        <topicDocumentations>
+            <topicDocumentation name="LucasianProDevElaboracion">
+                <descriptions>
+                    <description locale="en">LucasianProDevElaboracion</description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6118066917770">
+                <labels>
+                    <label locale="en">Crear plan de proyecto</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6118125708484">
+                <labels>
+                    <label locale="en">Definicion de requerimientos NO FUNCIONALES</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6118132038618">
+                <labels>
+                    <label locale="en">Definicion Preliminar de arquitectura</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6118162365251">
+                <labels>
+                    <label locale="en">Desarrollar pruebas de concepto</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6118204425882">
+                <labels>
+                    <label locale="en">Analizar protitipo de arquitectura</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6118208919057">
+                <labels>
+                    <label locale="en">Modelar en Enterprise Architect</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6118215606891">
+                <labels>
+                    <label locale="en">Lograr Aprobacion del cliente</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6118228883140">
+                <labels>
+                    <label locale="en">Desarrollar prototipo por caso de uso</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6118258836370">
+                <labels>
+                    <label locale="en">Desarrollar especificacion funcional X CU</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6118280823135">
+                <labels>
+                    <label locale="en">Definir perfiles de seguridad</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6118284110521">
+                <labels>
+                    <label locale="en">Obtener aprobacion del usuario</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6118287802012">
+                <labels>
+                    <label locale="en">Quemar especificacion en PDF</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY611831130176">
+                <labels>
+                    <label locale="en">Crear plan de proyecto</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6142841643854">
+                <labels>
+                    <label locale="en">Diseño de DB x CU</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6142846612971">
+                <labels>
+                    <label locale="en">Validar prototipos vs ER</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6142847285759">
+                <labels>
+                    <label locale="en">Validar procesos Vs ER</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY614284848570">
+                <labels>
+                    <label locale="en">Validar reportes Vs ER</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6142849053751">
+                <labels>
+                    <label locale="en">Crear modelo en Data Modeler</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6143568402138">
+                <labels>
+                    <label locale="en">Validar estandar de nombramiento</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6143570297859">
+                <labels>
+                    <label locale="en">Documentar campos</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6143571431953">
+                <labels>
+                    <label locale="en">Analisis de riesgo de rendimiento</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6143571866010">
+                <labels>
+                    <label locale="en">Generar diccionario de datos</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6143586109487">
+                <labels>
+                    <label locale="en">Generar escript de aplicacion</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6143596621698">
+                <labels>
+                    <label locale="en">Actualizar especificacion tecnica BOB</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6143596942042">
+                <labels>
+                    <label locale="en">Crear Diagrama de estados</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6143597212914">
+                <labels>
+                    <label locale="en">Adicionar / Actualizar BEAN del servicio</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6143597489182">
+                <labels>
+                    <label locale="en">Modelar en Enterprise Architect</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6143597776585">
+                <labels>
+                    <label locale="en">Crear modelo en Data Modeler</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6143598220861">
+                <labels>
+                    <label locale="en">Crear modelo en Data Modeler</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6143602187131">
+                <labels>
+                    <label locale="en">Modelar PL-SQL</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6143687546724">
+                <labels>
+                    <label locale="en">Definir Modelo de clases</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6144613423156">
+                <labels>
+                    <label locale="en">Generar codigo leaf</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY614466053112">
+                <labels>
+                    <label locale="en">Generar codigo leaf</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY614466682957">
+                <labels>
+                    <label locale="en">Diseñar Objetos de transporte</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6144670948674">
+                <labels>
+                    <label locale="en">Particionar forma en tabs</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6144674268642">
+                <labels>
+                    <label locale="en">Diseñar Objetos de transporte</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6144674614224">
+                <labels>
+                    <label locale="en">Diagrama de secuencia de invocaciones</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY614467498543">
+                <labels>
+                    <label locale="en">Definir tiempos innovacion tabs</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ABSTRACT_ACTIVITY6144690979713">
+                <labels>
+                    <label locale="en">Verificar diseño visual Vs especificacion</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="START_EVENT6083589782851">
+                <labels>
+                    <label locale="en">Start</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="END_EVENT6083589782880">
+                <labels>
+                    <label locale="en">End</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="PARALLEL_GATEWAY6118149152857">
+                <labels>
+                    <label locale="en">PG_INI_001</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="PARALLEL_GATEWAY6118151408419">
+                <labels>
+                    <label locale="en">PG_FIN_001</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="PARALLEL_GATEWAY6118155327031">
+                <labels>
+                    <label locale="en">PG_INI_002</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="PARALLEL_GATEWAY6118156600160">
+                <labels>
+                    <label locale="en">PG_FIN_002</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="PARALLEL_GATEWAY6143641909571">
+                <labels>
+                    <label locale="en">PG_INI HayEstados</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="PARALLEL_GATEWAY6143642588244">
+                <labels>
+                    <label locale="en">PG_FIN</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EXCLUSIVE_GATEWAY6143649728293">
+                <labels>
+                    <label locale="en">Tiene Estados</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EXCLUSIVE_GATEWAY6143658758743">
+                <labels>
+                    <label locale="en">Es Negocio Simple</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EXCLUSIVE_GATEWAY6143667230893">
+                <labels>
+                    <label locale="en">AplicaMDB</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EXCLUSIVE_GATEWAY6143670191025">
+                <labels>
+                    <label locale="en">Es Negocio Complejo</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EXCLUSIVE_GATEWAY6143697049037">
+                <labels>
+                    <label locale="en">Hay diseño complejo</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EXCLUSIVE_GATEWAY6144624387590">
+                <labels>
+                    <label locale="en">Es forma tipo CRUD</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EXCLUSIVE_GATEWAY6144633522420">
+                <labels>
+                    <label locale="en">Es forma negocio simple</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf74"/>
+            <topicDocumentation name="sf226"/>
+            <topicDocumentation name="sf227"/>
+            <topicDocumentation name="sf228"/>
+            <topicDocumentation name="sf230"/>
+            <topicDocumentation name="sf232"/>
+            <topicDocumentation name="sf233"/>
+            <topicDocumentation name="sf235"/>
+            <topicDocumentation name="sf236"/>
+            <topicDocumentation name="sf260"/>
+            <topicDocumentation name="sf262"/>
+            <topicDocumentation name="sf264"/>
+            <topicDocumentation name="sf267"/>
+            <topicDocumentation name="sf269"/>
+            <topicDocumentation name="sf271"/>
+            <topicDocumentation name="sf274"/>
+            <topicDocumentation name="sf308"/>
+            <topicDocumentation name="sf310"/>
+            <topicDocumentation name="sf313"/>
+            <topicDocumentation name="sf315"/>
+            <topicDocumentation name="sf317"/>
+            <topicDocumentation name="sf137"/>
+            <topicDocumentation name="sf139"/>
+            <topicDocumentation name="sf141"/>
+            <topicDocumentation name="sf143"/>
+            <topicDocumentation name="sf145"/>
+            <topicDocumentation name="sf177"/>
+            <topicDocumentation name="sf179"/>
+            <topicDocumentation name="sf181"/>
+            <topicDocumentation name="sf183"/>
+            <topicDocumentation name="sf185"/>
+            <topicDocumentation name="sf187"/>
+            <topicDocumentation name="sf189"/>
+            <topicDocumentation name="sf192"/>
+            <topicDocumentation name="sf194"/>
+            <topicDocumentation name="sf196"/>
+            <topicDocumentation name="sf339"/>
+            <topicDocumentation name="sf343"/>
+            <topicDocumentation name="sf346"/>
+            <topicDocumentation name="sf348"/>
+            <topicDocumentation name="sf350"/>
+            <topicDocumentation name="sf352"/>
+            <topicDocumentation name="sf354">
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf356">
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf358">
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf407"/>
+            <topicDocumentation name="sf409">
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf411"/>
+            <topicDocumentation name="sf413"/>
+            <topicDocumentation name="sf415"/>
+            <topicDocumentation name="sf417"/>
+            <topicDocumentation name="sf419"/>
+            <topicDocumentation name="sf312"/>
+            <topicDocumentation name="sf316">
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf319"/>
+            <topicDocumentation name="sf321">
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf437"/>
+            <topicDocumentation name="sf439"/>
+            <topicDocumentation name="sf441"/>
+            <topicDocumentation name="sf444"/>
+            <topicDocumentation name="sf446"/>
+            <topicDocumentation name="sf448"/>
+            <topicDocumentation name="sf450"/>
+            <topicDocumentation name="sf452"/>
+            <topicDocumentation name="sf454"/>
+        </topicDocumentations>
+    </component>
+</processDocumentation>

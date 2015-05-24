@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?bpmo version="11.1.1.6.0.15.53" build="15.53" fullName="Enumeracioens.Estados" modifiers="0"?>
+<!--########################################################################################-->
+<!--####                                                                                ####-->
+<!--####          THIS IS AN AUTO GENERATED FILE. PLEASE DO NOT MANUALLY MODIFY         ####-->
+<!--#### CHANGES TO THIS FILE MAY PRODUCE UNEXPECTED BEHAVIOR AND WOULD BE OVERWRITTEN  ####-->
+<!--####                                                                                ####-->
+<!--########################################################################################-->
+<xs:schema targetNamespace="http://xmlns.oracle.com/bpm/bpmobject/Enumeracioens/Estados" elementFormDefault="qualified" xmlns="http://xmlns.oracle.com/bpm/bpmobject/Enumeracioens/Estados"  xmlns:xs="http://www.w3.org/2001/XMLSchema"  xmlns:bpmo="http://xmlns.oracle.com/bpm/bpmobject/" >
+    <xs:complexType name="EstadosType">
+        <xs:sequence>
+            <xs:element name="nuevo" default="NUEVO" type="xs:string"/>
+            <xs:element name="enespecificacion" default="EN ESPECIFICACION" type="xs:string"/>
+            <xs:element name="confirmado" default="CONFIRMADO" type="xs:string"/>
+            <xs:element name="aplazado" default="APLAZADO" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>
+                        <bpmo:documentable>
+                            <bpmo:description>
+                                APLAZADO
+                            </bpmo:description>
+                        </bpmo:documentable>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="enconstruccion" default="EN CONSTRUCCION" type="xs:string"/>
+            <xs:element name="enpruebasinterfaz" default="EN PRUEBAS INTERFAZ" type="xs:string"/>
+            <xs:element name="terminado" default="TERMINADO" type="xs:string"/>
+            <xs:element name="especificacion" default="ESPECIFICADO" type="xs:string"/>
+            <xs:element name="construido" default="CONSTRUIDO" type="xs:string"/>
+            <xs:element name="aprobado" default="APROBADO" type="xs:string"/>
+            <xs:element name="anulado" default="ANULADO" type="xs:string"/>
+            <xs:element name="validado" default="VALIDADO" type="xs:string"/>
+            <xs:element name="contenido" default="CONTENIDO" type="xs:string"/>
+            <xs:element name="enpruebasnegocio" default="EN PRUEBAS NEGOCIO" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="Estados" type="EstadosType"/>
+</xs:schema>

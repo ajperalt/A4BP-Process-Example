@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?bpmo version="11.1.1.6.0.15.53" build="15.53" fullName="CasoDeUso.InfoCU" modifiers="0"?>
+<!--########################################################################################-->
+<!--####                                                                                ####-->
+<!--####          THIS IS AN AUTO GENERATED FILE. PLEASE DO NOT MANUALLY MODIFY         ####-->
+<!--#### CHANGES TO THIS FILE MAY PRODUCE UNEXPECTED BEHAVIOR AND WOULD BE OVERWRITTEN  ####-->
+<!--####                                                                                ####-->
+<!--########################################################################################-->
+<xs:schema targetNamespace="http://xmlns.oracle.com/bpm/bpmobject/CasoDeUso/InfoCU" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"  xmlns="http://xmlns.oracle.com/bpm/bpmobject/CasoDeUso/InfoCU"  xmlns:bpmo="http://xmlns.oracle.com/bpm/bpmobject/" >
+    <xs:complexType name="InfoCUType">
+        <xs:sequence>
+            <xs:element name="idCU" nillable="true" type="xs:string"/>
+            <xs:element name="idProyecto" nillable="true" type="xs:string"/>
+            <xs:element name="nombreCU" nillable="true" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="InfoCU" type="InfoCUType"/>
+</xs:schema>

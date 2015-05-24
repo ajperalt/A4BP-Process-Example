@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application"
+             version="11.1.1.61.92" id="DataBindings" SeparateXMLFiles="false"
+             Package="lucasianprodevcrearplandeproyecto" ClientType="Generic">
+  <pageMap>
+    <page path="/taskDetails1.jspx"
+          usageId="lucasianprodevcrearplandeproyecto_taskDetails1PageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="lucasianprodevcrearplandeproyecto_taskDetails1PageDef"
+          path="lucasianprodevcrearplandeproyecto.pageDefs.taskDetails1PageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <dc id="LucasianProDevCrearPlanDeProyecto_LucasianProDevCrearPlanDeProyecto"
+        path="lucasianprodevcrearplandeproyecto.LucasianProDevCrearPlanDeProyecto_LucasianProDevCrearPlanDeProyecto"/>
+  </dataControlUsages>
+</Application>

@@ -1,0 +1,778 @@
+<?xml version="1.0"?>
+<definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="_2015032701208" targetNamespace="http://www.bizagi.com/definitions/_2015032701208" xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL">
+  <resource id="Human_Resources_Analyst" name="Human Resources Analyst">
+    <documentation>The persons who belongs Human Resources area, he or she must  lead the selection process.</documentation>
+  </resource>
+  <resource id="Requester" name="Requester">
+    <documentation>The persons who makes the personnel requisition. </documentation>
+  </resource>
+  <resource id="Boss_for_Requester" name="Boss for Requester">
+    <documentation />
+  </resource>
+  <resource id="Doctor" name="Doctor">
+    <documentation>The persons who makes the physical exam of the selected candidates.</documentation>
+  </resource>
+  <resource id="Interviewer" name="Interviewer">
+    <documentation> The persons who conduct an interview, in the process several people are interviewed.   </documentation>
+  </resource>
+  <process id="Id_1a377ccf-a70c-49fa-9c38-5fc2dc501a35" name="Main Process">
+    <documentation />
+    <laneSet id="Id_72b3874a-04d8-4381-9ebf-a9dd3ba41463" />
+  </process>
+  <process id="Id_14c92294-eb57-4025-a980-3a2fc0032541" name="Advertisements">
+    <documentation />
+    <laneSet id="Id_01ad65d2-eb9f-4f4d-a308-11ab09640332">
+      <lane id="Id_d36cb488-b3b5-4a03-a736-28879cd20dcb" name="Human Resourses">
+        <documentation />
+        <childLaneSet id="Id_e5c99364-0d9d-43d3-a30e-f5597530255e" />
+      </lane>
+    </laneSet>
+    <startEvent id="Id_9e100449-9ef8-4247-b84c-6bb3c5bee6eb" name="">
+      <documentation />
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="#E6FF97" />
+            <bizagi:BizagiProperty name="borderColor" value="#62A716" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+      <outgoing>Id_ad609c6a-9c83-4769-b757-33c3777ac7df</outgoing>
+    </startEvent>
+    <scriptTask id="Id_457698ee-23dc-4da1-a274-d55c4a321742" name="External Advertisement Publication">
+      <documentation>Notify the company that will publish the ad.</documentation>
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="#ECEFFF" />
+            <bizagi:BizagiProperty name="borderColor" value="#03689A" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+      <incoming>Id_c7654cab-118a-4d9f-817c-5e9e0135023b</incoming>
+      <outgoing>Id_56073afe-e60e-4c2e-97d0-de112a43d4ed</outgoing>
+      <script />
+    </scriptTask>
+    <scriptTask id="Id_72bdb0af-067e-4415-a285-14519da83dd0" name="Internal Advertisement Publication">
+      <documentation> Publish  the internal advertisement publication throughout the company.</documentation>
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="#ECEFFF" />
+            <bizagi:BizagiProperty name="borderColor" value="#03689A" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+      <incoming>Id_18152ffd-f2ea-4049-a2a8-91aa0cc699e3</incoming>
+      <outgoing>Id_f4fff85d-e9ca-4705-bc84-e948983eebfc</outgoing>
+      <script />
+    </scriptTask>
+    <task id="Id_f52799ec-28b6-4caa-9d8e-566b84dc2507" name="Select Initial Candidates to Evaluate">
+      <documentation>&lt;p&gt;&lt;span style="font-family:Segoe UI;font-size:8pt;"&gt;Choose the people that are going to start the selection process. The candidates information must to be included, such as name, contact information and the curriculum vital file&lt;/span&gt;&lt;/p&gt;</documentation>
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="#ECEFFF" />
+            <bizagi:BizagiProperty name="borderColor" value="#03689A" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+      <incoming>Id_ddfe2b7e-bd15-4fec-8684-2b327a556433</incoming>
+      <incoming>Id_08831e52-6079-4420-a6e3-0f5813f0513f</incoming>
+      <outgoing>Id_fe1c6d3d-fd8d-4868-a463-518d150744ea</outgoing>
+      <resourceRole id="Id_39939e9d-1d02-451f-bd8a-ea5b9e50e0a5">
+        <q1:resourceRef xmlns="" xmlns:q1="http://www.omg.org/spec/BPMN/20100524/MODEL">Human_Resources_Analyst</q1:resourceRef>
+      </resourceRole>
+    </task>
+    <endEvent id="Id_eb9c4792-97b3-4f9b-ab58-17c6638d45cd" name="">
+      <documentation />
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="#EEAAAA" />
+            <bizagi:BizagiProperty name="borderColor" value="#990000" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+      <incoming>Id_d34588f8-7f40-40de-b4b9-866a8d5efcd9</incoming>
+    </endEvent>
+    <exclusiveGateway id="Id_b29c45fe-730c-438b-9873-875e43c1e7c8" name="Internal or External?" gatewayDirection="Diverging">
+      <documentation> The gateway validates if the advertisement is internal or external, this decision is made by the human resources area depending on the needs y/o policies of the company. </documentation>
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="#FFFFCC" />
+            <bizagi:BizagiProperty name="borderColor" value="#A6A61D" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+      <incoming>Id_8ec79553-9b8b-421a-89d0-7799bceba44f</incoming>
+      <outgoing>Id_18152ffd-f2ea-4049-a2a8-91aa0cc699e3</outgoing>
+      <outgoing>Id_c7654cab-118a-4d9f-817c-5e9e0135023b</outgoing>
+    </exclusiveGateway>
+    <exclusiveGateway id="Id_da9419e7-5ae7-42e4-b66a-ac55a6ad2d24" name="" gatewayDirection="Converging">
+      <documentation />
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="#FFFFCC" />
+            <bizagi:BizagiProperty name="borderColor" value="#A6A61D" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+      <incoming>Id_f4fff85d-e9ca-4705-bc84-e948983eebfc</incoming>
+      <incoming>Id_56073afe-e60e-4c2e-97d0-de112a43d4ed</incoming>
+      <outgoing>Id_46b5c0c8-53df-42f2-8305-066d0b452e5c</outgoing>
+    </exclusiveGateway>
+    <exclusiveGateway id="Id_1835d5b6-9fe2-457b-8f5c-fced2e8fd5fa" name="Need changes in the search criteria" gatewayDirection="Diverging">
+      <documentation> The gateway checks, if there is enough candidates to start the process. </documentation>
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="#FFFFCC" />
+            <bizagi:BizagiProperty name="borderColor" value="#A6A61D" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+      <incoming>Id_fe1c6d3d-fd8d-4868-a463-518d150744ea</incoming>
+      <outgoing>Id_d34588f8-7f40-40de-b4b9-866a8d5efcd9</outgoing>
+      <outgoing>Id_e95fcf93-4b13-4662-a6af-f0f6c2cf90d6</outgoing>
+    </exclusiveGateway>
+    <task id="Id_5d54fc82-f618-493e-af3d-84a78f642005" name="Job Vacancy Advertisement">
+      <documentation>&lt;p&gt;&lt;span style="font-family:Segoe UI;font-size:8pt;"&gt; It is necessary to create  an appropriate strategy to find the potential candidates.  It is possible to choose between an internal or external advertisement. The ad must be created and published in the chosen media.&lt;/span&gt;&lt;/p&gt;
+		&lt;p&gt;&lt;span style="font-family:Segoe UI;font-size:8pt;"&gt; It is important to remember that when the advertising is planned it is necessary to consider the type of position as well as the intended audience and applicant pool. &lt;/span&gt;&lt;/p&gt;
+		&lt;p&gt;&amp;nbsp;&lt;/p&gt;</documentation>
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="#ECEFFF" />
+            <bizagi:BizagiProperty name="borderColor" value="#03689A" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+      <incoming>Id_e95fcf93-4b13-4662-a6af-f0f6c2cf90d6</incoming>
+      <incoming>Id_ad609c6a-9c83-4769-b757-33c3777ac7df</incoming>
+      <outgoing>Id_8ec79553-9b8b-421a-89d0-7799bceba44f</outgoing>
+      <resourceRole id="Id_e2ad44c2-6a53-488b-b87d-5d0782520524">
+        <q2:resourceRef xmlns="" xmlns:q2="http://www.omg.org/spec/BPMN/20100524/MODEL">Human_Resources_Analyst</q2:resourceRef>
+      </resourceRole>
+    </task>
+    <intermediateCatchEvent id="Id_8cd9b575-d435-4d40-8b34-d6e82ef2bbe9" name="Wait for Closing Date">
+      <documentation>&lt;p&gt;&lt;span style="color:#595959;font-family:Segoe UI;font-size:10pt;"&gt;Wait until the closing date to choose between the curriculums vital received.&lt;/span&gt;&lt;/p&gt;</documentation>
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="#FEFAEF" />
+            <bizagi:BizagiProperty name="borderColor" value="#969149" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+      <incoming>Id_9e09092a-92fd-40f2-bed8-faa853e01f67</incoming>
+      <outgoing>Id_ddfe2b7e-bd15-4fec-8684-2b327a556433</outgoing>
+      <timerEventDefinition id="Id_fc8fc7a7-6622-4bca-bdb8-0eb9276ea538">
+        <timeCycle id="Expression_6c06a4ed-1dae-45c5-8a43-e8dd622a2693" />
+      </timerEventDefinition>
+    </intermediateCatchEvent>
+    <intermediateThrowEvent id="Id_021e595f-c45d-45f3-8c3a-a1801bf5e491" name="Receive CVs">
+      <documentation>&lt;p&gt;&lt;span style="font-family:Segoe UI;font-size:8pt;"&gt;If the process can continue with the candidates received before the closing date, the event is performed.&lt;/span&gt;&lt;/p&gt;</documentation>
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="#FEFAEF" />
+            <bizagi:BizagiProperty name="borderColor" value="#969149" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+      <incoming>Id_d8cbee43-641b-44b8-8ccc-a4e995b8894a</incoming>
+      <incoming>Id_cf60224c-1cf6-4822-9917-79de6c83e18b</incoming>
+      <outgoing>Id_74081ddd-2180-4482-8133-41668c8524c8</outgoing>
+    </intermediateThrowEvent>
+    <exclusiveGateway id="Id_e83a3026-cb07-45b9-b314-4c3c38f4b6cd" name="Process  Continues?" gatewayDirection="Diverging">
+      <documentation />
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="#FFFFCC" />
+            <bizagi:BizagiProperty name="borderColor" value="#A6A61D" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+      <incoming>Id_74081ddd-2180-4482-8133-41668c8524c8</incoming>
+      <outgoing>Id_08831e52-6079-4420-a6e3-0f5813f0513f</outgoing>
+      <outgoing>Id_cf60224c-1cf6-4822-9917-79de6c83e18b</outgoing>
+    </exclusiveGateway>
+    <eventBasedGateway id="Id_5bfbd0aa-045e-4e8e-bb0f-998308f268c1" name="" gatewayDirection="Diverging" instantiate="false" eventGatewayType="Exclusive">
+      <documentation />
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="#FFFFCC" />
+            <bizagi:BizagiProperty name="borderColor" value="#A6A61D" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+      <incoming>Id_46b5c0c8-53df-42f2-8305-066d0b452e5c</incoming>
+      <outgoing>Id_9e09092a-92fd-40f2-bed8-faa853e01f67</outgoing>
+      <outgoing>Id_d8cbee43-641b-44b8-8ccc-a4e995b8894a</outgoing>
+    </eventBasedGateway>
+    <sequenceFlow id="Id_18152ffd-f2ea-4049-a2a8-91aa0cc699e3" name="Internal" sourceRef="Id_b29c45fe-730c-438b-9873-875e43c1e7c8" targetRef="Id_72bdb0af-067e-4415-a285-14519da83dd0">
+      <documentation />
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="White" />
+            <bizagi:BizagiProperty name="borderColor" value="#000000" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+      <conditionExpression id="Expression_743353aa-30d5-4255-bf05-108529ba66a3">If the advertisement is internal, the process continues to the  Internal Advertisements Description task. </conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="Id_c7654cab-118a-4d9f-817c-5e9e0135023b" name="External" sourceRef="Id_b29c45fe-730c-438b-9873-875e43c1e7c8" targetRef="Id_457698ee-23dc-4da1-a274-d55c4a321742">
+      <documentation />
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="White" />
+            <bizagi:BizagiProperty name="borderColor" value="#000000" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+      <conditionExpression id="Expression_a86e9205-a575-4173-84bc-d61ab6043c6e">If the advertisement is external, the process continues to the  External Advertisements Description task. </conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="Id_f4fff85d-e9ca-4705-bc84-e948983eebfc" name="" sourceRef="Id_72bdb0af-067e-4415-a285-14519da83dd0" targetRef="Id_da9419e7-5ae7-42e4-b66a-ac55a6ad2d24">
+      <documentation />
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="White" />
+            <bizagi:BizagiProperty name="borderColor" value="#000000" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="Id_56073afe-e60e-4c2e-97d0-de112a43d4ed" name="" sourceRef="Id_457698ee-23dc-4da1-a274-d55c4a321742" targetRef="Id_da9419e7-5ae7-42e4-b66a-ac55a6ad2d24">
+      <documentation />
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="White" />
+            <bizagi:BizagiProperty name="borderColor" value="#000000" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="Id_fe1c6d3d-fd8d-4868-a463-518d150744ea" name="" sourceRef="Id_f52799ec-28b6-4caa-9d8e-566b84dc2507" targetRef="Id_1835d5b6-9fe2-457b-8f5c-fced2e8fd5fa">
+      <documentation />
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="White" />
+            <bizagi:BizagiProperty name="borderColor" value="#000000" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="Id_d34588f8-7f40-40de-b4b9-866a8d5efcd9" name="No" sourceRef="Id_1835d5b6-9fe2-457b-8f5c-fced2e8fd5fa" targetRef="Id_eb9c4792-97b3-4f9b-ab58-17c6638d45cd">
+      <documentation />
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="White" />
+            <bizagi:BizagiProperty name="borderColor" value="#000000" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+      <conditionExpression id="Expression_c9373e59-7f87-4fe7-983c-4b89de6e8f1d"> If there is not enough candidates to start the selection process, the process returns to the Position Advertisement activity, where it is possible to change the search criteria</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="Id_e95fcf93-4b13-4662-a6af-f0f6c2cf90d6" name="Yes" sourceRef="Id_1835d5b6-9fe2-457b-8f5c-fced2e8fd5fa" targetRef="Id_5d54fc82-f618-493e-af3d-84a78f642005">
+      <documentation />
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="White" />
+            <bizagi:BizagiProperty name="borderColor" value="#000000" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+      <conditionExpression id="Expression_bb115c03-e74a-49c1-a1a3-1160aa6486cd">If the process can continue with the candidates received, the process continues to the Selection Process sub process.  </conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="Id_ad609c6a-9c83-4769-b757-33c3777ac7df" name="" sourceRef="Id_9e100449-9ef8-4247-b84c-6bb3c5bee6eb" targetRef="Id_5d54fc82-f618-493e-af3d-84a78f642005">
+      <documentation />
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="White" />
+            <bizagi:BizagiProperty name="borderColor" value="#000000" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="Id_8ec79553-9b8b-421a-89d0-7799bceba44f" name="" sourceRef="Id_5d54fc82-f618-493e-af3d-84a78f642005" targetRef="Id_b29c45fe-730c-438b-9873-875e43c1e7c8">
+      <documentation />
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="White" />
+            <bizagi:BizagiProperty name="borderColor" value="#000000" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="Id_46b5c0c8-53df-42f2-8305-066d0b452e5c" name="" sourceRef="Id_da9419e7-5ae7-42e4-b66a-ac55a6ad2d24" targetRef="Id_5bfbd0aa-045e-4e8e-bb0f-998308f268c1">
+      <documentation />
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="White" />
+            <bizagi:BizagiProperty name="borderColor" value="#000000" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+      <conditionExpression id="Expression_15963ddc-fdab-410d-81ac-999ce4a25ca6" />
+    </sequenceFlow>
+    <sequenceFlow id="Id_9e09092a-92fd-40f2-bed8-faa853e01f67" name="" sourceRef="Id_5bfbd0aa-045e-4e8e-bb0f-998308f268c1" targetRef="Id_8cd9b575-d435-4d40-8b34-d6e82ef2bbe9">
+      <documentation />
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="White" />
+            <bizagi:BizagiProperty name="borderColor" value="#000000" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="Id_d8cbee43-641b-44b8-8ccc-a4e995b8894a" name="" sourceRef="Id_5bfbd0aa-045e-4e8e-bb0f-998308f268c1" targetRef="Id_021e595f-c45d-45f3-8c3a-a1801bf5e491">
+      <documentation />
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="White" />
+            <bizagi:BizagiProperty name="borderColor" value="#000000" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="Id_ddfe2b7e-bd15-4fec-8684-2b327a556433" name="" sourceRef="Id_8cd9b575-d435-4d40-8b34-d6e82ef2bbe9" targetRef="Id_f52799ec-28b6-4caa-9d8e-566b84dc2507">
+      <documentation />
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="White" />
+            <bizagi:BizagiProperty name="borderColor" value="#000000" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="Id_74081ddd-2180-4482-8133-41668c8524c8" sourceRef="Id_021e595f-c45d-45f3-8c3a-a1801bf5e491" targetRef="Id_e83a3026-cb07-45b9-b314-4c3c38f4b6cd">
+      <documentation />
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="White" />
+            <bizagi:BizagiProperty name="borderColor" value="#000000" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="Id_08831e52-6079-4420-a6e3-0f5813f0513f" name="Yes" sourceRef="Id_e83a3026-cb07-45b9-b314-4c3c38f4b6cd" targetRef="Id_f52799ec-28b6-4caa-9d8e-566b84dc2507">
+      <documentation />
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="White" />
+            <bizagi:BizagiProperty name="borderColor" value="#000000" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+      <conditionExpression id="Expression_7c9e1919-88c0-4bf6-a740-1266dbb19377" />
+    </sequenceFlow>
+    <sequenceFlow id="Id_cf60224c-1cf6-4822-9917-79de6c83e18b" name="No" sourceRef="Id_e83a3026-cb07-45b9-b314-4c3c38f4b6cd" targetRef="Id_021e595f-c45d-45f3-8c3a-a1801bf5e491">
+      <documentation />
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="White" />
+            <bizagi:BizagiProperty name="borderColor" value="#000000" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+      <conditionExpression id="Expression_315758d7-8ce1-46f0-97d8-84d32b261547" />
+    </sequenceFlow>
+  </process>
+  <collaboration id="Id_0f8619f0-1306-4e36-b9ad-3a86189044c0" name="Job Vacancy Advertisement">
+    <documentation />
+    <participant id="Id_dccf465a-3adf-424f-afdd-cdb3046eb50d" name="Main Process" processRef="Id_1a377ccf-a70c-49fa-9c38-5fc2dc501a35">
+      <documentation />
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="#FFFFFF" />
+            <bizagi:BizagiProperty name="borderColor" value="#000000" />
+            <bizagi:BizagiProperty name="isMainParticipant" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+    </participant>
+    <participant id="Id_a01ef9d3-e0f9-4e46-a754-a01339aef5b4" name="Advertisements" processRef="Id_14c92294-eb57-4025-a980-3a2fc0032541">
+      <documentation />
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="#FFFFFF" />
+            <bizagi:BizagiProperty name="borderColor" value="#000000" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+    </participant>
+  </collaboration>
+  <BPMNDiagram id="Diagram_4fd5a7c4-86b0-4eb7-ae0f-4773f4b3d996" xmlns="http://www.omg.org/spec/BPMN/20100524/DI">
+    <BPMNPlane id="DiagramElement_9aa4fed9-0ad0-4a90-855a-1c2b0124d4f3" bpmnElement="Id_0f8619f0-1306-4e36-b9ad-3a86189044c0">
+      <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+      <BPMNShape id="DiagramElement_979ce4f0-dece-4254-a6c3-62e3713a1945" bpmnElement="Id_dccf465a-3adf-424f-afdd-cdb3046eb50d" isHorizontal="true">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <Bounds x="0" y="0" width="700" height="350" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+        <BPMNLabel id="DiagramElement_31df80ca-ba97-4916-904b-9c98fed584fe" labelStyle="Style_1a62e470-0244-4dbd-a171-7034c92c42ce">
+          <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+          <Bounds x="0" y="0" width="0" height="0" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+        </BPMNLabel>
+      </BPMNShape>
+      <BPMNShape id="DiagramElement_22addabc-5500-4e6d-b95b-d59ae84c9b3c" bpmnElement="Id_a01ef9d3-e0f9-4e46-a754-a01339aef5b4" isHorizontal="true">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <Bounds x="40" y="40" width="1320" height="350" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+        <BPMNLabel id="DiagramElement_0b50352e-647b-4488-adf2-f1417ec2c0d4" labelStyle="Style_cba00206-e028-4077-a4f2-6e7082957417">
+          <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+          <Bounds x="0" y="0" width="0" height="0" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+        </BPMNLabel>
+      </BPMNShape>
+      <BPMNShape id="DiagramElement_5ffa054d-ad6a-45d0-92cd-3a22c1debd5c" bpmnElement="Id_d36cb488-b3b5-4a03-a736-28879cd20dcb" isHorizontal="true">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <Bounds x="50" y="40" width="1270" height="350" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+        <BPMNLabel id="DiagramElement_311cd28b-4587-4b4e-880c-deca5ea2a636" labelStyle="Style_2798a89e-129f-4f1e-aa4a-4ae93f8ac21b">
+          <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+          <Bounds x="0" y="0" width="0" height="0" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+        </BPMNLabel>
+      </BPMNShape>
+      <BPMNShape id="DiagramElement_c9558105-aa45-4c1f-a8e4-55c244742d2e" bpmnElement="Id_9e100449-9ef8-4247-b84c-6bb3c5bee6eb">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <Bounds x="160" y="185" width="30" height="30" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+      </BPMNShape>
+      <BPMNShape id="DiagramElement_cd74508f-8bdb-4629-97ac-d848dd3e63b9" bpmnElement="Id_457698ee-23dc-4da1-a274-d55c4a321742">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <Bounds x="580" y="170" width="90" height="60" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+        <BPMNLabel id="DiagramElement_2bf0d7fe-8a89-4f9f-9a09-bd4f388b8c00" labelStyle="Style_5cf3d0df-0b5c-44ab-a756-fa8efcb9fcf4">
+          <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+          <Bounds x="0" y="0" width="0" height="0" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+        </BPMNLabel>
+      </BPMNShape>
+      <BPMNShape id="DiagramElement_2c647f44-3809-4384-9e95-7bc442966d32" bpmnElement="Id_72bdb0af-067e-4415-a285-14519da83dd0">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <Bounds x="580" y="80" width="90" height="60" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+        <BPMNLabel id="DiagramElement_cb235698-4e77-4134-a54b-4206a578c461" labelStyle="Style_5db51f85-de8c-4e55-bcb4-f869d5cf9cb7">
+          <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+          <Bounds x="0" y="0" width="0" height="0" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+        </BPMNLabel>
+      </BPMNShape>
+      <BPMNShape id="DiagramElement_4af2a262-60fa-4c6a-8708-cc8f5cb98bcd" bpmnElement="Id_f52799ec-28b6-4caa-9d8e-566b84dc2507">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <Bounds x="1195" y="120" width="90" height="60" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+        <BPMNLabel id="DiagramElement_693e39d7-52d2-4fa1-aab9-cce94f871366" labelStyle="Style_7b726ee4-9566-49d9-a301-7cf94a2fb8d2">
+          <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+          <Bounds x="0" y="0" width="0" height="0" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+        </BPMNLabel>
+      </BPMNShape>
+      <BPMNShape id="DiagramElement_ddb07115-8917-4366-8b7b-663eaf6acae3" bpmnElement="Id_eb9c4792-97b3-4f9b-ab58-17c6638d45cd">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <Bounds x="1300" y="265" width="30" height="30" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+      </BPMNShape>
+      <BPMNShape id="DiagramElement_26c49669-22e6-40fb-b7dd-fab8ae493b99" bpmnElement="Id_b29c45fe-730c-438b-9873-875e43c1e7c8">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <Bounds x="420" y="180" width="40" height="40" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+        <BPMNLabel id="DiagramElement_ab591fed-8ce6-46c4-9125-c1a16a8bd7de" labelStyle="Style_4765cbf8-bf02-4072-a9d2-1ed995969856">
+          <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+          <Bounds x="0" y="0" width="0" height="0" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+        </BPMNLabel>
+      </BPMNShape>
+      <BPMNShape id="DiagramElement_a18d5910-8955-4bf1-a720-b39971c12eb6" bpmnElement="Id_da9419e7-5ae7-42e4-b66a-ac55a6ad2d24">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <Bounds x="820" y="140" width="40" height="40" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+      </BPMNShape>
+      <BPMNShape id="DiagramElement_ed75fc9b-e411-4872-a85d-ee0b6fab53d4" bpmnElement="Id_1835d5b6-9fe2-457b-8f5c-fced2e8fd5fa">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <Bounds x="1220" y="260" width="40" height="40" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+        <BPMNLabel id="DiagramElement_e4a7d68b-f879-4d2b-912e-94758542b63c" labelStyle="Style_864f2c16-95ad-4c64-a84c-d04dc44e6044">
+          <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+          <Bounds x="0" y="0" width="0" height="0" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+        </BPMNLabel>
+      </BPMNShape>
+      <BPMNShape id="DiagramElement_511c8d81-dd54-4076-be50-cd343d96efb7" bpmnElement="Id_5d54fc82-f618-493e-af3d-84a78f642005">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <Bounds x="280" y="170" width="90" height="60" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+        <BPMNLabel id="DiagramElement_7bbc97a6-72c0-47b9-b26d-c7d908b16deb" labelStyle="Style_1d47c4eb-3ca9-4c46-b811-77908f069688">
+          <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+          <Bounds x="0" y="0" width="0" height="0" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+        </BPMNLabel>
+      </BPMNShape>
+      <BPMNShape id="DiagramElement_ec00debc-738c-4c5e-a4bc-5604423781de" bpmnElement="Id_8cd9b575-d435-4d40-8b34-d6e82ef2bbe9">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <Bounds x="1000" y="80" width="30" height="30" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+        <BPMNLabel id="DiagramElement_40898389-dcd1-4bc7-ad60-93db7665ab3e" labelStyle="Style_7beceb9c-dfec-4454-96dd-6a8f3ce4c3dd">
+          <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+          <Bounds x="0" y="0" width="0" height="0" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+        </BPMNLabel>
+      </BPMNShape>
+      <BPMNShape id="DiagramElement_f6144d64-0b4f-4c1f-9cad-e5a9f2f1939c" bpmnElement="Id_021e595f-c45d-45f3-8c3a-a1801bf5e491">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <Bounds x="940" y="200" width="30" height="30" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+        <BPMNLabel id="DiagramElement_fc8717aa-157b-431f-9847-4616b6ed0bb2" labelStyle="Style_ab430caf-89c4-4273-8259-15ce43914b98">
+          <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+          <Bounds x="0" y="0" width="0" height="0" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+        </BPMNLabel>
+      </BPMNShape>
+      <BPMNShape id="DiagramElement_9a06a612-f011-4542-8135-22739fc7874f" bpmnElement="Id_e83a3026-cb07-45b9-b314-4c3c38f4b6cd">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <Bounds x="1020" y="195" width="40" height="40" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+        <BPMNLabel id="DiagramElement_9060b25a-a706-4200-bbdf-ef9040e33a99" labelStyle="Style_f8ed7f39-4ed3-4a94-983d-73dbecc91073">
+          <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+          <Bounds x="0" y="0" width="0" height="0" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+        </BPMNLabel>
+      </BPMNShape>
+      <BPMNShape id="DiagramElement_60e00a02-8d9e-4d8f-9ae8-62dd872b1a2b" bpmnElement="Id_5bfbd0aa-045e-4e8e-bb0f-998308f268c1">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <Bounds x="880" y="140" width="40" height="40" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+      </BPMNShape>
+      <BPMNEdge id="DiagramElement_4e9147b0-ca78-465c-b3bd-38a725deaeac" bpmnElement="Id_18152ffd-f2ea-4049-a2a8-91aa0cc699e3">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <waypoint x="440" y="180" xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <waypoint x="440" y="110" xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <waypoint x="580" y="110" xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <BPMNLabel id="DiagramElement_98c0302f-6478-4407-9619-8a5067acf217" labelStyle="Style_0b788b03-d985-478e-bd81-13180e456f32">
+          <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+          <Bounds x="0" y="0" width="0" height="0" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+        </BPMNLabel>
+      </BPMNEdge>
+      <BPMNEdge id="DiagramElement_cdc7f844-ac47-4ec3-a505-5909f5c0fb4a" bpmnElement="Id_c7654cab-118a-4d9f-817c-5e9e0135023b">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <waypoint x="460" y="200" xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <waypoint x="580" y="200" xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <BPMNLabel id="DiagramElement_3e734d19-f2f5-471d-905a-5f093004bdf6" labelStyle="Style_ae860e34-5217-4798-b217-905fda5f1724">
+          <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+          <Bounds x="0" y="0" width="0" height="0" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+        </BPMNLabel>
+      </BPMNEdge>
+      <BPMNEdge id="DiagramElement_cea4c746-8f02-41c0-a661-25f81d8c6e7b" bpmnElement="Id_f4fff85d-e9ca-4705-bc84-e948983eebfc">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <waypoint x="670" y="110" xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <waypoint x="840" y="110" xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <waypoint x="840" y="140" xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <BPMNLabel id="DiagramElement_41f7259d-5f43-4537-88be-e7be716d5ab8" labelStyle="Style_a8ab9a64-6825-4072-8d5a-c7e7a2ce4278">
+          <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+          <Bounds x="0" y="0" width="0" height="0" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+        </BPMNLabel>
+      </BPMNEdge>
+      <BPMNEdge id="DiagramElement_35d48f01-33bc-4ece-850f-9d86663f693d" bpmnElement="Id_56073afe-e60e-4c2e-97d0-de112a43d4ed">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <waypoint x="670" y="200" xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <waypoint x="840" y="200" xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <waypoint x="840" y="180" xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <BPMNLabel id="DiagramElement_1db3f457-04f1-4acd-bd81-7ac0df39b259" labelStyle="Style_1a6f059d-300b-4a51-ac50-71fe00ba9d8d">
+          <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+          <Bounds x="0" y="0" width="0" height="0" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+        </BPMNLabel>
+      </BPMNEdge>
+      <BPMNEdge id="DiagramElement_4c4f1bda-ad45-4ab3-8454-943539ecaef0" bpmnElement="Id_fe1c6d3d-fd8d-4868-a463-518d150744ea">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <waypoint x="1240" y="180" xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <waypoint x="1240" y="260" xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <BPMNLabel id="DiagramElement_aa87008e-77e1-47a1-8b41-8d8e7f6d5c60" labelStyle="Style_86b030b4-8cf5-411e-aaf5-f0c88001b88e">
+          <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+          <Bounds x="0" y="0" width="0" height="0" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+        </BPMNLabel>
+      </BPMNEdge>
+      <BPMNEdge id="DiagramElement_bcb0172d-ebb6-4298-97b6-cb2ae68c39f6" bpmnElement="Id_d34588f8-7f40-40de-b4b9-866a8d5efcd9">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <waypoint x="1260" y="280" xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <waypoint x="1300" y="280" xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <BPMNLabel id="DiagramElement_f66dc5f8-c3a1-4a88-881a-a2c470dc7806" labelStyle="Style_f9ccb061-c4c2-4317-aca4-c55d81ea83a6">
+          <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+          <Bounds x="0" y="0" width="0" height="0" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+        </BPMNLabel>
+      </BPMNEdge>
+      <BPMNEdge id="DiagramElement_5bb8abaa-546c-442c-9d56-a359b88fa90d" bpmnElement="Id_e95fcf93-4b13-4662-a6af-f0f6c2cf90d6">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <waypoint x="1220" y="280" xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <waypoint x="325" y="280" xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <waypoint x="325" y="230" xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <BPMNLabel id="DiagramElement_23ebb0d1-3d54-41a2-8eb5-6700d63db312" labelStyle="Style_cd458485-03e8-413f-8863-7edcc5bfe9a9">
+          <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+          <Bounds x="0" y="0" width="0" height="0" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+        </BPMNLabel>
+      </BPMNEdge>
+      <BPMNEdge id="DiagramElement_7ae78539-cbd4-4d8a-a9e8-ef0b5cad4570" bpmnElement="Id_ad609c6a-9c83-4769-b757-33c3777ac7df">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <waypoint x="190" y="200" xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <waypoint x="280" y="200" xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <BPMNLabel id="DiagramElement_a97b8aad-33f6-483f-98e7-36409cdf8506" labelStyle="Style_f81107db-2596-44ba-a640-052cbca88d4c">
+          <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+          <Bounds x="0" y="0" width="0" height="0" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+        </BPMNLabel>
+      </BPMNEdge>
+      <BPMNEdge id="DiagramElement_aa617c17-f11c-408e-a9bb-9e66d64e19b1" bpmnElement="Id_8ec79553-9b8b-421a-89d0-7799bceba44f">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <waypoint x="370" y="200" xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <waypoint x="420" y="200" xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <BPMNLabel id="DiagramElement_c3ae9133-61f0-4f9f-a738-e232ffd39fe5" labelStyle="Style_b3463136-31ac-4eed-9c0c-bd894e91989d">
+          <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+          <Bounds x="0" y="0" width="0" height="0" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+        </BPMNLabel>
+      </BPMNEdge>
+      <BPMNEdge id="DiagramElement_37f6ced5-25a6-44c7-b33f-825b53d06fbd" bpmnElement="Id_46b5c0c8-53df-42f2-8305-066d0b452e5c">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <waypoint x="860" y="160" xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <waypoint x="880" y="160" xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <BPMNLabel id="DiagramElement_de3aed96-fc8c-47e4-b73e-70cc37b72f68" labelStyle="Style_7b3b9c1b-130e-4656-91c8-21c76fb1ea4f">
+          <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+          <Bounds x="0" y="0" width="0" height="0" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+        </BPMNLabel>
+      </BPMNEdge>
+      <BPMNEdge id="DiagramElement_b4e54f15-376f-4bdf-960f-d52158c6167c" bpmnElement="Id_9e09092a-92fd-40f2-bed8-faa853e01f67">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <waypoint x="900" y="140" xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <waypoint x="900" y="95" xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <waypoint x="1000" y="95" xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <BPMNLabel id="DiagramElement_f90d2400-1d18-4749-83c5-17ba7acecbd4" labelStyle="Style_16fe5646-66dc-45bf-898d-72ae44939693">
+          <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+          <Bounds x="0" y="0" width="0" height="0" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+        </BPMNLabel>
+      </BPMNEdge>
+      <BPMNEdge id="DiagramElement_2be7b369-3e08-4626-893f-ce95ada0650e" bpmnElement="Id_d8cbee43-641b-44b8-8ccc-a4e995b8894a">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <waypoint x="900" y="180" xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <waypoint x="900" y="215" xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <waypoint x="940" y="215" xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <BPMNLabel id="DiagramElement_1abba151-0154-4633-b230-9fb3318be997" labelStyle="Style_61b0dec2-05fe-418a-9579-59f160881b15">
+          <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+          <Bounds x="0" y="0" width="0" height="0" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+        </BPMNLabel>
+      </BPMNEdge>
+      <BPMNEdge id="DiagramElement_07f2b3d0-0a9f-4699-b535-284bb7e29f96" bpmnElement="Id_ddfe2b7e-bd15-4fec-8684-2b327a556433">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <waypoint x="1030" y="95" xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <waypoint x="1079" y="95" xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <waypoint x="1079" y="150" xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <waypoint x="1195" y="150" xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <BPMNLabel id="DiagramElement_669f5eea-e94f-44e0-b2d7-df307ba319c3" labelStyle="Style_a66f3879-3a03-42f6-a389-77514689c75b">
+          <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+          <Bounds x="1079" y="122" width="0" height="0" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+        </BPMNLabel>
+      </BPMNEdge>
+      <BPMNEdge id="DiagramElement_d289dd34-1df4-4d41-8ab1-df7c20a0de7d" bpmnElement="Id_74081ddd-2180-4482-8133-41668c8524c8">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <waypoint x="970" y="215" xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <waypoint x="1020" y="215" xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+      </BPMNEdge>
+      <BPMNEdge id="DiagramElement_55c9f1ae-6820-4d94-80c9-2c12c5dd755b" bpmnElement="Id_08831e52-6079-4420-a6e3-0f5813f0513f">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <waypoint x="1060" y="215" xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <waypoint x="1080" y="215" xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <waypoint x="1080" y="150" xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <waypoint x="1195" y="150" xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <BPMNLabel id="DiagramElement_f0319377-c41d-4eb4-84ac-db3a32bd49bf" labelStyle="Style_ea19fb88-631f-4626-a9a1-c429d9193731">
+          <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+          <Bounds x="0" y="0" width="0" height="0" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+        </BPMNLabel>
+      </BPMNEdge>
+      <BPMNEdge id="DiagramElement_3cb53805-be93-4e8b-a1d5-5b420ccc9378" bpmnElement="Id_cf60224c-1cf6-4822-9917-79de6c83e18b">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <waypoint x="1040" y="195" xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <waypoint x="1040" y="182" xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <waypoint x="955" y="182" xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <waypoint x="955" y="200" xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <BPMNLabel id="DiagramElement_76c55c58-46b5-4203-a38b-a723bcdd8067" labelStyle="Style_390ec7e3-d8a8-4b11-9eb4-ca1cf386690e">
+          <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+          <Bounds x="0" y="0" width="0" height="0" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+        </BPMNLabel>
+      </BPMNEdge>
+    </BPMNPlane>
+    <BPMNLabelStyle id="Style_1a62e470-0244-4dbd-a171-7034c92c42ce">
+      <Font name="Segoe UI" size="10" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+    </BPMNLabelStyle>
+    <BPMNLabelStyle id="Style_cba00206-e028-4077-a4f2-6e7082957417">
+      <Font name="Segoe UI" size="10" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+    </BPMNLabelStyle>
+    <BPMNLabelStyle id="Style_2798a89e-129f-4f1e-aa4a-4ae93f8ac21b">
+      <Font name="Segoe UI" size="10" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+    </BPMNLabelStyle>
+    <BPMNLabelStyle id="Style_5cf3d0df-0b5c-44ab-a756-fa8efcb9fcf4">
+      <Font name="Segoe UI" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+    </BPMNLabelStyle>
+    <BPMNLabelStyle id="Style_5db51f85-de8c-4e55-bcb4-f869d5cf9cb7">
+      <Font name="Segoe UI" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+    </BPMNLabelStyle>
+    <BPMNLabelStyle id="Style_7b726ee4-9566-49d9-a301-7cf94a2fb8d2">
+      <Font name="Segoe UI" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+    </BPMNLabelStyle>
+    <BPMNLabelStyle id="Style_4765cbf8-bf02-4072-a9d2-1ed995969856">
+      <Font name="Segoe UI" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+    </BPMNLabelStyle>
+    <BPMNLabelStyle id="Style_864f2c16-95ad-4c64-a84c-d04dc44e6044">
+      <Font name="Segoe UI" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+    </BPMNLabelStyle>
+    <BPMNLabelStyle id="Style_1d47c4eb-3ca9-4c46-b811-77908f069688">
+      <Font name="Segoe UI" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+    </BPMNLabelStyle>
+    <BPMNLabelStyle id="Style_7beceb9c-dfec-4454-96dd-6a8f3ce4c3dd">
+      <Font name="Segoe UI" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+    </BPMNLabelStyle>
+    <BPMNLabelStyle id="Style_ab430caf-89c4-4273-8259-15ce43914b98">
+      <Font name="Segoe UI" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+    </BPMNLabelStyle>
+    <BPMNLabelStyle id="Style_f8ed7f39-4ed3-4a94-983d-73dbecc91073">
+      <Font name="Segoe UI" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+    </BPMNLabelStyle>
+    <BPMNLabelStyle id="Style_0b788b03-d985-478e-bd81-13180e456f32">
+      <Font name="Segoe UI" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+    </BPMNLabelStyle>
+    <BPMNLabelStyle id="Style_ae860e34-5217-4798-b217-905fda5f1724">
+      <Font name="Segoe UI" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+    </BPMNLabelStyle>
+    <BPMNLabelStyle id="Style_a8ab9a64-6825-4072-8d5a-c7e7a2ce4278">
+      <Font name="Segoe UI" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+    </BPMNLabelStyle>
+    <BPMNLabelStyle id="Style_1a6f059d-300b-4a51-ac50-71fe00ba9d8d">
+      <Font name="Segoe UI" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+    </BPMNLabelStyle>
+    <BPMNLabelStyle id="Style_86b030b4-8cf5-411e-aaf5-f0c88001b88e">
+      <Font name="Segoe UI" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+    </BPMNLabelStyle>
+    <BPMNLabelStyle id="Style_f9ccb061-c4c2-4317-aca4-c55d81ea83a6">
+      <Font name="Segoe UI" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+    </BPMNLabelStyle>
+    <BPMNLabelStyle id="Style_cd458485-03e8-413f-8863-7edcc5bfe9a9">
+      <Font name="Segoe UI" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+    </BPMNLabelStyle>
+    <BPMNLabelStyle id="Style_f81107db-2596-44ba-a640-052cbca88d4c">
+      <Font name="Segoe UI" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+    </BPMNLabelStyle>
+    <BPMNLabelStyle id="Style_b3463136-31ac-4eed-9c0c-bd894e91989d">
+      <Font name="Segoe UI" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+    </BPMNLabelStyle>
+    <BPMNLabelStyle id="Style_7b3b9c1b-130e-4656-91c8-21c76fb1ea4f">
+      <Font name="Segoe UI" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+    </BPMNLabelStyle>
+    <BPMNLabelStyle id="Style_16fe5646-66dc-45bf-898d-72ae44939693">
+      <Font name="Segoe UI" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+    </BPMNLabelStyle>
+    <BPMNLabelStyle id="Style_61b0dec2-05fe-418a-9579-59f160881b15">
+      <Font name="Segoe UI" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+    </BPMNLabelStyle>
+    <BPMNLabelStyle id="Style_a66f3879-3a03-42f6-a389-77514689c75b">
+      <Font name="Segoe UI" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+    </BPMNLabelStyle>
+    <BPMNLabelStyle id="Style_ea19fb88-631f-4626-a9a1-c429d9193731">
+      <Font name="Segoe UI" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+    </BPMNLabelStyle>
+    <BPMNLabelStyle id="Style_390ec7e3-d8a8-4b11-9eb4-ca1cf386690e">
+      <Font name="Segoe UI" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+    </BPMNLabelStyle>
+  </BPMNDiagram>
+</definitions>
